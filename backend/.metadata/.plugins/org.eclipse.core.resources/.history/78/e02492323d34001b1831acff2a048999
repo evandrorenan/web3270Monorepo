@@ -1,0 +1,8 @@
+package br.com.evandrorenan.learning.ats.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.evandrorenan.learning.ats.entity.ScriptLine;
+
+public interface ScriptLineRepository extends JpaRepository<ScriptLine, Long> {
+}

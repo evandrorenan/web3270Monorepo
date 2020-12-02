@@ -1,0 +1,18 @@
+
+’squid:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(œ®Şüÿÿÿÿ8¦Çá‡â.HRMINORZ
+CODE_SMELL
+r
+squid:S106±"9Replace this use of System.out or System.err by a logger.(šš„÷ÿÿÿÿÿ8¦Çá‡â.H…RMAJORZ
+CODE_SMELL
+€squid:HiddenFieldCheckH"ARename "scriptLineDto" which hides the field declared at line 50.(èÅ8¦Çá‡â.HƒRMAJORZ
+CODE_SMELL
+{squid:S00112h"FDefine and throw a dedicated exception instead of using a generic one.(®™‡ğ8¦Çá‡â.HÿRMAJORZ
+CODE_SMELL
+}squid:HiddenFieldCheck‚"=Rename "scriptDto" which hides the field declared at line 40.(õ´Øê8¦Çá‡â.H„RMAJORZ
+CODE_SMELL
+‚squid:HiddenFieldCheckG">Rename "strActions" which hides the field declared at line 36.(ÚÃÊéıÿÿÿÿ8¦Çá‡â.H‚RMAJORZ
+CODE_SMELL
+Œsquid:S1598"ÏThis file "ScriptService.java" should be located in "br\com\evandrorenan\learning\ats\service" directory, not in "C:\web3270\backend\web3270-scripts\src\main\java\br\com\evandrorenan\web3270scripts\service".(ú«şèùÿÿÿÿ8¦Çá‡â.HşRCRITICALZ
+CODE_SMELL
+“squid:S2293É"YReplace the type specification in this constructor call with the diamond operator ("<>").(£æµ–úÿÿÿÿ8¦Çá‡â.HRMINORZ
+CODE_SMELL

@@ -1,0 +1,226 @@
+what,kind,bundleId,bundleVersion,description,time
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557147
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557147
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557148
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557149
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557149
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557150
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557150
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557150
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557151
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557151
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557151
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557152
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557152
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557153
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557154
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557154
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557155
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557157
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557157
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557157
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557158
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557159
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557160
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557160
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557161
+no handler,command,org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples,,"org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.cutcolumn",1606867557161
+started,bundle,org.eclipse.wst.common.ui,1.1.500.v200911182011,"org.eclipse.wst.common.ui",1606867557452
+closed,view,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.internal.introview",1606867559760
+activated,view,com.ibm.etools.project.explorer,7.5.201.v20190912_1541,"com.ibm.etools.ui.navigator.SDExplorer",1606867560153
+activated,view,com.ibm.etools.project.explorer,7.5.201.v20190912_1541,"com.ibm.etools.ui.navigator.SDExplorer",1606867560161
+started,bundle,org.eclipse.ui.browser,3.6.300.v20180828-0837,"org.eclipse.ui.browser",1606867562345
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867564866
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867579393
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867586967
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867588833
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867590903
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867592826
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867597025
+started,bundle,org.eclipse.m2e.importer,1.9.1.20180912-1601,"org.eclipse.m2e.importer",1606867602519
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867613250
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.e4.ui.importer.openDirectory",1606867613292
+started,bundle,org.eclipse.jst.servlet.ui,1.1.921.v201802201739,"org.eclipse.jst.servlet.ui",1606867613312
+started,bundle,org.eclipse.m2e.wtp,1.4.0.20180606-2005,"org.eclipse.m2e.wtp",1606867613324
+started,bundle,org.eclipse.wst.sse.core,1.2.100.v201807090620,"org.eclipse.wst.sse.core",1606867613373
+started,bundle,org.eclipse.jst.common.frameworks,1.1.701.v201710201209,"org.eclipse.jst.common.frameworks",1606867613492
+started,bundle,com.ibm.etools.j2ee,6.0.801.v20190912_1541,"com.ibm.etools.j2ee",1606867613493
+started,bundle,com.ibm.etools.javaee.ui.editors,1.0.601.v20190912_1541,"com.ibm.etools.javaee.ui.editors",1606867613519
+started,bundle,com.ibm.jee.bean.validation.core,1.0.103.v20190912_1541,"com.ibm.jee.bean.validation.core",1606867613714
+started,bundle,org.jboss.tools.common.model.ui,3.8.4.v20170316-1803,"org.jboss.tools.common.model.ui",1606867613774
+started,bundle,org.jboss.tools.hibernate.xml,5.1.4.v20170306-1242,"org.jboss.tools.hibernate.xml",1606867614086
+started,bundle,org.eclipse.m2e.core.ui,1.9.1.20180912-1601,"org.eclipse.m2e.core.ui",1606867614155
+started,bundle,org.eclipse.jdt.launching,3.11.0.v20180827-1040,"org.eclipse.jdt.launching",1606867614191
+started,bundle,com.ibm.support.trace,1.0.300.v20190912_1541,"com.ibm.support.trace",1606867614409
+started,bundle,com.ibm.etools.aries.rad.ext.core,2.0.0.v20190912_1541,"com.ibm.etools.aries.rad.ext.core",1606867614411
+started,bundle,org.eclipse.jst.ws.jaxws.dom.integration,1.0.301.v201802222200,"org.eclipse.jst.ws.jaxws.dom.integration",1606867620551
+started,bundle,org.eclipse.jst.ws.jaxws.dom.ui,1.0.101.v201802222200,"org.eclipse.jst.ws.jaxws.dom.ui",1606867620557
+started,bundle,org.eclipse.jst.ws.jaxws.utils,1.0.302.v201802222200,"org.eclipse.jst.ws.jaxws.utils",1606867620588
+started,bundle,org.eclipse.ltk.core.refactoring,3.9.100.v20180828-0626,"org.eclipse.ltk.core.refactoring",1606867621300
+started,bundle,org.eclipse.ltk.ui.refactoring,3.9.200.v20180828-0626,"org.eclipse.ltk.ui.refactoring",1606867628790
+started,bundle,org.eclipse.compare.core,3.6.300.v20180827-1041,"org.eclipse.compare.core",1606867628983
+started,bundle,org.eclipse.wst.sse.ui,1.5.0.v201807252207,"org.eclipse.wst.sse.ui",1606867629136
+opened,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1606867629149
+started,bundle,org.hibernate.eclipse.jdt.ui,5.1.4.v20170306-1242,"org.hibernate.eclipse.jdt.ui",1606867629433
+started,bundle,org.hibernate.eclipse,5.1.4.v20170306-1242,"org.hibernate.eclipse",1606867629576
+started,bundle,org.jboss.tools.hibernate.runtime.spi,5.1.4.v20170306-1242,"org.jboss.tools.hibernate.runtime.spi",1606867629594
+started,bundle,org.hibernate.eclipse.console,5.1.4.v20170315-1215,"org.hibernate.eclipse.console",1606867629696
+started,bundle,org.eclipse.core.variables,3.4.200.v20180821-1744,"org.eclipse.core.variables",1606867629745
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1606867630037
+started,bundle,org.eclipse.m2e.editor.xml,1.9.1.20180912-1601,"org.eclipse.m2e.editor.xml",1606867632826
+started,bundle,org.eclipse.wst.common.uriresolver,1.2.300.v201802151734,"org.eclipse.wst.common.uriresolver",1606867633158
+error,log,,,"Internal Error",1606867634010
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867634059
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867635621
+executed,command,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.edit.text.java.open.editor",1606867635726
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867636783
+started,bundle,org.eclipse.m2e.jdt,1.9.1.20180912-1601,"org.eclipse.m2e.jdt",1606867640247
+started,bundle,org.eclipse.m2e.wtp.jpa,1.4.0.20180606-2005,"org.eclipse.m2e.wtp.jpa",1606867640350
+started,bundle,com.ibm.etools.maven.javaee.core,1.1.605.v20190912_1541,"com.ibm.etools.maven.javaee.core",1606867640403
+started,bundle,org.jboss.tools.maven.hibernate,1.8.3.v20161214-0939,"org.jboss.tools.maven.hibernate",1606867640417
+started,bundle,org.eclipse.m2e.wtp.jaxrs,1.4.0.20180606-2005,"org.eclipse.m2e.wtp.jaxrs",1606867640450
+started,bundle,org.eclipse.jpt.common.utility,2.4.1.v201803012210,"org.eclipse.jpt.common.utility",1606867664576
+started,bundle,org.eclipse.jpt.common.core,1.5.1.v201803012210,"org.eclipse.jpt.common.core",1606867664579
+started,bundle,org.eclipse.jpt.common.ui,1.4.201.v201803012210,"org.eclipse.jpt.common.ui",1606867664581
+started,bundle,org.eclipse.jpt.jpa.core,3.5.1.v201803012210,"org.eclipse.jpt.jpa.core",1606867664593
+started,bundle,org.eclipse.jpt.jpa.db,2.2.201.v201803012210,"org.eclipse.jpt.jpa.db",1606867664673
+started,bundle,org.eclipse.datatools.connectivity,1.14.101.201807021805,"org.eclipse.datatools.connectivity",1606867664677
+started,bundle,org.eclipse.jpt.jpa.ui,3.4.201.v201803012210,"org.eclipse.jpt.jpa.ui",1606867664689
+started,bundle,org.eclipse.jst.ws.jaxrs.ui,1.0.800.v201803062123,"org.eclipse.jst.ws.jaxrs.ui",1606867670216
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867691782
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867695595
+started,bundle,com.umlet.plugin,14.3.0,"com.umlet.plugin",1606867710074
+started,bundle,org.jboss.tools.maven.ui,1.8.3.v20161214-0939,"org.jboss.tools.maven.ui",1606867710093
+started,bundle,com.ibm.ws.st.ui,1.0.710.v2019-09-12_1422,"com.ibm.ws.st.ui",1606867716213
+started,bundle,com.ibm.etools.common.migration.extension.ui,1.1.0.v20190912_1541,"com.ibm.etools.common.migration.extension.ui",1606867716528
+started,bundle,org.eclipse.cft.server.standalone.core,1.0.4.v201805291812,"org.eclipse.cft.server.standalone.core",1606867716573
+started,bundle,org.eclipse.cft.server.core,1.2.3.v201805291812,"org.eclipse.cft.server.core",1606867716628
+started,bundle,org.jboss.tools.hibernate.jpt.ui,5.1.4.v20170306-1242,"org.jboss.tools.hibernate.jpt.ui",1606867725239
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867764710
+started,bundle,com.ibm.etools.annotations.core,1.0.409.v20190912_1541,"com.ibm.etools.annotations.core",1606867765233
+started,bundle,com.ibm.propertygroup,6.5.101.v20190912_1541,"com.ibm.propertygroup",1606867765275
+started,bundle,com.ibm.etools.annotations.ui,1.301.102.v20190912_1541,"com.ibm.etools.annotations.ui",1606867765275
+started,bundle,org.jboss.tools.common.ui,3.8.4.v20170316-1803,"org.jboss.tools.common.ui",1606867765290
+started,bundle,com.ibm.ast.ws.jaxws.annotations,2.0.100.v20190912_1541,"com.ibm.ast.ws.jaxws.annotations",1606867765417
+started,bundle,com.ibm.jee.common.annotations.ui,1.0.400.v20190912_1541,"com.ibm.jee.common.annotations.ui",1606867765430
+started,bundle,com.ibm.jee.jpa.was.ui,1.200.300.v20190912_1541,"com.ibm.jee.jpa.was.ui",1606867765476
+started,bundle,com.ibm.ast.ws.jaxws.annotations.v85,2.0.0.v20190912_1541,"com.ibm.ast.ws.jaxws.annotations.v85",1606867765558
+started,bundle,com.ibm.etools.javaee.cdi.ext.ui,1.2.301.v20190912_1541,"com.ibm.etools.javaee.cdi.ext.ui",1606867765565
+started,bundle,com.ibm.jee.ejb.ui,1.0.400.v20190912_1541,"com.ibm.jee.ejb.ui",1606867765575
+started,bundle,org.eclipse.jdt.junit,3.11.100.v20180829-0645,"org.eclipse.jdt.junit",1606867765588
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867767573
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867769493
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867769860
+started,bundle,org.eclipse.pde.ds.annotations,1.1.200.v20180827-1309,"org.eclipse.pde.ds.annotations",1606867770663
+started,bundle,org.eclipse.pde.launching,3.7.200.v20180827-1331,"org.eclipse.pde.launching",1606867770718
+started,bundle,org.eclipse.pde.core,3.12.100.v20180829-1412,"org.eclipse.pde.core",1606867770883
+started,bundle,org.eclipse.pde.ui,3.10.400.v20180829-0709,"org.eclipse.pde.ui",1606867770899
+started,bundle,org.eclipse.jdt.apt.core,3.6.100.v20180905-0315,"org.eclipse.jdt.apt.core",1606867770919
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.2.200.v20180905-0315,"org.eclipse.jdt.apt.pluggable.core",1606867770929
+started,bundle,com.ibm.etools.aries.core,2.2.701.v20190912_1541,"com.ibm.etools.aries.core",1606867780338
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867817822
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867819497
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867820718
+activated,view,com.ibm.etools.project.explorer,7.5.201.v20190912_1541,"com.ibm.etools.ui.navigator.SDExplorer",1606867823606
+started,bundle,org.eclipse.jpt.jaxb.core,1.4.101.v201803012210,"org.eclipse.jpt.jaxb.core",1606867824541
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867830064
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867832427
+started,bundle,org.eclipse.cft.server.ui,1.0.110.v201805291812,"org.eclipse.cft.server.ui",1606867835026
+started,bundle,org.eclipse.cft.server.standalone.ui,1.0.4.v201805291812,"org.eclipse.cft.server.standalone.ui",1606867835026
+started,bundle,org.eclipse.compare,3.7.300.v20180827-1041,"org.eclipse.compare",1606867835086
+started,bundle,org.eclipse.debug.ui,3.13.100.v20180827-0649,"org.eclipse.debug.ui",1606867835144
+started,bundle,org.eclipse.jst.ws.ui,1.0.600.v201802222200,"org.eclipse.jst.ws.ui",1606867835176
+started,bundle,com.ibm.ast.ws.was85.policyset.ui,2.0.100.v20190912_1541,"com.ibm.ast.ws.was85.policyset.ui",1606867835179
+started,bundle,org.eclipse.wst.command.env.ui,1.1.200.v201802222200,"org.eclipse.wst.command.env.ui",1606867835184
+started,bundle,org.eclipse.wst.common.environment,1.0.400.v201802151734,"org.eclipse.wst.common.environment",1606867835190
+started,bundle,org.eclipse.wst.jsdt.chromium.debug.ui,0.6.200.v201701261810,"org.eclipse.wst.jsdt.chromium.debug.ui",1606867835217
+started,bundle,org.eclipse.wst.jsdt.chromium.debug.core,0.5.300.v201705091354,"org.eclipse.wst.jsdt.chromium.debug.core",1606867835640
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867839693
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867847376
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606867848290
+started,bundle,org.eclipse.equinox.p2.garbagecollector,1.1.100.v20180822-1302,"org.eclipse.equinox.p2.garbagecollector",1606867920339
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868071381
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868072599
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868079122
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868079748
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868087396
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868088134
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868088715
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868092601
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868096405
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868104214
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868118695
+opened,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1606868119147
+started,bundle,org.eclipse.jdt.debug,3.12.0.v20180827-1040,"org.eclipse.jdt.debug",1606868119452
+started,bundle,org.eclipse.jdt.debug.ui,3.10.0.v20180827-1040,"org.eclipse.jdt.debug.ui",1606868119513
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1606868119553
+started,bundle,org.eclipse.recommenders.apidocs.rcp,2.5.4.v20180909-1132,"org.eclipse.recommenders.apidocs.rcp",1606868122439
+started,bundle,org.eclipse.recommenders.chain.rcp,2.5.4.v20180909-1132,"org.eclipse.recommenders.chain.rcp",1606868122443
+started,bundle,org.eclipse.recommenders.rcp,2.5.4.v20180909-1132,"org.eclipse.recommenders.rcp",1606868122458
+started,bundle,org.eclipse.jst.ws.jaxws.ui,1.0.500.v201803011744,"org.eclipse.jst.ws.jaxws.ui",1606868123329
+started,bundle,org.eclipse.mylyn.java.ui,3.24.2.v20180905-0014,"org.eclipse.mylyn.java.ui",1606868123358
+started,bundle,org.eclipse.pde.api.tools,1.1.400.v20180827-1618,"org.eclipse.pde.api.tools",1606868123410
+started,bundle,org.eclipse.pde.api.tools.ui,1.1.400.v20180827-1618,"org.eclipse.pde.api.tools.ui",1606868123413
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868124977
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868126423
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.file.save",1606868129414
+started,bundle,org.eclipse.jem.workbench,2.0.400.v201802082131,"org.eclipse.jem.workbench",1606868130888
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1606868131053
+started,bundle,com.ibm.etools.annotations.ejb.ui,1.200.0.v20190912_1541,"com.ibm.etools.annotations.ejb.ui",1606868141255
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1606868141381
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1606868143996
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868153275
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868168018
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1606868169639
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1606868170061
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1606868173801
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1606868174194
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868180330
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868182722
+started,bundle,org.eclipse.search,3.11.300.v20180822-1339,"org.eclipse.search",1606868182857
+started,bundle,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor",1606868182858
+started,bundle,org.eclipse.wst.json.core,1.1.0.v201804162113,"org.eclipse.wst.json.core",1606868182961
+started,bundle,org.eclipse.jst.jee,1.0.902.v201802201739,"org.eclipse.jst.jee",1606868182971
+started,bundle,com.ibm.etools.javaee.cdi.core,1.2.101.v20190912_1541,"com.ibm.etools.javaee.cdi.core",1606868182980
+started,bundle,com.ibm.etools.javaee.core,1.3.403.v20190912_1541,"com.ibm.etools.javaee.core",1606868182988
+started,bundle,com.ibm.ast.ws.xml.editor,1.0.450.v20190912_1541,"com.ibm.ast.ws.xml.editor",1606868183037
+started,bundle,com.ibm.etools.restapi.documentation.swagger.core,1.0.300.v20190912_1541,"com.ibm.etools.restapi.documentation.swagger.core",1606868183057
+started,bundle,org.eclipse.wst.html.core,1.3.0.v201804302243,"org.eclipse.wst.html.core",1606868183105
+started,bundle,org.eclipse.wst.xml.ui,1.2.100.v201807252207,"org.eclipse.wst.xml.ui",1606868183123
+started,bundle,org.hibernate.eclipse.mapper,5.1.4.v20170306-1242,"org.hibernate.eclipse.mapper",1606868183125
+started,bundle,org.jboss.tools.common.text.xml,3.8.4.v20170316-1803,"org.jboss.tools.common.text.xml",1606868183190
+started,bundle,org.eclipse.wst.dtd.ui,1.1.100.v201807090620,"org.eclipse.wst.dtd.ui",1606868183377
+started,bundle,org.eclipse.wst.xsl.ui,1.2.0.v201802171654,"org.eclipse.wst.xsl.ui",1606868183418
+started,bundle,org.eclipse.wst.xsl.core,1.2.0.v201802171654,"org.eclipse.wst.xsl.core",1606868183475
+started,bundle,org.eclipse.wst.xsl.exslt.core,1.1.0.v201802171654,"org.eclipse.wst.xsl.exslt.core",1606868183481
+started,bundle,org.eclipse.wst.xsd.core,1.2.0.v201802171838,"org.eclipse.wst.xsd.core",1606868183585
+started,bundle,org.eclipse.xsd,2.15.0.v20180722-1116,"org.eclipse.xsd",1606868183591
+opened,editor,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor.MavenPomEditor",1606868183684
+started,bundle,org.eclipse.wst.internet.cache,1.0.800.v201702270716,"org.eclipse.wst.internet.cache",1606868183687
+started,bundle,org.eclipse.wst.jsdt.debug.ui,1.0.600.v201605311817,"org.eclipse.wst.jsdt.debug.ui",1606868184346
+activated,editor,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor.MavenPomEditor",1606868184442
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.ui.navigate.openResource",1606868184499
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868207072
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868207753
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.textStart",1606868209062
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868210677
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868219451
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868219902
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868230808
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1606868232865
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.navigate.previousTab",1606868232918
+activated,editor,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor.MavenPomEditor",1606868234950
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.navigate.nextTab",1606868235036
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868241433
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1606868245425
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868245941
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246120
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246272
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246422
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246574
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246759
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868246921
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868247079
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868247223
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868247404
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1606868247587

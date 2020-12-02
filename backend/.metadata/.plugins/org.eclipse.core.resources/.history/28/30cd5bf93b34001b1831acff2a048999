@@ -1,0 +1,5 @@
+package br.com.evandrorenan.web3270scripts.dto;
+
+public @interface Component {
+
+}

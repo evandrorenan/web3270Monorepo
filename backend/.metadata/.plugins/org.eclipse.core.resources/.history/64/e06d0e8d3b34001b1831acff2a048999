@@ -1,0 +1,37 @@
+package br.com.evandrorenan.learning.ats.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
+
+import br.com.evandrorenan.learning.ats.entity.ScriptLine;
+import lombok.Data;
+
+@Component
+@Data
+public class ScriptLineDto {
+
+	private long idScriptLine;
+	private String textScriptLine;
+	private ScriptDto scriptDto;
+	
+	public ScriptLine convertToEntity() {
+		ModelMapper modelMapper = new ModelMapper();
+		return modelMapper.map(this, ScriptLine.class);
+	}
+	
+	public static ScriptLineDto convertScriptLineToDto(ScriptLine scriptLine) {
+		ModelMapper modelMapper = new ModelMapper();
+		return modelMapper.map(scriptLine, ScriptLineDto.class);
+	}	
+	
+	public List<ScriptLineDto> convertScriptLineToDto(List<ScriptLine> scriptLines) {
+		List<ScriptLineDto> scriptLineDtoList = new ArrayList<>();
+		for (ScriptLine scriptLine : scriptLines) {
+			scriptLineDtoList.add(convertScriptLineToDto(scriptLine));
+		}
+		return scriptLineDtoList;
+	}
+}

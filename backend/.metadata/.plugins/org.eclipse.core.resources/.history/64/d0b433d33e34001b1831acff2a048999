@@ -1,0 +1,51 @@
+package br.com.evandrorenan.web3270scripts.bean;
+
+import java.util.Collections;
+import java.util.List;
+
+import br.com.evandrorenan.web3270scripts.exception.ExceptionResponse;
+import lombok.Data;
+
+@Data
+public class ForkCondition {
+	
+	private int maxReps = 0;
+	private int col = 0;
+	private String screenText;
+	
+	public ForkCondition(int maxReps) {
+		this.maxReps = maxReps;			
+	}
+
+	public ForkCondition(int col, String screenText) {
+		this.col = col;
+		this.screenText = screenText;
+	}
+
+	public boolean check(List<String> extractArea, int startCol, ForkCondition forkCondition) throws ExceptionResponse {
+		
+		if (this.maxReps > 0) {
+			return false;
+		}
+		
+		if (this.screenText == null) {
+			return true;
+		}
+		
+		for (int i = 0; i < extractArea.size(); i++) {
+			if (extractArea.get(i).contains(this.screenText)) {
+				extractArea = i == 0 ? Collections.emptyList() : extractArea.subList(0, i);
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private boolean endStringFound(String line) {
+		int len = Math.min(this.col + line.length(), line.length());
+		String text = line.substring(this.col - 1, len);			
+		
+		return (text.equals(this.screenText));
+	}
+}

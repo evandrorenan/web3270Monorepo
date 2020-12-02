@@ -1,0 +1,47 @@
+
+squid:S00112ş"FDefine and throw a dedicated exception instead of using a generic one.(Õ÷ùÿÿÿÿ8å¡ã‡â.H÷RMAJORZ
+CODE_SMELL
+squid:S00112í"FDefine and throw a dedicated exception instead of using a generic one.(ÚöŠ’üÿÿÿÿ8å¡ã‡â.HøRMAJORZ
+CODE_SMELL
+squid:S1450"eRemove the "discardTsoNotification" field and declare it as a local variable in the relevant methods.(»ƒüûÿÿÿÿ8å¡ã‡â.HùRMINORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(ã©8å¡ã‡â.HúRMAJORZ
+CODE_SMELL
+jsquid:S1135I"2Complete the task associated to this TODO comment.(â“¡‡üÿÿÿÿ8å¡ã‡â.HûRINFOZ
+CODE_SMELL
+nsquid:S2696‹"6Make the enclosing method "static" or remove this set.(§­‚Ì8å¡ã‡â.HüRCRITICALZ
+CODE_SMELL
+Šsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¿›Ì8å¡ã‡â.HıRCRITICALZ
+CODE_SMELL
+nsquid:S2696“"6Make the enclosing method "static" or remove this set.(§­‚Ì8å¡ã‡â.HşRCRITICALZ
+CODE_SMELL
+`squid:S1905"&Remove this unnecessary cast to "int".(Ô¢·øÿÿÿÿ8å¡ã‡â.HÿRMINORZ
+CODE_SMELL
+`squid:S1905¢"&Remove this unnecessary cast to "int".(ÚÏÛªüÿÿÿÿ8å¡ã‡â.H€RMINORZ
+CODE_SMELL
+[squid:S1905º"&Remove this unnecessary cast to "int".(ù¨Ü‡8å¡ã‡â.HRMINORZ
+CODE_SMELL
+r
+squid:S106Ê"9Replace this use of System.out or System.err by a logger.(¶ñøÿÿÿÿ8å¡ã‡â.H‚RMAJORZ
+CODE_SMELL
+r
+squid:S106Ì"9Replace this use of System.out or System.err by a logger.(å‡ëÇøÿÿÿÿ8å¡ã‡â.HƒRMAJORZ
+CODE_SMELL
+r
+squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8å¡ã‡â.H„RMAJORZ
+CODE_SMELL
+Psquid:S3626”"Remove this redundant jump.(ûÁİ…8å¡ã‡â.H…RMINORZ
+CODE_SMELL
+Psquid:S3626Æ"Remove this redundant jump.(ûÁİ…8å¡ã‡â.H†RMINORZ
+CODE_SMELL
+fsquid:S1135‚"2Complete the task associated to this TODO comment.(¯²¦ö8å¡ã‡â.H‡RINFOZ
+CODE_SMELL
+fsquid:S1135"2Complete the task associated to this TODO comment.(¯²¦ö8å¡ã‡â.HˆRINFOZ
+CODE_SMELL
+vsquid:UnusedPrivateMethod"3Remove this unused private "executeCopyOld" method.(¿›Ì8å¡ã‡â.H‰RMAJORZ
+CODE_SMELL
+}squid:UnusedPrivateMethodÉ"5Remove this unused private "buildCopyNodeOld" method.(úç©êùÿÿÿÿ8å¡ã‡â.HŠRMAJORZ
+CODE_SMELL
+ssquid:S1068":Remove this unused "discardTsoNotification" private field.(»ƒüûÿÿÿÿ8å¡ã‡â.H‹RMAJORZ
+CODE_SMELL
