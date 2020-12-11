@@ -1,5 +1,14 @@
 package br.com.evandrorenan.web3270scripts.bean;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import br.com.evandrorenan.web3270scripts.exception.ExceptionResponse;
+import br.com.evandrorenan.web3270scripts.util.SessionConstants;
+import br.com.evandrorenan.web3270scripts.util.Web3270ScriptConstants;
+import lombok.Data;
+
 @Data
 public class Node {
 	private static final int COLS_PER_PAGE = 80;
@@ -134,7 +143,7 @@ public class Node {
 
 	private void checkFirstPage(IMySession session) throws ExceptionResponse, InterruptedException {
 		if (!firstPage) {
-			session.sendKeys(MySessionConstants.F8_STR);
+			session.sendKeys(SessionConstants.F8_STR);
 		}
 		firstPage = false;
 	}
@@ -142,7 +151,7 @@ public class Node {
 	private List<String> executeCopyOld(IMySession session) throws ExceptionResponse, InterruptedException {
 		List<String> copyList = new ArrayList<>();
 		if (!firstPage) {
-			session.sendKeys(MySessionConstants.F8_STR);
+			session.sendKeys(SessionConstants.F8_STR);
 		}
 		firstPage = false;
 		
@@ -220,7 +229,7 @@ public class Node {
 		
 		String textFromScreen = session.getString(this.startRow, this.startCol, this.text.length());
 		if (! textFromScreen.equals(this.text)) {
-			returnList.add(AbendToolsSuiteConstants.SKIP_NEXT);
+			returnList.add(Web3270ScriptConstants.SKIP_NEXT);
 		}
 		return returnList;
 	}

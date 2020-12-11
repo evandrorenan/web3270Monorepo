@@ -6,7 +6,7 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import br.com.evandrorenan.web3270scripts.dao.Script;
+import br.com.evandrorenan.web3270scripts.dao.ScriptDao;
 import lombok.Data;
 
 @Component
@@ -17,20 +17,20 @@ public class ScriptDto {
 	private String name;
 	private List<ScriptLineDto> lines;
 
-	public Script convertDtoToEntity() {		
+	public ScriptDao convertDtoToEntity() {		
 		ModelMapper modelMapper = new ModelMapper();
-		return modelMapper.map(this, Script.class);
+		return modelMapper.map(this, ScriptDao.class);
 	}
 
-	public static List<ScriptDto> convertScriptToDto(List<Script> scripts) {
+	public static List<ScriptDto> convertScriptToDto(List<ScriptDao> scripts) {
 		List<ScriptDto> scriptDtoList = new ArrayList<>();
-		for (Script script : scripts) {
+		for (ScriptDao script : scripts) {
 			scriptDtoList.add(convertScriptToDto(script));
 		}
 		return scriptDtoList;
 	}
 
-	public static ScriptDto convertScriptToDto(Script script) {
+	public static ScriptDto convertScriptToDto(ScriptDao script) {
 		ModelMapper modelMapper = new ModelMapper();
 		return modelMapper.map(script, ScriptDto.class);
 	}

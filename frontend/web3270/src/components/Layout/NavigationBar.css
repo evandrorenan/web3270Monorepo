@@ -1,0 +1,45 @@
+.NavigationBar {
+    color: cyan;
+    width: 100%;
+    height: 15px;
+    top: 54px;
+    left: 0;
+    background-image: linear-gradient(to right, black , lightgray);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-bottom: 0;
+    display: flex;
+}
+
+.NavigationBar .button {
+    display: flex;
+    margin-left: 0px;
+    width: 10%;
+    margin-right: 10px;
+    color: cyan;
+    width: fit-content;
+    background-color: transparent;
+    text-align: center;
+    padding: 0 20px 0 20px;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-radius: 5px 5px 0px 0px;
+    border-color: grey;
+    font-family: "Lucida Console", "Courier New", monaco;
+    z-index: 90;
+
+}
+
+.NavigationBar :hover {
+    background-color: rgb(36, 216, 48);
+    color: black;
+    
+}
+
+.NavigationBar button.active {
+    background-color: white;
+    color: black;
+    
+}

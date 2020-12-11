@@ -1,0 +1,143 @@
+.DataDivision {
+    overflow: hidden;
+    margin-left: 10px;
+    border: 1px black solid;
+    width: 100%;
+}
+
+.DataDiv {
+    font-family: "Lucida Console", "Courier New", monaco;
+    text-align: left;
+    width: 98%;
+    font-size: 9pt;
+    display: flex;
+    border-color: grey;
+    border-width: 0.5px;
+    border-bottom-style: solid;
+}
+
+.DataDiv .input {
+    display: flex;
+    margin: auto;
+    margin-left: 3px;
+}
+
+.DataDivContent {
+    display: flex;
+    margin: 0;
+    padding: auto;
+    width: 80%;
+    background-color: #fffff0;
+}
+
+.DataDivItemName {
+    display: flex;
+    margin: auto;
+    margin-left: 3px;
+    width: 44%;
+    cursor: pointer;
+}
+
+.DataDivItemName:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+.DataDivHex {
+    display: flex;
+    margin: 0;
+    padding: auto;
+    width: 80%;
+    background-color: #fffff0;
+}
+
+.SelectedDataItem {
+    background-color: skyblue;
+}
+
+.GridDataContent{
+    border: 1px black soolid;
+    padding: 3px;
+    display: inline-block;
+}
+
+.DataContents{
+    background-color: white;
+    width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.DataContent{
+    display: inline-block;
+    overflow: hidden;
+    border: 0;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.DataName{
+    display: none;
+    width: 20%;
+    white-space: nowrap;
+    border: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.DataEbcdicContent{
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.DataHexContent{
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+}
+
+.checkboxTitle {
+    opacity: 0;
+}
+
+.Pinned {
+    font-weight: bold;
+}
+
+.DataItemsList {
+    position: relative;
+    overflow-y: scroll;
+    width: 98.5%;
+    height: 70%;
+    padding-left: 10px;
+}
+    
+.DataItemDetail {
+    width: 100%;
+    height: 30%;
+}
+
+.ContentDetail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-right: 40px;
+}
+
+.Textarea {
+    width: 95%;
+    padding-right: 12px;
+    margin-top: 10px;
+    position: relative;
+    height: 85%;
+    background-color: #fffff0;
+}

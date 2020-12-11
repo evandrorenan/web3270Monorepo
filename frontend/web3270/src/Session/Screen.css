@@ -1,0 +1,141 @@
+/* .Title {
+    height: 56px;
+    color: cyan;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, black , lightgray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90px;
+    font-family: "Courier New", "Lucida Console", monaco;
+    font-size: 40%;
+} */
+
+.Body {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.Session {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.Screen {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    /* border-radius: 15px; */
+    /* width: 943px; */
+    /* padding: 0px 0px 0px 0px; */
+    background-color: black;
+    /* margin: 10px; */
+    /* border-color: #232423;; */
+    /* border-style: sofsourlid; */
+    /* text-align: left; */
+    /* align-items: center; */
+    /* border-collapse: collapse; */
+}
+
+.Rows {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+
+}
+
+.Row {
+    line-height: 0.00001;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    width: fit-content;
+
+} 
+
+.TraillerTitle {
+    background-image: linear-gradient(to right, grey , lightgray);
+    text-align: left;
+    width: 931px;
+    height: 25px;
+    border-style: none;
+    text-align: left;
+    padding: 10px;
+    margin: 0px;
+    display: none;
+    /* border-collapse: collapse; */
+    color: white;
+    font-family: "Helvetica", "Lucida Sans Typewriter", monaco;
+}
+
+.TraillerDiv {
+    padding: 0px;
+    border-radius: 6px;
+    border-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    width: 949px;
+    margin-top: 10px;
+    font-size: 80%;
+}
+
+.Trailler {
+    margin: 0px 0px 0px 0px;
+    width: 800px;
+    padding: 10px;
+    background-color: white;
+    /* margin: 10px; */
+    border-style: none;
+    text-align: left;
+    align-items: center;
+    /* border-collapse: collapse; */
+    color: black;
+    font-family: "Helvetica", "Lucida Sans Typewriter", monaco;
+
+/* 
+    font-size: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-color: rgb(88, 240, 240);
+    border-collapse: collapse;
+    /* background-color: #232423; */
+    /* width: 1023px; */
+    /* text-align: left;  */
+}
+
+.report {
+    width: 1295px;
+    display: flex;
+    overflow: hidden;
+    /* background-color: red; */
+    height: 530px;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  

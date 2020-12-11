@@ -1,0 +1,12 @@
+.Layout {
+    width: 100%;
+    overflow: hidden;
+}
+
+.Content {
+    padding-left: 15px;
+    border: none;
+    display: flex;
+    width: 98%;
+    overflow: hidden;
+}

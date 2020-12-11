@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.evandrorenan.web3270scripts.dto.ScriptDto;
 import br.com.evandrorenan.web3270scripts.service.ScriptService;
-
+import br.com.evandrorenan.web3270scripts.util.Web3270ScriptsUtils;
 
 @RestController
 public class Web3270ScriptsController {
@@ -25,6 +25,18 @@ public class Web3270ScriptsController {
 		this.scriptService = new ScriptService();
 	}
 	
+	@PostMapping(path = {"/scripts/create"})
+	public EntityModel<ScriptDto> createScript(List<String> strActions){
+		ScriptDto scriptDto = scriptService.createScript(strActions);
+		return hateoasLinkToAllScripts(scriptDto);
+	}
+	
+	@GetMapping(path = {"/abends/scripts/{id}"})
+	public ScriptDto getScriptById(@PathVariable long id){
+		return scriptService.getScriptById(id);
+	}
+		
+
 	@GetMapping(path = {"/abends/scripts/run/{scriptId}"})
 	public String executeScriptFromUrl(@PathVariable long scriptId) throws Exception {
 		ScriptDto scriptDto = this.scriptService.getScriptById(scriptId);
@@ -59,11 +71,6 @@ public class Web3270ScriptsController {
 		return stringBuilder.toString();
 	}
 	
-	@GetMapping(path = {"/abends/scripts/{id}"})
-	public ScriptDto getScriptById(@PathVariable long id){
-		return scriptService.getScriptById(id);
-	}
-		
 	@GetMapping(path = {"/abends/scripts/findByName/{scriptName}"})
 	public ScriptDto getScriptByName(@PathVariable String scriptName){
 		return scriptService.getScriptByName(scriptName);
@@ -74,14 +81,8 @@ public class Web3270ScriptsController {
 		return scriptService.getAllScripts();
 	}
 
-	@PostMapping(path = {"/scripts"})
-	public Resource<ScriptDto> createScript(List<String> strActions){
-		ScriptDto scriptDto = scriptService.createScript(strActions);
-		return hateoasLinkToAllScripts(scriptDto);
-	}
-	
 	@PostMapping(path = {"/abends/scripts/createFromTextHateoas"})
-	public Resource<ScriptDto> createScriptHateoas(@RequestBody String strScript){
+	public EntityModel<ScriptDto> createScriptHateoas(@RequestBody String strScript){
 		ScriptDto scriptDto = scriptService.createScript(strScript);
 		return hateoasLinkToAllScripts(scriptDto);
 	}
@@ -102,12 +103,12 @@ public class Web3270ScriptsController {
 		return script.getStrActions();
 	}
 	
-	private Resource<ScriptDto> hateoasLinkToAllScripts(ScriptDto scriptDto) {
-	    Resource<ScriptDto> resource = new Resource<>(scriptDto);
-	    ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).getScripts());
-	    
-	    resource.add(linkTo.withRel(
-	    		AbendToolsSuiteUtils.getMessage("field.all_scripts", messageSource)));
+	private EntityModel<ScriptDto> hateoasLinkToAllScripts(ScriptDto scriptDto) {
+	    EntityModel<ScriptDto> resource = new EntityModel<>(scriptDto);
+//	    WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).getScripts());
+//
+//	    resource.add(linkTo.withRel(
+//	    		Web3270ScriptsUtils.getMessage("field.all_scripts", messageSource)));
 		
 		return resource;
 	}

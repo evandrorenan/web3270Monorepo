@@ -1,5 +1,9 @@
 package br.com.evandrorenan.web3270scripts.dto._interface;
 
+import java.util.List;
+
+import br.com.evandrorenan.web3270scripts.ScriptConstant;
+
 public class IRunScriptRequest {
 	public long getIdScript;
 	public String getNameScript;

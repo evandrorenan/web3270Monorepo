@@ -1,0 +1,10 @@
+.Field {
+    font-family: Consolas, "Courier New", Courier, monospace;
+    font-size: 100%;
+    color: black;
+    background-color: #e2dddd;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 8.8125px;
+    
+}

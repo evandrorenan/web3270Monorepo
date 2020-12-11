@@ -1,0 +1,17 @@
+.Toolbar {
+    background-image: linear-gradient(to right, black , lightgray);
+    height: 54px;
+    top: 0;
+    left: 0;
+    color: cyan;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: large;
+    padding-left: 15px;
+    border: none;
+    display: flex;
+
+}
+
+

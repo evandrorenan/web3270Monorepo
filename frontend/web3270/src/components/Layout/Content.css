@@ -1,0 +1,15 @@
+.Content {
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    border: none;
+    display: flex;
+}
+
+.HiddenDiv {
+    display: none;
+}
+
+.NotHiddenDiv {
+    visibility: visible;
+}

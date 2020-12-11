@@ -22,7 +22,7 @@ public class ScriptLine {
 	private long idScriptLine;
 	private String text;
 	@ManyToOne
-	private Script script;
+	private ScriptDao script;
 	
 	public long getIdScriptLine() {
 		return idScriptLine;
@@ -36,10 +36,10 @@ public class ScriptLine {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public Script getScript() {
+	public ScriptDao getScript() {
 		return script;
 	}
-	public void setScript(Script script) {
+	public void setScript(ScriptDao script) {
 		this.script = script;
 	}	
 }

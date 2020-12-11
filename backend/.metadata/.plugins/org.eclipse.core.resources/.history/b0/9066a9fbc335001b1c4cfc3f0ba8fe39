@@ -1,0 +1,199 @@
+package br.com.evandrorenan.web3270scripts.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import br.com.evandrorenan.web3270scripts.ScriptConstant;
+import br.com.evandrorenan.web3270scripts.bean.ACTION;
+import br.com.evandrorenan.web3270scripts.bean.Node;
+import br.com.evandrorenan.web3270scripts.dao.Script;
+import br.com.evandrorenan.web3270scripts.dao.ScriptLine;
+import br.com.evandrorenan.web3270scripts.dto.ScriptDto;
+import br.com.evandrorenan.web3270scripts.dto.ScriptLineDto;
+import br.com.evandrorenan.web3270scripts.exception.ExceptionResponse;
+import br.com.evandrorenan.web3270scripts.exception.ScriptNotFoundException;
+import br.com.evandrorenan.web3270scripts.repository.ScriptLineRepository;
+import br.com.evandrorenan.web3270scripts.repository.ScriptRepository;
+import br.com.evandrorenan.web3270scripts.util.Web3270ScriptConstants;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Component
+@Data
+@NoArgsConstructor
+public class ScriptService {
+
+	private List<Node> scriptActions = new ArrayList<>();
+	private Deque<Integer> loopsStack = new LinkedList<Integer>(); 
+	private List<Integer> repsLoopTimes = new ArrayList<>();
+	private List<String> copiedLines = new ArrayList<>();
+	private List<String> strActions = new ArrayList<>();
+	
+	private ScriptDto scriptDto;
+	private ScriptRepository scriptRepo;
+	private Script script;
+	private ScriptLine scriptLine;
+	private ScriptLineRepository scriptLineRepo;
+	private ScriptLineDto scriptLineDto;
+ 	
+	public ScriptDto createScript(String strScript) {
+		strScript = strScript.replaceAll("\r", "\n");
+		strScript = strScript.replaceAll("\t", " ");
+		strScript = strScript.trim();
+
+		String[] scriptLines = strScript.split("\n");
+		List<String> localStrActions = new ArrayList<>();
+
+		for (String line : scriptLines) {
+			if (! line.isEmpty()) {
+				localStrActions.add(line);
+			}
+		}	
+
+		return this.createScript(localStrActions);
+	}
+
+	public ScriptDto createScript(ScriptDto scriptDto) {
+		List<String> strActions = new ArrayList<>();
+		for (ScriptLineDto scriptLineDto : scriptDto.getLines()) {
+			strActions.add(scriptLineDto.getTextScriptLine());
+		}
+		
+		return this.createScript(strActions, scriptDto.getName());
+	}
+	
+	public ScriptDto createScript(List<String> strActions) {
+		return createScript(strActions, null);
+	}
+	
+	public ScriptDto createScript(List<String> strActions, String nameScript) {
+		this.strActions = discardRemarkedLines(strActions);
+		this.scriptDto.setLines(new ArrayList<ScriptLineDto>());
+		if (nameScript != null) {
+			this.scriptDto.setName(nameScript);
+		}
+		
+		this.script = this.scriptDto.convertDtoToEntity();
+
+		for (String strAction : this.strActions) {
+			this.scriptLineDto = new ScriptLineDto();
+			this.scriptLineDto.setTextScriptLine(strAction);
+			this.scriptLine = this.scriptLineDto.convertToEntity();
+			this.scriptLine.setScript(script);
+			
+			this.script.getScriptLines().add(this.scriptLine);
+		}
+		this.script = scriptRepo.save(this.script);
+		return ScriptDto.convertScriptToDto(this.script);
+	}
+
+	public void buildNodes(List<String> strActions, List<ScriptConstant> strConstants) throws Exception {
+		Node node = new Node(replaceConstants(strActions.get(0), strConstants));
+		this.scriptActions.add(node);
+		Node previowsNode = null;
+
+		for (int i = 1; i < strActions.size(); i++) {
+			previowsNode = node;
+			node = new Node(replaceConstants(strActions.get(i), strConstants));
+			checkEndLoop(node, previowsNode); 
+			setNextNodes(node, i);
+		}
+		printNodesOnConsole();
+	}	
+
+	private String replaceConstants(String strAction, List<ScriptConstant> strConstants) {
+		for (ScriptConstant strConstant : strConstants) {
+			strAction = strAction.replaceAll(strConstant.getConstantName(), strConstant.getConstantValue());
+		}
+		return strAction;
+	}
+
+	public List<ScriptDto> getAllScripts(){
+		return ScriptDto.convertScriptToDto(scriptRepo.findAll());
+	}
+
+	public ScriptDto getScriptByName(String scriptName) {
+		for (ScriptDto scriptDto : this.getAllScripts()) {
+			if (scriptDto.getName() != null 
+			&&  scriptDto.getName().equals(scriptName)) {
+				return scriptDto;
+			}
+		}
+		return null;
+	}
+
+	public ScriptDto getScriptById(long id) {
+		Script localScript = scriptRepo.findById(id).orElseThrow(() -> new ScriptNotFoundException("id:" + id));
+		return ScriptDto.convertScriptToDto(localScript);
+	}
+
+	public List<String> run(MySession session) throws InterruptedException, ExceptionResponse {
+		Integer indexNextNode = 0;
+		while (indexNextNode != null) {
+			List<String> page = scriptActions.get(indexNextNode).execute(session.getSession());
+			if (!page.isEmpty()
+			&&  page.get(0).equals(Web3270ScriptConstants.SKIP_NEXT)) {
+				indexNextNode = scriptActions.get(indexNextNode).getIndexNextNode(Collections.emptyList());
+				indexNextNode = scriptActions.get(indexNextNode).getIndexNextNode(Collections.emptyList());
+			} else {
+				this.copiedLines.addAll(page);
+				indexNextNode = scriptActions.get(indexNextNode).getIndexNextNode(this.copiedLines);
+			}
+		}
+		return copiedLines;
+	}
+
+	private void checkEndLoop(Node node, Node previowsNode) {
+		if (node.getNodeType().equals(ACTION.END_LOOP)) {
+			previowsNode.setIndexNextNode(loopsStack.pop());
+		}
+	}
+
+	private List<String> discardRemarkedLines(List<String> strActions) {
+		List <String> strActionsClean = new ArrayList<>();
+		for (String strAction : strActions) {
+			if (! strAction.startsWith("#"))
+				strActionsClean.add(strAction);
+		}
+		return strActionsClean;
+	}
+
+	private void printNodesOnConsole() {
+		for (int i = 0; i < scriptActions.size(); i++) {
+			System.out.println(String.format("Node %s, action %s, next %s, fork %s, %s ",
+					String.valueOf(i),
+					(scriptActions.get(i).getNodeType().getActionName() + "                ").substring(0,15),
+					this.scriptActions.get(i).getIndexNextNode(),
+					this.scriptActions.get(i).getIndexForkNode(),
+					this.scriptActions.get(i).getForkCondition() == null ? "n/a" : scriptActions.get(i).getForkCondition().toString()
+					));
+		}
+	}
+
+	private void setNextNodes(Node node, int i) {
+		if (!node.getNodeType().equals(ACTION.END_LOOP)) {
+			this.scriptActions.get(scriptActions.size() - 1).setIndexNextNode(i);
+			this.scriptActions.add(node);
+
+			if (node.getNodeType().equals(ACTION.LOOP_TIMES)
+			||  node.getNodeType().equals(ACTION.LOOP_UNTIL)) {
+				this.loopsStack.push(i);				
+			}
+		}
+	}
+
+	public void initalize() {
+		this.scriptActions = new ArrayList<>();
+		this.loopsStack = new LinkedList<Integer>(); 
+		this.repsLoopTimes = new ArrayList<>();
+		this.copiedLines = new ArrayList<>();
+		this.strActions = new ArrayList<>();
+		
+	}
+}
