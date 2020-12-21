@@ -5,6 +5,7 @@ import Screen from '../../Session/Screen';
 import ProgramReport from '../../Session/ProgramReport';
 import DataDivisionMap from '../../Session/DataDivisionMap';
 import RequestReport from '../Layout/Forms/RequestReportForm/RequestReportForm';
+import ScreenWebSocket from '../../store/ScreenWebSocket';
 
 const Content = (props) => {
     return (
@@ -13,7 +14,8 @@ const Content = (props) => {
                 <RequestReport />
             </span>
             <span class={props.activeTab() === "SessionItem" ? "NotHiddenDiv" : "HiddenDiv"}>
-                <Screen onkeyup={onkeyup} onkeydown={onkeydown}  />
+                <ScreenWebSocket />
+                <Screen />
             </span>
             <span class={props.activeTab() === "Report" ? "NotHiddenDiv" : "HiddenDiv"}>
                 <div class="report">

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="374"/>
-		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item value="374" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+		<item value="true" key="actionSetFilter"/>
+		<item value="true" key="uncategorizedFilter"/>
+		<item value="true" key="internalFilter"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item key="dialogHeight" value="-1"/>
-		<item key="dialogWidth" value="-1"/>
+		<item value="-1" key="dialogHeight"/>
+		<item value="-1" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -16,9 +21,14 @@
 		<list key="textArray">
 		</list>
 	</section>
-	<section name="org.eclipse.ui.preferences.keysPreferencePage">
-		<item key="actionSetFilter" value="true"/>
-		<item key="internalFilter" value="true"/>
-		<item key="uncategorizedFilter" value="true"/>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jpt.jaxb"/>
+			<item value="com.ibm.etools.aries"/>
+			<item value="br.com.bradesco.pdc.workbench.core.wizardcategory"/>
+			<item value="org.eclipse.jst.ws.ui.new"/>
+		</list>
 	</section>
 </section>

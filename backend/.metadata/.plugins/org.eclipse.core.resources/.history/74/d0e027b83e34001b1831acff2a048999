@@ -1,5 +1,0 @@
-package br.com.evandrorenan.web3270scripts.exception;
-
-public class ExceptionResponse {
-
-}

@@ -1,0 +1,81 @@
+package websocket;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.stomp.StompSession;
+import org.springframework.web.socket.client.standard.StandardWebSocketClient;
+import org.springframework.web.socket.messaging.WebSocketStompClient;
+import org.springframework.web.socket.sockjs.client.SockJsClient;
+import org.springframework.web.socket.sockjs.client.Transport;
+import org.springframework.web.socket.sockjs.client.WebSocketTransport;
+
+import br.com.evandrorenan.web3270.dto.ScreenDto;
+import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
+
+@SpringBootTest
+public class WebSocketScreenTest {
+
+	private WebSocketStompClient webSocketStompClient;
+	
+	@BeforeEach
+	public void setup() {
+		
+		List<Transport> transports = new ArrayList<>();
+		WebSocketTransport webSocketTransport = new WebSocketTransport(new StandardWebSocketClient());
+		transports.add(webSocketTransport);
+		
+		this.webSocketStompClient = new WebSocketStompClient(
+				new SockJsClient(transports)); 
+	}
+	
+	@Test
+	public void returnOk_whenGetScreenWebSocket() {
+
+		BlockingQueue<String> blockingQueue = new ArrayBlockingQueue(1);
+		
+		webSocketStompClient.setMessageConverter(new MappingJackson2MessageConverter());
+		
+		StompSession session = webSocketStompClient
+				
+				
+//			    connect(getWsPath(), new StompSessionHandlerAdapter() {
+//			    })
+//			    .get(1, SECONDS);
+
+			  session.subscribe("/app/chat", new StompFrameHandler() {
+
+			    @Override
+			    public Type getPayloadType(StompHeaders headers) {
+			      return Message.class;
+			    }
+
+			    @Override
+			    public void handleFrame(StompHeaders headers, Object payload) {
+			      latch.countDown();
+			    }
+			  });
+
+			  if (!latch.await(1, TimeUnit.SECONDS)) {
+			    fail("Message not received");
+			  }
+			}		
+		
+
+	}
+	
+	@MessageMapping("/screen")
+	@SendTo("/stomp")
+    public ScreenDto getScreen(String payload) throws ExceptionWeb3270 {
+		System.out.println("getScreen:" + payload);
+		return new ScreenDto();		
+    }
+
+	
+}

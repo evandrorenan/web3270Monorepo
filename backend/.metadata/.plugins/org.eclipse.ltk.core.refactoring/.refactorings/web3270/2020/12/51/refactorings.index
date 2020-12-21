@@ -1,0 +1,4 @@
+1608078794412	Extract local variable 'webSocketTransport'
+1608118921386	Extract method 'getInstanceOfStompFrameHandler'
+1608350151116	Extract local variable 'wsPath'
+1608350176113	Extract local variable 'stompSessionHandlerAdapter'

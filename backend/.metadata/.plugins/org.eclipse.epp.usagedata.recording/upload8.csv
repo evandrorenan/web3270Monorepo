@@ -1,0 +1,226 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743596102
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743610149
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.file.save",1607743614308
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607743619592
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607743619795
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607743623733
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743636984
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743636984
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743637160
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743637161
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743637519
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607743637519
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.lineEnd",1607743641037
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.file.save",1607743682193
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743686615
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607743696330
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743697832
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.newWizard",1607743697873
+started,bundle,org.eclipse.mylyn.context.ui,3.24.2.v20180905-0014,"org.eclipse.mylyn.context.ui",1607743698373
+opened,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607743698521
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607743698547
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743703856
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743708206
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordNext",1607743711001
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743711567
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743714977
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607743719047
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743724662
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743728116
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1607743734654
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743738306
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743740291
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1607743743146
+started,bundle,org.eclipse.equinox.p2.discovery.compatibility,1.1.100.v20180822-1302,"org.eclipse.equinox.p2.discovery.compatibility",1607743754277
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743754696
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743754788
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743755021
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743780069
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743781544
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743783851
+activated,editor,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor.MavenPomEditor",1607743783959
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.ui.navigate.openResource",1607743784071
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743793903
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743800558
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743801557
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743836918
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.ClassFileEditor",1607743840446
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.navigate.nextTab",1607743840506
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607743840665
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.navigate.nextTab",1607743840706
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743845527
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743860831
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607743862777
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743873750
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743875301
+activated,view,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.PackageExplorer",1607743887788
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743898756
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743922837
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743923901
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743933099
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607743935204
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744014332
+activated,editor,org.eclipse.m2e.editor,1.9.1.20180912-1601,"org.eclipse.m2e.editor.MavenPomEditor",1607744016910
+started,bundle,org.eclipse.m2e.discovery,1.9.1.20180912-1601,"org.eclipse.m2e.discovery",1607744024904
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744030073
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744045655
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744045819
+error,log,,,"Invalid input url:platform:/plugin/org.springframework.tooling.ls.eclipse.gotosymbol/icons/boot-icon.png",1607744067812
+error,log,,,"Unable to resolve plug-in ""org.springframework.tooling.ls.eclipse.gotosymbol"".",1607744067818
+error,log,,,"Invalid input url:platform:/plugin/org.springframework.tooling.ls.eclipse.gotosymbol/icons/boot-icon.png",1607744067823
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.window.maximizePart",1607744067881
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744070237
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744081490
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744082498
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.findReplace",1607744082536
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744082620
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744084500
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744088117
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744092563
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744094620
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.lineStart",1607744096109
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744097834
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744098650
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744099119
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744101791
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744103071
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744109172
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744109403
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.file.save",1607744112201
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.file.saveAll",1607744114340
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.window.maximizePart",1607744115229
+activated,view,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.PackageExplorer",1607744119315
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744123699
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744124476
+executed,command,org.eclipse.m2e.core.ui,1.9.1.20180912-1601,"org.eclipse.m2e.core.ui.command.updateProject",1607744124496
+started,bundle,org.eclipse.wst.jsdt.js.common,1.0.200.v201610211901,"org.eclipse.wst.jsdt.js.common",1607744127794
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744128919
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1607744132154
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744137078
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744140488
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744144090
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.text.contentAssist.proposals",1607744144589
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744148338
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744149005
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744150195
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744155762
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744167395
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744169389
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744170065
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744173298
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744179602
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744189223
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744207339
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744208804
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744209098
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744214534
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744216322
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1607744218957
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744229436
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744229594
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744229754
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744230247
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744230733
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744231045
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordNext",1607744231454
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744235552
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.copy",1607744237580
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744246346
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744246346
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744247241
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744247241
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744247675
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744247675
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744250475
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744250475
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.copy",1607744253733
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744255510
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744260010
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744283456
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744283607
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744289979
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744321053
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744322801
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744352088
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744357505
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744358291
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744363669
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744404983
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordPrevious",1607744411177
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordNext",1607744411665
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744422268
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744440952
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744452850
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744457265
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744494833
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744498512
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744501820
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744501983
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744503777
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744522060
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744523612
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744545320
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744563911
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744577553
+started,bundle,com.ibm.propertygroup.ui,6.3.250.v20190912_1541,"com.ibm.propertygroup.ui",1607744579628
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744580739
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744580740
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581075
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581075
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581538
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581538
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581905
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744581905
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744582110
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744582111
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744582277
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744582277
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordNext",1607744584294
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordNext",1607744584295
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594151
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594152
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594296
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594297
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594457
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594457
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594802
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744594802
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744595004
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744595004
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744597393
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744597513
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744597658
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744597808
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744597938
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744598070
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744598198
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744598352
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineEnd",1607744599946
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744631443
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.select.wordPrevious",1607744631444
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744646337
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744649014
+opened,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744649189
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744649218
+executed,command,org.eclipse.ui.ide,3.14.100.v20180828-1350,"org.eclipse.ui.navigate.openResource",1607744649266
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.textEnd",1607744650886
+deactivated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744653210
+executed,command,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.edit.text.java.show.outline",1607744653302
+activated,workbench,org.eclipse.ui.workbench,3.112.0.v20180906-1121,"",1607744659162
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744661401
+executed,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744661556
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.copy",1607744664113
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744665327
+activated,editor,org.eclipse.jdt.ui,3.15.0.v20180829-2215,"org.eclipse.jdt.ui.CompilationUnitEditor",1607744667058
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.lineStart",1607744671516
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.paste",1607744671995
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744676859
+executed,command,org.eclipse.ui,3.110.0.v20180828-1350,"org.eclipse.ui.edit.delete",1607744678418
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744682731
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744682731
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744682909
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744682909
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744683083
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744683083
+no handler,command,org.eclipse.ui.workbench.texteditor,3.11.100.v20180824-1030,"org.eclipse.ui.edit.text.goto.wordNext",1607744683273

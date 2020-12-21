@@ -1,0 +1,9 @@
+
+q
+squid:S106'"9Replace this use of System.out or System.err by a logger.(Êõ©şÿÿÿÿ8öÂ½Çæ.Hş+RMAJORZ
+CODE_SMELL
+j
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ô¹£öÿÿÿÿÿHö+RMAJORZ
+CODE_SMELL
+ã%squid:RedundantThrowsDeclarationCheck4"Remove the declaration of thrown exception 'br.com.evandrorenan.web3270.exception.ExceptionWeb3270', as it cannot be thrown from method's body.(ğå•–ûÿÿÿÿ8öÂ½Çæ.Hı+RMINORZ
+CODE_SMELL

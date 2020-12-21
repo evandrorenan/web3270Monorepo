@@ -1831,3 +1831,1623 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-12-03 22:48:13,892 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-12-03 22:48:13,893 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2020-12-03 22:48:13,893 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270-scripts\src\test\resources
+2020-12-11 22:36:10,521 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-12-11 22:39:01,305 [Worker-17: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:39:01,619 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:39:01,966 [Worker-17: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:39:01,984 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:39:04,335 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:39:04,340 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:39:04,354 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:39:04,377 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:39:04,377 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:39:06,698 [Worker-5: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:39:07,004 [Worker-5: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:39:09,705 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:39:10,069 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:39:10,075 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:39:10,087 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:39:10,102 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:39:10,102 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:40:07,666 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2315)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2142)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4860)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3607)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:40:08,181 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.ui.internal.ErrorEditorPart.setFocus(ErrorEditorPart.java:84)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1382)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1547)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1499)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1469)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1593)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$3(AbstractTextEditor.java:4277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3987)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3615)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:45:20,641 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: target/web3270/WEB-INF/classes/br/com/evandrorenan/learning/web3270/controller [in web3270] is not on its project's build path
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:655)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:674)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3205)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3102)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3100)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3070)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3061)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:569)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:524)
+	at org.eclipse.ui.internal.ide.handlers.OpenResourceHandler.execute(OpenResourceHandler.java:129)
+	at org.eclipse.ui.internal.ide.handlers.OpenResourceHandler.run(OpenResourceHandler.java:182)
+	at org.eclipse.ui.internal.handlers.ActionDelegateHandlerProxy.execute(ActionDelegateHandlerProxy.java:288)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1254)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1513)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4881)
+	at org.eclipse.swt.widgets.Tree.WM_CHAR(Tree.java:5977)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4759)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5972)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:46:10,865 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:46:10,865 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:46:10,865 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:46:10,881 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:46:10,881 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:47:31,091 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: target/web3270/WEB-INF/classes/br/com/evandrorenan/learning/web3270/controller [in web3270] is not on its project's build path
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:655)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Canvas.WM_SETFOCUS(Canvas.java:437)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1074)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.setFocus(AbstractTextEditor.java:6186)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:149)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.setFocus(JavaEditor.java:2343)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClassFileEditor.setFocus(ClassFileEditor.java:973)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:659)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:623)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:786)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1259)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3197)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3102)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3100)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3070)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3061)
+	at org.eclipse.ui.internal.NavigationHistoryEntry.restoreLocation(NavigationHistoryEntry.java:68)
+	at org.eclipse.ui.internal.NavigationHistory.gotoEntry(NavigationHistory.java:436)
+	at org.eclipse.ui.internal.NavigationHistory.shiftEntry(NavigationHistory.java:495)
+	at org.eclipse.ui.internal.NavigationHistory.backward(NavigationHistory.java:479)
+	at org.eclipse.ui.internal.NavigationHistoryAction.run(NavigationHistoryAction.java:224)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1254)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmSysKeyDown(Widget.java:2393)
+	at org.eclipse.swt.widgets.Control.WM_SYSKEYDOWN(Control.java:5583)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4840)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:47:31,850 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.ui.internal.ErrorEditorPart.setFocus(ErrorEditorPart.java:84)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at jdk.internal.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:659)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:623)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:786)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1259)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3197)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3102)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3100)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3070)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3061)
+	at org.eclipse.ui.internal.NavigationHistoryEntry.restoreLocation(NavigationHistoryEntry.java:68)
+	at org.eclipse.ui.internal.NavigationHistory.gotoEntry(NavigationHistory.java:436)
+	at org.eclipse.ui.internal.NavigationHistory.shiftEntry(NavigationHistory.java:495)
+	at org.eclipse.ui.internal.NavigationHistory.backward(NavigationHistory.java:479)
+	at org.eclipse.ui.internal.NavigationHistoryAction.run(NavigationHistoryAction.java:224)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1254)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmSysKeyDown(Widget.java:2393)
+	at org.eclipse.swt.widgets.Control.WM_SYSKEYDOWN(Control.java:5583)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4840)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:47:32,446 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.ui.internal.ErrorEditorPart.setFocus(ErrorEditorPart.java:84)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at jdk.internal.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:659)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:623)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:786)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1259)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3197)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3102)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3100)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3070)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3061)
+	at org.eclipse.ui.internal.NavigationHistoryEntry.restoreLocation(NavigationHistoryEntry.java:68)
+	at org.eclipse.ui.internal.NavigationHistory.gotoEntry(NavigationHistory.java:436)
+	at org.eclipse.ui.internal.NavigationHistory.shiftEntry(NavigationHistory.java:495)
+	at org.eclipse.ui.internal.NavigationHistory.backward(NavigationHistory.java:479)
+	at org.eclipse.ui.internal.NavigationHistoryAction.run(NavigationHistoryAction.java:224)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1254)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Text.sendKeyEvent(Text.java:1815)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmSysKeyDown(Widget.java:2393)
+	at org.eclipse.swt.widgets.Control.WM_SYSKEYDOWN(Control.java:5583)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4840)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4921)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:47:34,162 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: target/web3270/WEB-INF/classes/br/com/evandrorenan/learning/web3270/controller [in web3270] is not on its project's build path
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:256)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:530)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:655)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1074)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClassFileEditor.setFocus(ClassFileEditor.java:976)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at jdk.internal.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3237)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1879)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:330)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3612)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:47:35,551 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.ui.internal.ErrorEditorPart.setFocus(ErrorEditorPart.java:84)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at jdk.internal.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1378)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1547)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1499)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1469)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1593)
+	at org.eclipse.ui.internal.CloseEditorHandler.execute(CloseEditorHandler.java:50)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1254)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1513)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4759)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:47:37,950 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
+org.eclipse.jdt.core.JavaModelException: web3270-scripts does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2525)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2382)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2441)
+	at org.eclipse.jdt.internal.core.JavaProject.getClasspathEntryFor(JavaProject.java:1844)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceAttachmentPath(PackageFragmentRoot.java:672)
+	at org.eclipse.m2e.jdt.ui.internal.DownloadSourcesActionDelegate.setActiveEditor(DownloadSourcesActionDelegate.java:53)
+	at org.eclipse.ui.internal.EditorPluginAction.editorChanged(EditorPluginAction.java:69)
+	at org.eclipse.ui.internal.EditorActionBuilder$EditorContribution.editorChanged(EditorActionBuilder.java:77)
+	at org.eclipse.ui.internal.EditorActionBuilder$ExternalContributor.setActiveEditor(EditorActionBuilder.java:123)
+	at org.eclipse.ui.internal.EditorActionBars.partChanged(EditorActionBars.java:338)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActivations(WorkbenchPage.java:329)
+	at org.eclipse.ui.internal.WorkbenchPage.access$2(WorkbenchPage.java:310)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:218)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:249)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:246)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:770)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1469)
+	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1432)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2974)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5440)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4831)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4913)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1111)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3459)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1072)
+	at org.eclipse.ui.internal.ErrorEditorPart.setFocus(ErrorEditorPart.java:84)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:222)
+	at jdk.internal.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:325)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:247)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:147)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:792)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$1.setFocus(ContributedPartRenderer.java:106)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:379)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2676)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1066)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3970)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3229)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:83)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4725)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1378)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1332)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1182)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1168)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1042)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1958)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3612)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+2020-12-11 22:50:44,203 [Worker-26: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:50:44,999 [Worker-26: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:51:52,077 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:51:52,077 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:51:52,078 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:51:52,080 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:51:52,080 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:51:52,396 [Worker-10: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:51:53,061 [Worker-10: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:53:08,844 [Worker-13: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:53:09,566 [Worker-13: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:53:24,199 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-11 22:53:25,010 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:53:25,256 [Worker-24: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:53:26,251 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-11 22:53:26,252 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 22:53:26,253 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 22:53:26,253 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-11 22:53:30,756 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 6 sec
+2020-12-11 22:53:32,351 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:53:32,768 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:53:32,769 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:53:32,783 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:53:32,798 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:53:32,799 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:53:59,021 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:53:59,023 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:53:59,026 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:53:59,029 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:53:59,030 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:54:21,709 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:54:21,711 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:54:21,714 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:54:21,717 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:54:21,718 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:55:13,489 [Worker-24: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:55:13,730 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:55:14,661 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:14,664 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:14,664 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:14,667 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:14,668 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:55:15,643 [Worker-24: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:55:16,654 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/webjars-locator-core/0.45/webjars-locator-core-0.45-sources.jar
+2020-12-11 22:55:17,135 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:17,136 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:55:17,149 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:55:17,165 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:17,165 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:55:17,506 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/webjars-locator-core/0.45/webjars-locator-core-0.45-sources.jar
+2020-12-11 22:55:17,647 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/webjars-locator-core/0.45/webjars-locator-core-0.45-sources.jar
+2020-12-11 22:55:17,683 [Worker-24: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:webjars-locator-core:0.45
+2020-12-11 22:55:18,248 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69-sources.jar
+2020-12-11 22:55:18,661 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69-sources.jar
+2020-12-11 22:55:19,650 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69-sources.jar
+2020-12-11 22:55:19,707 [Worker-24: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.github.classgraph:classgraph:4.8.69
+2020-12-11 22:55:20,220 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/sockjs-client/1.0.2/sockjs-client-1.0.2-sources.jar
+2020-12-11 22:55:20,594 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/sockjs-client/1.0.2/sockjs-client-1.0.2-sources.jar
+2020-12-11 22:55:20,596 [Worker-24: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.webjars:sockjs-client:1.0.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.webjars:sockjs-client:jar:sources:1.0.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:804)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2020-12-11 22:55:21,143 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/stomp-websocket/2.3.3/stomp-websocket-2.3.3-sources.jar
+2020-12-11 22:55:21,514 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/stomp-websocket/2.3.3/stomp-websocket-2.3.3-sources.jar
+2020-12-11 22:55:21,517 [Worker-24: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.webjars:stomp-websocket:2.3.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.webjars:stomp-websocket:jar:sources:2.3.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:804)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:772)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:749)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2020-12-11 22:55:22,063 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7-sources.jar
+2020-12-11 22:55:22,440 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7-sources.jar
+2020-12-11 22:55:22,568 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7-sources.jar
+2020-12-11 22:55:22,640 [Worker-24: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:bootstrap:3.3.7
+2020-12-11 22:55:23,171 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/jquery/3.1.1-1/jquery-3.1.1-1-sources.jar
+2020-12-11 22:55:23,550 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/jquery/3.1.1-1/jquery-3.1.1-1-sources.jar
+2020-12-11 22:55:23,681 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/jquery/3.1.1-1/jquery-3.1.1-1-sources.jar
+2020-12-11 22:55:23,750 [Worker-24: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:jquery:3.1.1-1
+2020-12-11 22:55:24,577 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:24,578 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:24,578 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:24,580 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:24,580 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:55:25,697 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/sockjs-client/1.0.2/sockjs-client-1.0.2-javadoc.jar
+2020-12-11 22:55:26,082 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/sockjs-client/1.0.2/sockjs-client-1.0.2-javadoc.jar
+2020-12-11 22:55:26,450 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/sockjs-client/1.0.2/sockjs-client-1.0.2-javadoc.jar
+2020-12-11 22:55:26,478 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.webjars:sockjs-client:1.0.2
+2020-12-11 22:55:27,007 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/stomp-websocket/2.3.3/stomp-websocket-2.3.3-javadoc.jar
+2020-12-11 22:55:27,380 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/stomp-websocket/2.3.3/stomp-websocket-2.3.3-javadoc.jar
+2020-12-11 22:55:27,515 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/stomp-websocket/2.3.3/stomp-websocket-2.3.3-javadoc.jar
+2020-12-11 22:55:27,541 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.webjars:stomp-websocket:2.3.3
+2020-12-11 22:55:28,485 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:28,486 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:28,486 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:55:28,488 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:55:28,488 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:57:29,511 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:57:29,512 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:57:29,513 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-11 22:57:29,515 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:57:29,516 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 22:57:29,851 [Worker-16: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:57:30,569 [Worker-16: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:58:12,623 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-11 22:58:13,399 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 22:58:13,626 [Worker-25: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:58:14,539 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-11 22:58:14,540 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 22:58:14,540 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 22:58:14,540 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-11 22:58:15,667 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
+2020-12-11 22:58:17,323 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-11 22:58:17,477 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:58:17,478 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 22:58:17,488 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 22:58:17,499 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 22:58:17,500 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 23:03:04,988 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 23:03:04,990 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-11 23:03:04,993 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-11 23:03:04,995 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-11 23:03:04,996 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-11 23:04:41,841 [Worker-4: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-11 23:04:50,510 [Worker-3: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 23:07:18,429 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-11 23:07:19,435 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 23:07:20,626 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-11 23:07:20,627 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 23:07:20,628 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 23:07:20,629 [Worker-3: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-11 23:07:25,794 [Worker-3: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 7 sec
+2020-12-11 23:42:11,919 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE
+2020-12-11 23:42:11,930 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter:2.3.3.RELEASE
+2020-12-11 23:42:11,938 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot:2.3.3.RELEASE
+2020-12-11 23:42:11,945 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-autoconfigure:2.3.3.RELEASE
+2020-12-11 23:42:11,952 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-logging:2.3.3.RELEASE
+2020-12-11 23:42:11,959 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for ch.qos.logback:logback-classic:1.2.3
+2020-12-11 23:42:11,966 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for ch.qos.logback:logback-core:1.2.3
+2020-12-11 23:42:11,973 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-to-slf4j:2.13.3
+2020-12-11 23:42:11,980 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-api:2.13.3
+2020-12-11 23:42:11,987 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:jul-to-slf4j:1.7.30
+2020-12-11 23:42:11,994 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.yaml:snakeyaml:1.26
+2020-12-11 23:42:12,002 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-json:2.3.3.RELEASE
+2020-12-11 23:42:12,009 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-databind:2.11.2
+2020-12-11 23:42:12,015 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.11.2
+2020-12-11 23:42:12,022 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.2
+2020-12-11 23:42:12,029 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.2
+2020-12-11 23:42:12,035 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-web:5.2.8.RELEASE
+2020-12-11 23:42:12,041 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:5.2.8.RELEASE
+2020-12-11 23:42:12,047 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-webmvc:5.2.8.RELEASE
+2020-12-11 23:42:12,053 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:5.2.8.RELEASE
+2020-12-11 23:42:12,059 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:5.2.8.RELEASE
+2020-12-11 23:42:12,064 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:5.2.8.RELEASE
+2020-12-11 23:42:12,070 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-tomcat:2.3.3.RELEASE
+2020-12-11 23:42:12,076 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for jakarta.annotation:jakarta.annotation-api:1.3.5
+2020-12-11 23:42:12,082 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tomcat.embed:tomcat-embed-core:9.0.37
+2020-12-11 23:42:12,088 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.glassfish:jakarta.el:3.0.3
+2020-12-11 23:42:12,094 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tomcat.embed:tomcat-embed-websocket:9.0.37
+2020-12-11 23:42:12,100 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tomcat.embed:tomcat-embed-jasper:9.0.37
+2020-12-11 23:42:12,105 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tomcat.embed:tomcat-embed-el:9.0.37
+2020-12-11 23:42:12,111 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.eclipse.jdt:ecj:3.18.0
+2020-12-11 23:42:12,118 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.projectlombok:lombok:1.16.8
+2020-12-11 23:42:12,124 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger2:2.9.2
+2020-12-11 23:42:12,130 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.swagger:swagger-annotations:1.5.20
+2020-12-11 23:42:12,136 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.swagger:swagger-models:1.5.20
+2020-12-11 23:42:12,142 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-annotations:2.11.2
+2020-12-11 23:42:12,147 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spi:2.9.2
+2020-12-11 23:42:12,153 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-core:2.9.2
+2020-12-11 23:42:12,158 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-schema:2.9.2
+2020-12-11 23:42:12,164 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-common:2.9.2
+2020-12-11 23:42:12,170 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-spring-web:2.9.2
+2020-12-11 23:42:12,175 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.guava:guava:20.0
+2020-12-11 23:42:12,181 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml:classmate:1.5.1
+2020-12-11 23:42:12,187 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-api:1.7.30
+2020-12-11 23:42:12,194 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE
+2020-12-11 23:42:12,200 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE
+2020-12-11 23:42:12,207 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mapstruct:mapstruct:1.2.0.Final
+2020-12-11 23:42:12,212 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.springfox:springfox-swagger-ui:2.9.2
+2020-12-11 23:42:12,214 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:webjars-locator-core:0.45
+2020-12-11 23:42:12,220 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.github.classgraph:classgraph:4.8.69
+2020-12-11 23:42:12,226 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.core:jackson-core:2.11.2
+2020-12-11 23:42:12,228 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:bootstrap:3.3.7
+2020-12-11 23:42:12,233 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:jquery:3.1.1-1
+2020-12-11 23:42:12,239 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-runner:1.6.2
+2020-12-11 23:42:12,245 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for junit:junit:4.13
+2020-12-11 23:42:12,251 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hamcrest:hamcrest-core:2.2
+2020-12-11 23:42:12,257 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apiguardian:apiguardian-api:1.1.0
+2020-12-11 23:42:12,263 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-launcher:1.6.2
+2020-12-11 23:42:12,269 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-engine:1.6.2
+2020-12-11 23:42:12,274 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.opentest4j:opentest4j:1.2.0
+2020-12-11 23:42:12,280 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-commons:1.6.2
+2020-12-11 23:42:12,286 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-suite-api:1.6.2
+2020-12-11 23:42:12,293 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:spring-mock-mvc:3.3.0
+2020-12-11 23:42:12,299 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:rest-assured:3.3.0
+2020-12-11 23:42:12,305 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.groovy:groovy:2.5.13
+2020-12-11 23:42:12,310 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.groovy:groovy-xml:2.5.13
+2020-12-11 23:42:12,317 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpclient:4.5.12
+2020-12-11 23:42:12,323 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpcore:4.4.13
+2020-12-11 23:42:12,329 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-codec:commons-codec:1.14
+2020-12-11 23:42:12,334 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.httpcomponents:httpmime:4.5.12
+2020-12-11 23:42:12,340 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hamcrest:hamcrest-library:2.2
+2020-12-11 23:42:12,346 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ccil.cowan.tagsoup:tagsoup:1.2.1
+2020-12-11 23:42:12,352 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:json-path:3.3.0
+2020-12-11 23:42:12,359 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.codehaus.groovy:groovy-json:2.5.13
+2020-12-11 23:42:12,364 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:rest-assured-common:3.3.0
+2020-12-11 23:42:12,370 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:xml-path:3.3.0
+2020-12-11 23:42:12,377 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-lang3:3.10
+2020-12-11 23:42:12,382 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.xml.bind:jaxb-api:2.3.1
+2020-12-11 23:42:12,389 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.activation:javax.activation-api:1.2.0
+2020-12-11 23:42:12,396 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-osgi:2.2.10
+2020-12-11 23:42:12,402 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.sling:org.apache.sling.javax.activation:0.1.0
+2020-12-11 23:42:12,409 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.activation:activation:1.1.1
+2020-12-11 23:42:12,416 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.rest-assured:spring-commons:3.3.0
+2020-12-11 23:42:12,421 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-test:5.2.8.RELEASE
+2020-12-11 23:42:12,427 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE
+2020-12-11 23:42:12,433 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-test:2.3.3.RELEASE
+2020-12-11 23:42:12,440 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-test-autoconfigure:2.3.3.RELEASE
+2020-12-11 23:42:12,446 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.jayway.jsonpath:json-path:2.4.0
+2020-12-11 23:42:12,454 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.minidev:json-smart:2.3
+2020-12-11 23:42:12,462 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.minidev:accessors-smart:1.2
+2020-12-11 23:42:12,467 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.ow2.asm:asm:5.0.4
+2020-12-11 23:42:12,473 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+2020-12-11 23:42:12,479 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for jakarta.activation:jakarta.activation-api:1.2.2
+2020-12-11 23:42:12,485 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.assertj:assertj-core:3.16.1
+2020-12-11 23:42:12,490 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hamcrest:hamcrest:2.2
+2020-12-11 23:42:12,496 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter:5.6.2
+2020-12-11 23:42:12,502 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-api:5.6.2
+2020-12-11 23:42:12,507 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-params:5.6.2
+2020-12-11 23:42:12,513 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-engine:5.6.2
+2020-12-11 23:42:12,518 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mockito:mockito-core:3.3.3
+2020-12-11 23:42:12,524 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy:1.10.14
+2020-12-11 23:42:12,529 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy-agent:1.10.14
+2020-12-11 23:42:12,536 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.objenesis:objenesis:2.6
+2020-12-11 23:42:12,541 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mockito:mockito-junit-jupiter:3.3.3
+2020-12-11 23:42:12,548 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.skyscreamer:jsonassert:1.5.0
+2020-12-11 23:42:12,553 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+2020-12-11 23:42:12,559 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:5.2.8.RELEASE
+2020-12-11 23:42:12,564 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-jcl:5.2.8.RELEASE
+2020-12-11 23:42:12,570 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.xmlunit:xmlunit-core:2.7.0
+2020-12-11 23:42:26,445 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-11 23:42:27,279 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-11 23:42:28,089 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.pom
+2020-12-11 23:42:29,861 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.pom
+2020-12-11 23:42:30,013 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.pom
+2020-12-11 23:42:30,609 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.jar
+2020-12-11 23:42:31,131 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/jquery/1.11.1/jquery-1.11.1.jar
+2020-12-11 23:42:31,281 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.jar
+2020-12-11 23:42:32,661 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2.jar
+2020-12-11 23:42:32,807 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1.jar
+2020-12-11 23:42:33,274 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1.jar
+2020-12-11 23:42:34,302 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-11 23:42:34,303 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 23:42:34,303 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-11 23:42:34,303 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-11 23:42:36,505 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2-sources.jar
+2020-12-11 23:42:37,051 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2-sources.jar
+2020-12-11 23:42:38,022 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.3.2/spring-messaging-5.3.2-sources.jar
+2020-12-11 23:42:38,057 [Worker-18: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-messaging:5.3.2
+2020-12-11 23:42:38,413 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/webjars/jquery/1.11.1/jquery-1.11.1-sources.jar
+2020-12-11 23:42:38,553 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1-sources.jar
+2020-12-11 23:42:38,688 [Worker-18: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1-sources.jar
+2020-12-11 23:42:38,723 [Worker-18: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:jquery:1.11.1
+2020-12-11 23:42:38,725 [Worker-18: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-messaging:5.3.2
+2020-12-11 23:42:38,728 [Worker-18: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:jquery:1.11.1
+2020-12-11 23:42:39,292 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 12 sec
+2020-12-11 23:57:24,095 [Worker-25: Resolving model org.eclipse.recommenders:index::zip:0.0.0] WARN  o.e.r.models.ModelRepository - Failed to download org.eclipse.recommenders:index::zip:0.0.0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/photon/)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:453) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:255) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:232) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:303) ~[na:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:193) [org.eclipse.recommenders.models_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:172) [org.eclipse.recommenders.models_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:168) [org.eclipse.recommenders.models.rcp_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76) [org.eclipse.recommenders.models.rcp_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.100.v20180817-1215.jar:na]
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/photon/)
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:48) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:364) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:76) ~[na:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:590) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:258) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:529) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:430) ~[na:na]
+	... 8 common frames omitted
+2020-12-12 00:35:24,501 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-12 00:35:25,367 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-12 00:35:26,241 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.pom
+2020-12-12 00:35:26,997 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.pom
+2020-12-12 00:35:27,136 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.pom
+2020-12-12 00:35:27,503 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.pom
+2020-12-12 00:35:27,636 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.pom
+2020-12-12 00:35:27,906 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.pom
+2020-12-12 00:35:28,635 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.jar
+2020-12-12 00:35:28,997 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.jar
+2020-12-12 00:35:29,141 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.jar
+2020-12-12 00:35:30,332 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.jar
+2020-12-12 00:35:30,467 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.jar
+2020-12-12 00:35:31,307 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.jar
+2020-12-12 00:35:32,602 [Worker-38: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-12 00:35:32,603 [Worker-38: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-12 00:35:32,603 [Worker-38: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-12 00:35:32,604 [Worker-38: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-12 00:35:34,416 [Worker-38: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 9 sec
+2020-12-12 00:35:34,866 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:35,476 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:36,454 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:36,483 [Worker-39: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-messaging:5.2.8.RELEASE
+2020-12-12 00:35:36,840 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:36,994 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:37,684 [Worker-39: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE-sources.jar
+2020-12-12 00:35:37,711 [Worker-39: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-websocket:5.2.8.RELEASE
+2020-12-12 00:35:37,715 [Worker-39: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-messaging:5.2.8.RELEASE
+2020-12-12 00:35:37,718 [Worker-39: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-websocket:5.2.8.RELEASE
+2020-12-12 00:47:40,627 [Worker-45: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-12 00:47:40,636 [Worker-45: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-12 00:47:40,664 [Worker-45: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-12 00:47:40,692 [Worker-45: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-12 00:47:40,692 [Worker-45: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-15 20:15:18,551 [Worker-12: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-15 20:37:50,406 [Worker-21: Resolving model org.eclipse.recommenders:index::zip:0.0.0] WARN  o.e.r.models.ModelRepository - Failed to download org.eclipse.recommenders:index::zip:0.0.0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/photon/)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:453) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:255) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:232) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:303) ~[na:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:193) [org.eclipse.recommenders.models_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:172) [org.eclipse.recommenders.models_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:168) [org.eclipse.recommenders.models.rcp_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76) [org.eclipse.recommenders.models.rcp_2.5.4.v20180909-1132.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.100.v20180817-1215.jar:na]
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/photon/)
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:48) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:364) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:76) ~[na:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:590) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:258) ~[org.apache.maven.resolver.connector.basic_1.0.3.v20170405-0725.jar:1.0.3]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:529) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:430) ~[na:na]
+	... 8 common frames omitted
+2020-12-16 08:53:59,004 [Worker-68: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 08:53:59,014 [Worker-68: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-16 08:53:59,034 [Worker-68: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-16 08:53:59,039 [Worker-68: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 08:53:59,039 [Worker-68: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-16 08:57:55,110 [Worker-4: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-16 08:57:56,346 [Worker-4: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-16 09:04:42,167 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-16 09:21:51,237 [Worker-8: Launching Web3270ControllerTest] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-16 09:21:51,813 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 09:21:51,820 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-16 09:21:51,838 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-16 09:21:51,884 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 09:21:51,885 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-16 09:23:45,990 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-12-16 09:23:47,189 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.evandrorenan.learning:web3270:0.0.1-SNAPSHOT @ C:\web3270\backend\web3270\pom.xml.
+2020-12-16 09:23:47,547 [Worker-11: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-16 09:23:48,712 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/main/java
+2020-12-16 09:23:48,712 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-16 09:23:48,713 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web3270/src/main/resources
+2020-12-16 09:23:48,713 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web3270/src/test/java
+2020-12-16 09:23:55,212 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 9 sec
+2020-12-16 09:24:24,974 [Worker-11: Launching Web3270ControllerTest] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-16 09:24:25,236 [Worker-11: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 09:24:25,237 [Worker-11: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-16 09:24:25,254 [Worker-11: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-16 09:24:25,271 [Worker-11: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-16 09:24:25,272 [Worker-11: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-17 21:41:26,788 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-17 21:41:34,851 [Worker-4: Launching WebSocketScreenTest] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-17 21:44:18,943 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 21:44:18,947 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-17 21:44:18,966 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-17 21:44:18,974 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 21:44:18,974 [Worker-8: Launching Web3270ControllerTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-17 21:47:01,050 [Worker-7: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 21:47:01,054 [Worker-7: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-17 21:47:01,056 [Worker-7: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-17 21:47:01,083 [Worker-7: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 21:47:01,083 [Worker-7: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-17 22:07:34,547 [Worker-11: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 22:07:34,548 [Worker-11: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-17 22:07:34,548 [Worker-11: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-17 22:07:34,551 [Worker-11: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-17 22:07:34,551 [Worker-11: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-17 22:25:03,553 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-17 22:25:07,710 [Worker-6: Launching WebSocketScreenTest] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-18 20:26:15,202 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-12-18 20:26:21,948 [Worker-6: Launching WebSocketScreenTest] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-18 20:26:24,168 [Worker-6: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-18 20:26:24,174 [Worker-6: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-18 20:26:24,207 [Worker-6: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-18 20:26:24,213 [Worker-6: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-18 20:26:24,213 [Worker-6: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-18 20:34:38,920 [Worker-10: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-18 20:34:38,924 [Worker-10: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-18 20:34:38,928 [Worker-10: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-18 20:34:38,931 [Worker-10: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-18 20:34:38,932 [Worker-10: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-19 00:08:19,989 [Worker-38: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:08:19,994 [Worker-38: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-19 00:08:19,999 [Worker-38: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-19 00:08:20,005 [Worker-38: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:08:20,006 [Worker-38: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-19 00:47:53,109 [Worker-62: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:47:53,109 [Worker-62: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 00:47:53,110 [Worker-62: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 00:47:53,113 [Worker-62: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:47:53,114 [Worker-62: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-19 00:56:41,807 [Worker-67: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:56:41,807 [Worker-67: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 00:56:41,807 [Worker-67: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 00:56:41,811 [Worker-67: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 00:56:41,812 [Worker-67: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-19 01:03:23,342 [Worker-75: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 01:03:23,343 [Worker-75: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 01:03:23,343 [Worker-75: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-19 01:03:23,347 [Worker-75: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 01:03:23,347 [Worker-75: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-19 20:40:42,688 [Worker-117: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 20:40:42,693 [Worker-117: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-19 20:40:42,702 [Worker-117: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-19 20:40:42,709 [Worker-117: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-19 20:40:42,711 [Worker-117: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-20 18:48:35,090 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-20 20:25:13,791 [Worker-9: Check for devtools] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-20 20:33:43,411 [Worker-9: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:33:43,417 [Worker-9: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-20 20:33:43,436 [Worker-9: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2020-12-20 20:33:43,456 [Worker-9: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:33:43,456 [Worker-9: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-20 20:34:16,543 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:34:16,545 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-20 20:34:16,547 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2020-12-20 20:34:16,570 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:34:16,571 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-20 20:43:45,941 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:43:45,950 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-20 20:43:45,964 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-20 20:43:45,971 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:43:45,972 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-20 20:47:53,411 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:47:53,411 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

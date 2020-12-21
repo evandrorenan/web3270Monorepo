@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="WebSocketScreenTest" project="web3270" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="websocket.WebSocketScreenTest" incomplete="true" displayname="WebSocketScreenTest" uniqueid="[engine:junit-jupiter]/[class:websocket.WebSocketScreenTest]">
+    <testcase name="returnOk_whenGetScreenWebSocket" classname="websocket.WebSocketScreenTest" incomplete="true" displayname="returnOk_whenGetScreenWebSocket()" uniqueid="[engine:junit-jupiter]/[class:websocket.WebSocketScreenTest]/[method:returnOk_whenGetScreenWebSocket()]"/>
+  </testsuite>
+</testrun>

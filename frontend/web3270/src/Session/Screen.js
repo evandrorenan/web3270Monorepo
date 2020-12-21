@@ -15,7 +15,6 @@ class Screen extends Component {
     }
 
     shouldComponentUpdate() {
-        console.log("screen scu")
         return true;
     }
 
@@ -24,7 +23,6 @@ class Screen extends Component {
     }
 
     render() {
-        let fields = [this.props.fields.length];
         let rows = [24];
 
         for (let row = 0; row < 24; row++) {
@@ -35,8 +33,6 @@ class Screen extends Component {
                 }
             }
         }
-
-        console.log("Screen focusedField: " + this.props.focusedField);
 
         return  (
             <div >

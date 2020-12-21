@@ -1,0 +1,33 @@
+
+^squid:S1135r"2Complete the task associated to this TODO comment.(Í—ãÞH…,RINFOZ
+CODE_SMELL
+k
+squid:S106“"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿH†,RMAJORZ
+CODE_SMELL
+_squid:S1135¾"2Complete the task associated to this TODO comment.(‹÷íçH‡,RINFOZ
+CODE_SMELL
+f
+squid:S106É"9Replace this use of System.out or System.err by a logger.(ðÃÑúHˆ,RMAJORZ
+CODE_SMELL
+k
+squid:S106Ý"9Replace this use of System.out or System.err by a logger.(ÚíÎüþÿÿÿÿH‰,RMAJORZ
+CODE_SMELL
+[squid:S1172â"(Remove this unused method parameter "i".(ûÌÌ€üÿÿÿÿHŠ,RMAJORZ
+CODE_SMELL
+f
+squid:S106å"9Replace this use of System.out or System.err by a logger.(¼É¹žH‹,RMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLineÑ"<This block of commented-out lines of code should be removed.(“×‹HŒ,RMAJORZ
+CODE_SMELL
+~squid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(ë¸°›úÿÿÿÿH,RMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLineÖ"<This block of commented-out lines of code should be removed.(¤ß¹ÖHŽ,RMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLineØ"<This block of commented-out lines of code should be removed.(‘ÞåàH,RMAJORZ
+CODE_SMELL
+~squid:CommentedOutCodeLineÚ"<This block of commented-out lines of code should be removed.(Ùú€óÿÿÿÿÿH,RMAJORZ
+CODE_SMELL
+~squid:CommentedOutCodeLineã"<This block of commented-out lines of code should be removed.(‚‹žÁÿÿÿÿÿH‘,RMAJORZ
+CODE_SMELL
+~squid:CommentedOutCodeLineç"<This block of commented-out lines of code should be removed.(éØ»ÚûÿÿÿÿH’,RMAJORZ
+CODE_SMELL

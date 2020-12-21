@@ -1,0 +1,27 @@
+import React, { Component } from 'react';
+import SockJsClient from 'react-stomp';
+ 
+class ScreenWebSocket extends Component {
+ 
+  componentDidMount() {
+    this.sendMessage(this.props.sessionId);
+  }
+
+  sendMessage = (msg, sessionId) => {
+    this.clientRef.sendMessage("/subscribe/" + sessionId, msg);
+  }
+ 
+  //* TODO: On message, dispatch action
+  //        not sure if I really need this ref
+  render() {
+    return (
+      <span>
+        <SockJsClient url='http://localhost:8080/ws' topics={['/topics/all']}
+            onMessage={(msg) => { console.log(msg); }}
+            ref={ (client) => { this.clientRef = client }} />
+      </span>
+    );
+  }
+}
+
+export default ScreenWebSocket;

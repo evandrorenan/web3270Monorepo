@@ -46,10 +46,19 @@
 		<item value="org.sonatype.m2e.egit.feature:0.15.1.201806191431"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.5.202002191804"/>
 	</list>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\web3270\backend"/>
+		</list>
+	</section>
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item key="FilterByLocation" value="false"/>
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270-scripts/src/main/java/br/com/evandrorenan/web3270scripts/service/ScriptService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270-scripts/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270-scripts/src/main/java/br/com/evandrorenan/web3270scripts/dao/Script.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/target/web3270/WEB-INF/classes/br/com/evandrorenan/learning/web3270/controller/Web3270Controller.class&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/main/webapp/META-INF/maven/br.com.evandrorenan.learning/web3270/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/main/java/br/com/evandrorenan/web3270/websocket/WebSocketConfig.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/main/java/br/com/evandrorenan/web3270/service/ProgramReportService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/test/java/websocket/WebSocketScreenTest.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/main/java/br/com/evandrorenan/web3270/controller/Web3270SessionController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/test/java/br/com/evandrorenan/web3270/controller/Web3270ControllerTest.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/web3270/src/main/java/br/com/evandrorenan/web3270/controller/Web3270ScreenController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
 		<item key="ShowDerived" value="false"/>
 		<section name="DialogBoundsSettings">
@@ -61,10 +70,10 @@
 		</section>
 	</section>
 	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
 		<item key="DIALOG_X_ORIGIN" value="429"/>
 		<item key="DIALOG_Y_ORIGIN" value="8"/>
-		<item key="DIALOG_WIDTH" value="525"/>
-		<item key="DIALOG_HEIGHT" value="580"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
