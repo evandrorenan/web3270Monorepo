@@ -3451,3 +3451,103 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-12-20 20:43:45,972 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
 2020-12-20 20:47:53,411 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-12-20 20:47:53,411 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-20 20:47:53,412 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-20 20:47:53,418 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-20 20:47:53,418 [Worker-9: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:10:55,190 [Worker-28: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:10:55,193 [Worker-28: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:10:55,196 [Worker-28: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:10:55,203 [Worker-28: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:10:55,203 [Worker-28: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:33:47,712 [Worker-40: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:33:47,714 [Worker-40: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:33:47,718 [Worker-40: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:33:47,726 [Worker-40: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:33:47,727 [Worker-40: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:38:28,605 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:38:28,608 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:38:28,613 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:38:28,618 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:38:28,618 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:42:21,329 [Worker-51: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:42:21,332 [Worker-51: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:42:21,335 [Worker-51: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:42:21,340 [Worker-51: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:42:21,340 [Worker-51: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:47:28,897 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:47:28,900 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:47:28,924 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:47:28,929 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:47:28,929 [Worker-20: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 08:50:06,668 [Worker-53: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:50:06,670 [Worker-53: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 08:50:06,674 [Worker-53: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 08:50:06,679 [Worker-53: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 08:50:06,679 [Worker-53: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 21:43:18,493 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-21 21:43:25,633 [Worker-2: Launching Web3270Application] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2020-12-21 22:05:28,247 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:05:28,251 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:05:28,267 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:05:28,274 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:05:28,274 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:10:02,041 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:10:02,049 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:10:02,053 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:10:02,059 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:10:02,059 [Worker-12: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:11:01,220 [Worker-10: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:11:01,228 [Worker-10: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:11:01,240 [Worker-10: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:11:01,247 [Worker-10: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:11:01,247 [Worker-10: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:22:11,151 [Worker-13: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:22:11,154 [Worker-13: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:22:11,158 [Worker-13: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:22:11,166 [Worker-13: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:22:11,166 [Worker-13: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:31:00,122 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:31:00,124 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:31:00,127 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:31:00,131 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:31:00,132 [Worker-15: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:44:05,989 [Worker-18: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:44:05,992 [Worker-18: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:44:05,996 [Worker-18: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:44:05,999 [Worker-18: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:44:06,000 [Worker-18: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 22:50:45,759 [Worker-29: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:50:45,762 [Worker-29: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 22:50:45,766 [Worker-29: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 22:50:45,772 [Worker-29: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 22:50:45,772 [Worker-29: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:08:23,175 [Worker-37: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:08:23,177 [Worker-37: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:08:23,179 [Worker-37: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-12-21 23:08:23,184 [Worker-37: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:08:23,184 [Worker-37: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:11:46,136 [Worker-35: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:11:46,139 [Worker-35: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:11:46,143 [Worker-35: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 23:11:46,147 [Worker-35: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:11:46,148 [Worker-35: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:12:53,667 [Worker-36: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:12:53,669 [Worker-36: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:12:53,673 [Worker-36: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 23:12:53,678 [Worker-36: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:12:53,678 [Worker-36: Launching WebSocketScreenTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:16:37,408 [Worker-30: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:16:37,411 [Worker-30: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:16:37,415 [Worker-30: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 23:16:37,419 [Worker-30: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:16:37,420 [Worker-30: Launching Web3270Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:20:45,269 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:20:45,273 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:20:45,276 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 23:20:45,281 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:20:45,281 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources
+2020-12-21 23:20:52,220 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:20:52,225 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-12-21 23:20:52,229 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2020-12-21 23:20:52,235 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-12-21 23:20:52,235 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\web3270\backend\web3270\src\test\resources

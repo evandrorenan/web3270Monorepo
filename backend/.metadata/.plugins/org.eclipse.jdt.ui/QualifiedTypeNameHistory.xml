@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="br.com.evandrorenan.web3270scripts.util.Web3270ScriptConstants"/>
     <fullyQualifiedTypeName name="br.com.evandrorenan.web3270scripts.ScriptConstant"/>
     <fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.MessageMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.SendTo"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer"/>
@@ -42,6 +41,11 @@
     <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
     <fullyQualifiedTypeName name="org.springframework.messaging.converter.MappingJackson2MessageConverter"/>
     <fullyQualifiedTypeName name="org.springframework.messaging.simp.stomp.StompFrameHandler"/>
-    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.dto.ScreenDto"/>
     <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.controller.Web3270ScreenController"/>
+    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.dto.SessionDto"/>
+    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.dto.ScreenDto"/>
+    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.dto.UserInputDto"/>
+    <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.Async"/>
+    <fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.SendTo"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.jni.Time"/>
 </qualifiedTypeNameHistroy>

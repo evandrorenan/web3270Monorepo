@@ -1,0 +1,63 @@
+package br.com.evandrorenan.web3270.service;
+
+import java.util.HashMap;
+
+import org.apache.tomcat.jni.Time;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+
+import br.com.evandrorenan.web3270.dto.ScreenDto;
+import br.com.evandrorenan.web3270.dto.SendKeysDto;
+import br.com.evandrorenan.web3270.dto.UserInputDto;
+import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
+import br.com.evandrorenan.web3270.session._interface.IMySession;
+import lombok.Data;
+
+@Component
+@Data
+public class ScreenService {
+	
+	private HashMap<String, IMySession> sessionMap;
+	
+	public ScreenDto getScreenDto(IMySession mySession) throws ExceptionWeb3270 {
+		ScreenDto screenDto = new ScreenDto();
+		screenDto.setSessionId(mySession.getSessionId());
+		screenDto.setPositions(mySession.getPositions());
+		screenDto.setFieldPos(mySession.getFieldsIniPosition());
+		screenDto.setCursorPos(mySession.getCursorPosition());
+		screenDto.setFields(null);
+		return screenDto;
+	}
+
+	public ScreenDto getScreenFields(IMySession mySession) throws ExceptionWeb3270 {
+		ScreenDto screenDto = new ScreenDto();
+		screenDto.setSessionId(mySession.getSessionId());
+		screenDto.setPositions(null);
+		screenDto.setFieldPos(mySession.getFieldsIniPosition());
+		screenDto.setCursorPos(mySession.getCursorPosition());
+		screenDto.setFields(mySession.getFields());
+		return screenDto;
+	}
+
+	public void sendKeys(IMySession mySession, UserInputDto userInputDto) throws ExceptionWeb3270 {		
+		for (SendKeysDto sendKeys : userInputDto.getSendKeys()) {
+			mySession.setText(sendKeys.getRow(), sendKeys.getCol(), sendKeys.getText());
+			if (sendKeys.getFunctionKey() != null && !sendKeys.getFunctionKey().equals("")  ) {
+				mySession.sendKeys(sendKeys.getFunctionKey(), sendKeys.getRow(), sendKeys.getCol());
+			}			
+		}
+	}
+	
+	@Async
+	@SendTo("/topic/screens")
+	public ScreenDto sendKeysAsync(UserInputDto userInput) {
+		Time.sleep(1000);
+		ScreenDto screen = new ScreenDto();
+		screen.setCursorPos(10);
+		screen.setScreendId("B");
+		screen.setSessionId(userInput.getSessionId());
+		System.out.println("getScreenAsync:" + userInput);
+		return screen;		
+	}
+}
