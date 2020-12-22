@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: evandrorenan
+Build-Jdk: 15
+Implementation-Title: Web 3270 Terminal by evandrorenan
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.com.evandrorenan.learning
+Implementation-URL: https://www.linkedin.com/in/evandrorenan/
+Created-By: Maven Integration for Eclipse
+

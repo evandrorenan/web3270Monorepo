@@ -1,0 +1,204 @@
+-------------------------------------------------------------------------------
+Test set: br.com.evandrorenan.learning.web3270.controller.Web3270ControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 12.194 s <<< FAILURE! - in br.com.evandrorenan.learning.web3270.controller.Web3270ControllerTest
+returnNotFound_whenGetSession  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnNotFound_whenGetSessionScreen  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnOk_whenSendKeys  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnOk_whenGetSessionScreen  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnOk_whenNewSession  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnNotFound_whenSendKeys  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnServiceUnavailable_whenNewSession  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
+returnOk_whenGetSession  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class br.com.evandrorenan.learning.web3270.service.SessionService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 25.231-b11
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 1.8.0_231-b11
+JVM info           : mixed mode
+OS name            : Windows 10
+OS version         : 10.0
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.IllegalArgumentException: Could not create type
+Caused by: java.lang.NoClassDefFoundError: com/ibm/eNetwork/ECL/ECLErr
+Caused by: java.lang.ClassNotFoundException: com.ibm.eNetwork.ECL.ECLErr
+
