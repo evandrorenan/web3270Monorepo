@@ -2,14 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="sleep"/>
+		<item key="selection" value=".mo"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
-			<item value="sleep"/>
+			<item value=".mo"/>
+			<item value=".monit"/>
+			<item value="async"/>
+			<item value="Monitor"/>
 			<item value="monitor"/>
+			<item value="sessionMap"/>
+			<item value="sleep"/>
 			<item value="/"/>
 			<item value="hello"/>
 			<item value="topic"/>
@@ -18,11 +23,6 @@
 			<item value="programServie"/>
 			<item value="connect"/>
 			<item value="spring-websocket"/>
-			<item value="webjars"/>
-			<item value="create"/>
-			<item value="Entity&lt;"/>
-			<item value="Resource&lt;"/>
-			<item value="MySessionConstants"/>
 		</list>
 		<list key="replacehistory">
 			<item value="EntityModel&lt;"/>

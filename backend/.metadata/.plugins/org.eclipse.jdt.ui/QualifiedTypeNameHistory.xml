@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.AutoConfigureOrder"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
@@ -48,4 +47,9 @@
     <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.Async"/>
     <fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.SendTo"/>
     <fullyQualifiedTypeName name="org.apache.tomcat.jni.Time"/>
+    <fullyQualifiedTypeName name="org.springframework.messaging.simp.SimpMessagingTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.service.ScreenService"/>
+    <fullyQualifiedTypeName name="br.com.evandrorenan.web3270.session._interface.IScreenService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 </qualifiedTypeNameHistroy>
