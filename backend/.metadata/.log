@@ -11300,3 +11300,15 @@ java.io.IOException: Unable to resolve plug-in "com.ibm.etools.annotations.ui".
 
 !ENTRY org.eclipse.ui 2 2 2020-12-26 14:55:58.706
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 14:58:16.196
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ksMvrNyz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 14:58:16.196
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ksMvrNyz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 14:58:16.197
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-26 14:58:16.198
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ksMvrNyz => OK
