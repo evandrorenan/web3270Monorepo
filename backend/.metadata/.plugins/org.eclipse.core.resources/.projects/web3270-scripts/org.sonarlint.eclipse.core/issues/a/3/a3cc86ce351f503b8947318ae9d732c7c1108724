@@ -1,9 +1,0 @@
-
-ssquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Îë—HH×RMAJORZ
-CODE_SMELL
-tsquid:S00112*"FDefine and throw a dedicated exception instead of using a generic one.(…ØíÇHØRMAJORZ
-CODE_SMELL
-\squid:EmptyStatementUsageCheck"Remove this empty statement.(Ø»©öHÙRMINORZ
-CODE_SMELL
-xsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™ó°HÚRMAJORZ
-CODE_SMELL

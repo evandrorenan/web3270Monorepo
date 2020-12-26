@@ -1,5 +1,0 @@
-package br.com.evandrorenan.web3270.session._interface;
-
-public interface IScreenService {
-
-}
