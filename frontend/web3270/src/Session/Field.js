@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { isFunctionKey, isTypedChar, isArrowKey }        from "../KeyEvents/KeyTipe";
 import { connect }            from 'react-redux';
-import * as actionCreators    from "../store/actions";
+import * as customActions     from "../store/CustomActions";
 import { getPfkey }           from '../KeyEvents/HandleFunctionKey';
 
 import './Position.css'
@@ -148,20 +148,20 @@ class Field extends Component {
      }
 
      onkeydown = (event) => {
-          console.log("KD-event.target.selectionStart:" + event.target.selectionStart)
           if (isFunctionKey(event)) {
                this.markModified();
                // this.props.setFieldText(
                //      this.props.fields.findIndex(field => field.fieldId === getFieldId(event.target)),
                //      event.target.text);
-               this.props.sendKeys(
-                    this.state.currentField.row,
-                    this.state.currentField.col,
-                    event.target.value,
-                    getPfkey(event),
-                    this.props.fields,
-                    this.props.sessionId,
-                    )
+               let sendKeysParms = {
+                    row : this.state.currentField.row,
+                    col : this.state.currentField.col,
+                    currentFieldText : event.target.value,
+                    userFunctionKey : getPfkey(event),
+                    fields : this.props.fields,
+                    sessionId : this.props.sessionId,
+               };
+               this.props.sendKeys(this.props.stompClient, sendKeysParms);
                event.preventDefault();
                return false;
           } 
@@ -222,7 +222,6 @@ class Field extends Component {
 
      render() {      
 
-          console.log("ref: " + this.state.currentField.fieldId + " " + this.state.currentField.ref);
           return ( 
                <input 
                     key={"Position" + this.state.currentField.fieldId + this.state.sufix}
@@ -246,6 +245,7 @@ class Field extends Component {
 
 const mapStateToProps = state => {
      return {
+          stompClient : state.stompClient,
           fields: state.fields,
           sessionId: state.sessionId,
           cursorPos: state.cursorPos,
@@ -256,13 +256,13 @@ const mapStateToProps = state => {
  
 const mapDispatchToProps = dispatch => {
      return { 
-         createRef: (index, ref) => dispatch(actionCreators.createRef(index, ref)),
-         sendKeys: (row, col, text, functionKey, fields, sessionId) => 
-                    dispatch(actionCreators.sendKeys(row, col, text, functionKey, fields, sessionId)),
-         setFieldText: (index, text) => dispatch(actionCreators.setFieldText(index, text)),
-         markModifiedField: (index) => dispatch(actionCreators.markModifiedField(index)),
+         createRef: (index, ref) => dispatch(customActions.createRef(index, ref)),
+         sendKeys: (stompClient, sendKeysParms) => 
+                    dispatch(customActions.sendKeys(stompClient, sendKeysParms)),
+         setFieldText: (index, text) => dispatch(customActions.setFieldText(index, text)),
+         markModifiedField: (index) => dispatch(customActions.markModifiedField(index)),
      //     setFocusedField: (index, currentField) => dispatch(actionCreators.setFocusedField(index, currentField))         ,
-         setFocus: (field) => dispatch(actionCreators.setFocus(field))
+         setFocus: (field) => dispatch(customActions.setFocus(field))
      }
  }
 

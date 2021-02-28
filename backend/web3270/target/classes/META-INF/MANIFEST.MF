@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Built-By: evandrorenan
-Build-Jdk: 15
+Build-Jdk: 15.0.1
 Implementation-Title: Web 3270 Terminal by evandrorenan
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: br.com.evandrorenan.learning

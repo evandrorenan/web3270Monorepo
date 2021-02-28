@@ -93,13 +93,11 @@ class DataDivisionMap extends Component {
     }
     
     render() {
-        console.log("Data Division Map" + this.props.dataDivisionMap);        
-
         return (
             <div className="DataDivision" key="dataDivision">
-                <div class="DataItemsList" key="dataDivisionItemsList">
+                <div className="DataItemsList" key="dataDivisionItemsList">
                     <div className="DataDiv" key={"dataDivisionItemsTitle"}>
-                        <input type="checkbox" class="checkboxTitle" key={"pinCheckboxTitle"}/>
+                        <input type="checkbox" className="checkboxTitle" key={"pinCheckboxTitle"}/>
                         <div className="DataDivItemName" key={"dataDivisionTitleName"}>
                             Data Item
                         </div>
@@ -207,9 +205,9 @@ class DataDivisionMap extends Component {
                     </div>                                            
                     })}
                 </div>
-                <div class="DataItemDetail">
-                    <div class="ContentDetail">
-                        <textarea id="contentDetail" class="Textarea" value={this.state.selectedItem} />
+                <div className="DataItemDetail">
+                    <div className="ContentDetail">
+                        <textarea id="contentDetail" className="Textarea" onChange={null} value={this.state.selectedItem} />
                     </div>
                 </div>
             </div> 

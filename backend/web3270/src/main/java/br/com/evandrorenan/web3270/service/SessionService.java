@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
@@ -34,11 +35,14 @@ public class SessionService implements ISessionService {
 	private Boolean isMonitoring;
 
 	private Map<String, IMySession> sessionMap;
+	private SimpMessagingTemplate messageTemplate;
+
 	
 	@Autowired
-	public SessionService() {
-		System.out.println("SessionService constructed;");
+	public SessionService(SimpMessagingTemplate messageTemplate) {
+		this.messageTemplate = messageTemplate;
 		this.sessionMap = new HashMap<>();
+		System.out.println("SessionService constructed;");
 	}
 	
 	public SessionDto createNewSessionDto(String host, String port) {
@@ -59,14 +63,12 @@ public class SessionService implements ISessionService {
 		SessionDto sessionDto = new SessionDto();
 		sessionDto.setSessionId(mySession.getSessionId());
 		sessionDto.setConnected(mySession.isConnected());
-		try {
-			System.out.println("Antes do Async");
-			this.monitorConnectionStatus();
-			System.out.println("Depois do Async");
-		} catch (ExceptionWeb3270 e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			this.monitorConnectionStatus();
+//		} catch (ExceptionWeb3270 e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return sessionDto;
 	}
 	
@@ -113,11 +115,8 @@ public class SessionService implements ISessionService {
 		props.setProperty("SESSION_WIN_STATE"	, "false");
 		props.setProperty("AutoConnect"			, "N");
 
-
-		
-		
 		try {
-			MyPcommSession pcomm = new MyPcommSession(props);
+			MyPcommSession pcomm = new MyPcommSession(props, messageTemplate);
 			TimeLimiter limiter = new SimpleTimeLimiter();
 			IMySession proxyPcomm = limiter.newProxy(
 					pcomm, IMySession.class, 1000, TimeUnit.MILLISECONDS);

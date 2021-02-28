@@ -15,7 +15,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // Redux store. 
 // For it to be available for all the application's components the App will be wrapped 
 // by a Provider component, wich contains the store.
-const myStore = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+export const myStore = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>

@@ -8,11 +8,13 @@ import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
 import com.ibm.eNetwork.ECL.ECLErr;
 import com.ibm.eNetwork.ECL.ECLField;
 import com.ibm.eNetwork.ECL.ECLSession;
+import com.ibm.eNetwork.ECL.event.ECLPSListener;
 
 import br.com.evandrorenan.web3270.dto.FieldDto;
 import br.com.evandrorenan.web3270.dto.PositionDto;
@@ -34,7 +36,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 	
 	private String sessionId;
 
-	public MyPcommSession(Properties props) throws ECLErr {
+	public MyPcommSession(Properties props, SimpMessagingTemplate messageTemplate) throws ECLErr {
 		super(props);
 		
 		this.sessionId = new Timestamp(System.currentTimeMillis()).toString()
@@ -44,6 +46,10 @@ public class MyPcommSession extends ECLSession implements IMySession {
 				.replace(":", "");
 		
 		this.autoReconnect = false;
+		
+		ECLPSListener pcommEventListener = new PcommEventListener(this, messageTemplate);
+		this.GetPS().RegisterPSEvent(pcommEventListener);
+		
 	}
 	
 	@Override 

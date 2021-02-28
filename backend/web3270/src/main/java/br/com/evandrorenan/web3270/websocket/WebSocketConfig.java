@@ -9,15 +9,22 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @Configuration
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+	
+	@Override
+	public void configureMessageBroker(MessageBrokerRegistry config) {
+		config.enableSimpleBroker("/queue/session");
 
-	  @Override
-	  public void configureMessageBroker(MessageBrokerRegistry config) {
-	    config.enableSimpleBroker("/topic");
-	    config.setApplicationDestinationPrefixes("/session");
-	  }
-	  
-	  @Override
-	  public void registerStompEndpoints(StompEndpointRegistry registry) {
-	    registry.addEndpoint("/web3270-websocket").withSockJS();
-	  }
+		// Messages sent to the websocket must prefix '/ws/foobar' to be
+		// recognized by MessageMapping '/foobar' annotation
+		config.setApplicationDestinationPrefixes("/ws");
+		//
+		config.setUserDestinationPrefix("/session");
+	}	 
+	 
+	// Connection url ws://<host>/web3270-websocket
+	@Override
+	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		registry.addEndpoint("/web3270-websocket");
+		registry.addEndpoint("/web3270-websocket").withSockJS();
+	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -66,6 +67,8 @@ public class SessionController {
 		if (newSessionDto == null) {
 			throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE);
 		} 
+		// TODO: NewSession should start a websocket queue identified by sessionId to
+		//       be subscribed by the frontend. The registered ps should put screen
 		return newSessionDto;
 	}
 	
@@ -110,38 +113,5 @@ public class SessionController {
 		}
 		this.screenService.sendKeys(mySession, userInputDto);
 		return this.screenService.getScreenFields(mySession);
-	}
-	
-	@PostMapping(path = {"/programreport"})
-	public ProgramReportDto programReport(@RequestBody ProgramReportRequestDto request) throws ExceptionWeb3270 {
-		
-		System.out.println("Program report:" + request.toString());
-		if (request.getBaseLocators() == null && request.getCompilationReport() == null ) {
-			return this.programReportService.generateReport(
-					request.getCompilationJobid(), 
-					request.getBaseLocatorExtractParams());
-		}
-
-		if (request.getBaseLocators() == null) {
-			return this.programReportService.generateReport(
-					request.getCompilationReport(), 
-					request.getBaseLocatorExtractParams());
-		}
-		
-		return this.programReportService.generateReport(
-				request.getCompilationReport(),
-				request.getBaseLocators());
-	}
-
-	@PostMapping(path = {"/compilationreport"})
-	public CompilationReportDto getCompilationReport(@RequestBody ProgramReportRequestDto request) throws ExceptionWeb3270 {
-		return this.programReportService.getCompilationReport(
-				request.getCompilationJobid());	
-	}
-
-	@PostMapping(path = {"/baselocators"})
-	public List<BaseLocatorDto> getBaseLocators (@RequestBody ProgramReportRequestDto request) throws ExceptionWeb3270 {
-		return this.programReportService.getBaseLocators(
-				request.getBaseLocatorExtractParams());
 	}
 }

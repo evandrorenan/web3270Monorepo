@@ -1,4 +1,4 @@
-import * as actionTypes from "../store/actionTypes";
+import * as actionTypes from "./actionTypes";
 
 const initialFields = () => {
     let fields = [];
@@ -33,10 +33,15 @@ const initialState = {
     keyNameSufix : 1,
     isConnecting : false,
     isUpdatingScreen : false,
-    status : ""
+    status : "",
+    stompClient : null
 }
 
 const reducer = (state = initialState, action) => {
+    if ( action.type === actionTypes.DUMMY ) {
+        return state;
+    }
+
     let newState = Object.assign({}, state);
     switch (action.type) {
 
@@ -89,6 +94,10 @@ const reducer = (state = initialState, action) => {
 
         case actionTypes.SET_REPORT_OBJECT:
             newState.report = action.report;
+            return newState;
+
+        case actionTypes.SET_STOMP_CLIENT:
+            newState.stompClient = action.stompClient;
             return newState;
                 
         default:

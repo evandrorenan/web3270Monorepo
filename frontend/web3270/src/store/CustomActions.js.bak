@@ -1,0 +1,507 @@
+<<<<<<< HEAD:frontend/web3270/src/store/CustomActions.js
+import axios                from 'axios';
+import * as actionTypes from "./ActionTypes";
+import * as httpActions     from "./connectionActions/httpActions";
+import * as websocketActions from "./connectionActions/websocketActions";
+
+import { programResponse } from "../Session/ProgramReportObjects";
+
+// Functions exported on this class have to return an Action object.
+// All actions has to have a type.
+
+const STATUS_RETRIEVING_SCREEN = "Retrieving screen data...";
+const STATUS_READY = "Ready";
+const STATUS_SENDING_INPUT_DATA = "Sending input data...";
+
+export const setStatus = (localStatus) => {
+    return { 
+        type: actionTypes.SET_STATUS,
+        status : localStatus
+    }
+}
+
+export const createRef = (localIndex, localRef) => {
+    return { 
+        type: actionTypes.CREATE_REF,
+        index: localIndex,
+        ref: localRef
+    }
+}
+
+export const updatePositionText = (localIndex, localText) => {
+    return { 
+        type: actionTypes.UPDATE_POSITION_TEXT,
+        index: localIndex,
+        text: localText
+    }
+}
+
+export const newSessionResponseHandler = (response) => {
+    const x =  dispatch => {
+        dispatch(newSessionAction(response.data.sessionId));
+        dispatch(setStatus(STATUS_RETRIEVING_SCREEN));
+        dispatch(getScreenFieldsAsync(response.data.sessionId));
+        return newSessionAction(response.data.sessionId);
+    }
+    return x;
+}
+
+export const newSessionAction = (localSessionId) => {
+    return {
+        type: actionTypes.NEW_SESSION,
+        sessionId: localSessionId,
+        isConnecting: false
+    };
+};
+
+export const getScreenFieldsAsync = (sessionId) => {
+    if (!sessionId) {
+        return dispatch => {
+            dispatch(httpActions.newSessionAsync());
+        }
+    }
+    return dispatch => {
+        axios.get ("http://localhost:3000/session/" + sessionId + "/screenfields")
+            .then ( response => { 
+                dispatch(setStatus(STATUS_READY));
+                dispatch(getScreenResponseHandler(response));
+            } )
+    };
+};
+
+export const getScreenResponseHandler = (response) => {
+    return getScreenAction(response.data);
+}
+
+export const getScreenAction = (responseData) => {
+
+    return {
+        type: actionTypes.GET_SCREEN,
+        positions: responseData.positions,
+        fields: responseData.fields,
+        fieldPos: responseData.fieldPos,
+        cursorPos: responseData.cursorPos,
+        sessionId : responseData.sessionId
+    };
+};
+
+const buildRequestBody = (sendKeysParms) => {
+    let requestBody = {};
+    requestBody.sessionId = sendKeysParms.sessionId;
+    requestBody.sendKeys = [];
+    for (let i = 0; i < sendKeysParms.fields.length; i++) {
+        if (sendKeysParms.fields[i].modified ) {
+            if (!(sendKeysParms.fields[i].row === sendKeysParms.row 
+            && sendKeysParms.fields[i].col === sendKeysParms.col )) {
+                requestBody.sendKeys.push({
+                    row : sendKeysParms.fields[i].row,
+                    col : sendKeysParms.fields[i].col,
+                    text : sendKeysParms.fields[i].ref.current.value.trimEnd(),
+                    // text : ((fields[i].text + Array(fields[i].length).join(' ')).substr(0, fields[i].length)),
+                    functionKey : ""
+                })
+            }
+        }
+    }
+    
+    requestBody.sendKeys.push({
+        row : sendKeysParms.row,
+        col : sendKeysParms.col,
+        text : sendKeysParms.currentFieldText.trimEnd(),
+        functionKey : sendKeysParms.userFunctionKey }); 
+    return requestBody;
+}
+
+export const sendKeys = (stompClient, sendKeysParms) => {
+
+    const requestBody = buildRequestBody(sendKeysParms);
+
+    return dispatch => {
+        dispatch(websocketActions.sendWebSocketMessage(requestBody, stompClient));
+    };
+};
+
+export const setFieldText = (localIndex, localText) => {
+    return { 
+        type: actionTypes.SET_FIELD_TEXT,
+        index: localIndex,
+        text: localText 
+    }
+}
+
+export const markModifiedField = (localIndex) => {
+    return {
+        type : actionTypes.MARK_MODIFIED_FIELD,
+        index : localIndex
+    }
+}
+
+export const setFocusedField = (localIndex, field) => {
+    if (!localIndex || localIndex < 0 || !field)  {
+        return { 
+            type: actionTypes.DUMMY,
+        }
+    }
+
+    return {
+        type : actionTypes.SET_FOCUSED_FIELD,
+        focusedField : field,
+        index : localIndex
+    }
+}
+
+export const setFocus = (field) => {
+    return {
+        type: actionTypes.SET_FOCUS,
+        field: field
+    }
+}
+
+export const requestAbendReport = (request) => {
+    const payload = {
+        "compilationJobid": request.compilationJobid,
+        "user": request.user,
+        "password": request.password,
+        "programName": request.programName,
+        "abendId": request.abendId,
+        "abendFile": request.abendFile,
+        "compilationReport": null, 
+        "baseLocators": null
+    }
+
+    return requestAbendResponseHandler(programResponse);
+
+    // return dispatch => {
+    //     axios.post ("http://localhost:3000/programreport", payload)
+    //         .then ( response => { 
+    //             dispatch(requestAbendResponseHandler(response));
+    //         });
+    // };
+}
+
+export const requestAbendResponseHandler = (response) => {
+    return {
+        type: actionTypes.SET_REPORT_OBJECT,
+        report: response.data
+    }
+=======
+import axios                from 'axios';
+import * as actionTypes from "../store/actionTypes";
+// import SockJS from 'sockjs-client';
+// import Stomp from 'stomp-websocket';
+import { Client } from '@stomp/stompjs';
+import { programResponse } from "../Session/ProgramReportObjects";
+import { myStore } from '../../src/index';
+
+// Functions exported on this file have to return an Action object.
+// All actions has to have a type.
+
+const STATUS_CONNECTING = "Connecting...";
+const STATUS_CONNECTING_WEBSOCKET = "Connecting Websocket...";
+const STATUS_SUBSCRIBING_WEBSOCKET = "Subscribing Websocket...";
+const STATUS_RETRIEVING_SCREEN = "Retrieving screen data...";
+const STATUS_READY = "Ready";
+const STATUS_SENDING_INPUT_DATA = "Sending input data...";
+
+export const createRef = (localIndex, localRef) => {
+    return { 
+        type: actionTypes.CREATE_REF,
+        index: localIndex,
+        ref: localRef
+    }
+}
+
+export const updatePositionText = (localIndex, localText) => {
+    return { 
+        type: actionTypes.UPDATE_POSITION_TEXT,
+        index: localIndex,
+        text: localText
+    }
+}
+
+export const newSessionAsync = () => {
+    const body = {
+        "host": "192.168.240.1",
+        "port": "51004"
+    }
+    return dispatch => {
+        dispatch(setStatus(STATUS_CONNECTING));
+        axios.post ("http://localhost:3000/newsession", body)
+            .then ( response => { 
+                dispatch(newSessionResponseHandler(response));
+            });
+    };
+};
+
+export const setStatus = (localStatus) => {
+    return { 
+        type: actionTypes.SET_STATUS,
+        status : localStatus
+    }
+}
+
+const newSessionResponseHandler = (response) => {
+    return dispatch => {
+        dispatch(newSessionAction(response.data.sessionId));
+        dispatch(connectScreenWebsocket(response.data.sessionId));
+        dispatch(setStatus(STATUS_RETRIEVING_SCREEN));
+        dispatch(getScreenFieldsAsync(response.data.sessionId));
+    }
+}
+
+export const newSessionAction = (localSessionId) => {
+    return {
+        type: actionTypes.NEW_SESSION,
+        sessionId: localSessionId,
+        isConnecting: false
+    };
+};
+
+const connectScreenWebsocket = (sessionId) => {
+    let stompClient;
+
+    const onMessage = (message) => {
+        console.log("OnMessage: " + message);
+        let response = {};
+        response.data = JSON.parse(message.body);
+        myStore.dispatch(getScreenAction(response.data));
+    }
+
+    const wsConnectSuccess = (frame) => {
+        console.log("wsConnectSuccess - frame: " + frame);
+        console.log("wsConnectSuccess - stompClient: " + stompClient);
+
+        stompClient.subscribe('/queue/screens/' + sessionId, 
+                              message => onMessage (message)); 
+    }    
+
+    const stompConfig = {
+        connectHeaders: {},
+        brokerURL: "ws://localhost:8080/web3270-websocket/websocket",
+        
+        // Keep it off for production, it can be quit verbose
+        // Skip this key to disable
+        debug: function (str) {
+          console.log('STOMP: ' + str);
+        },
+        // If disconnected, it will retry after 200ms
+        reconnectDelay: 200,
+          
+        // Subscriptions should be done inside onConnect as those need to reinstated when the broker reconnects
+        onConnect: (frame) => wsConnectSuccess(frame)
+    }
+    
+    // Create an instance
+    stompClient = new Client(stompConfig);
+    console.log(stompClient);
+
+    // You can set additional configuration here
+
+    console.log('STOMP Client activate');
+    // Attempt to connect
+    stompClient.activate();
+
+    return { 
+        type: actionTypes.SET_STATUS,
+        status : STATUS_CONNECTING_WEBSOCKET
+    }
+}
+
+// const connectScreenWebsocket = (sessionId) => {
+//     let socket = new SockJS('/web3270-websocket');
+//     let stompClient = Stomp.over(socket);    
+//     // connect ( headers, callback , onerror )
+//     console.log("connectScreenWebsocket:" + sessionId)
+//     stompClient.connect({}, function (frame) {        
+//         console.log("connect callback:" + frame)
+//         return dispatch => { 
+//             subscribeScreenWebsocket(stompClient, sessionId);
+//         };
+//     },  function (frame) { 
+//         console.log("Connection failed: " + frame);
+//     });
+//     return { 
+//         type: actionTypes.SET_STATUS,
+//         status : STATUS_CONNECTING
+//     }
+// }
+
+// const subscribeScreenWebsocket = (stompClient, sessionId) => {
+//     console.log("subscribeScreenWebsocket:" + sessionId)
+//     stompClient.subscribe('/queue/screens/' + sessionId, function (message) {
+//         console.log("subscribe callback:" + message)
+//         let response = {};
+//         response.data = JSON.parse(message.body);
+//         return dispatch => { 
+//             dispatch (getScreenAction(response.data));
+//         }
+//     });
+//     return { 
+//         type: actionTypes.SET_STATUS,
+//         status : STATUS_CONNECTING
+//     }
+// }
+
+export const getScreenFromWebSocket = (message) => {
+    let response = {};
+    response.data = JSON.parse(message.body);
+    getScreenAction(response.data);
+}
+
+export const getScreenAsync = (sessionId) => {
+    if (!sessionId) {
+        return dispatch => {
+            dispatch(newSessionAsync());
+        }
+    }
+    return dispatch => {
+        axios.get ("http://localhost:3000/session/" + sessionId + "/screen")
+            .then ( response => { 
+                dispatch(setStatus(STATUS_READY));
+                dispatch(getScreenResponseHandler(response));
+            } )
+    };
+};
+
+export const getScreenFieldsAsync = (sessionId) => {
+    if (!sessionId) {
+        return dispatch => {
+            dispatch(newSessionAsync());
+        }
+    }
+    return dispatch => {
+        axios.get ("http://localhost:3000/session/" + sessionId + "/screenfields")
+            .then ( response => { 
+                dispatch(setStatus(STATUS_READY));
+                dispatch(getScreenResponseHandler(response));
+            } )
+    };
+};
+
+const getScreenResponseHandler = (response) => {
+    return getScreenAction(response.data);
+}
+
+export const getScreenAction = (responseData) => {
+    console.log("fieldPos: " + responseData.fieldPos[0]);
+
+    return {
+        type: actionTypes.GET_SCREEN,
+        positions: responseData.positions,
+        fields: responseData.fields,
+        fieldPos: responseData.fieldPos,
+        cursorPos: responseData.cursorPos,
+        sessionId : responseData.sessionId
+    };
+};
+
+const buildRequestBody = (row, col, currentFieldText, userFunctionKey, fields, sessionId) => {
+    let requestBody = {};
+    requestBody.sessionId = sessionId;
+    requestBody.sendKeys = [];
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].modified ) {
+            if (!(fields[i].row === row && fields[i].col === col )) {
+                requestBody.sendKeys.push({
+                    row : fields[i].row,
+                    col : fields[i].col,
+                    text : fields[i].ref.current.value.trimEnd(),
+                    // text : ((fields[i].text + Array(fields[i].length).join(' ')).substr(0, fields[i].length)),
+                    functionKey : ""
+                })
+            }
+        }
+    }
+    
+    requestBody.sendKeys.push({
+        row : row,
+        col : col,
+        text : currentFieldText.trimEnd(),
+        // text : ((currentFieldText + Array(currentFieldLen).join(' ')).substr(0, currentFieldLen)),
+        functionKey : userFunctionKey }); 
+    return requestBody;
+}
+
+export const sendKeys = (row, col, currentFieldText, functionKey, fields, sessionId) => {
+
+    const requestBody = buildRequestBody(row, col, currentFieldText, functionKey, fields, sessionId);
+    console.log("requestBody:" + requestBody.sessionId + " " + requestBody.sendKeys[0].text);
+
+    return dispatch => {
+        console.log("A");
+        dispatch(setStatus(STATUS_SENDING_INPUT_DATA));
+        console.log("b");
+        axios.post ("http://localhost:3000/session/sendkeys", requestBody)
+        .then ( response => { 
+                dispatch(setStatus(STATUS_READY));
+            });
+    };
+};
+
+export const setFieldText = (localIndex, localText) => {
+    return { 
+        type: actionTypes.SET_FIELD_TEXT,
+        index: localIndex,
+        text: localText 
+    }
+}
+
+export const markModifiedField = (localIndex) => {
+    return {
+        type : actionTypes.MARK_MODIFIED_FIELD,
+        index : localIndex
+    }
+}
+
+export const setFocusedField = (localIndex, field) => {
+    if (!localIndex || localIndex < 0 || !field)  {
+        return { 
+            type: actionTypes.DUMMY,
+        }
+    }
+    console.log("Action Set focused field-index: " + field.index);
+    console.log("Action Set focused field-row: " + field.row);
+
+    return {
+        type : actionTypes.SET_FOCUSED_FIELD,
+        focusedField : field,
+        index : localIndex
+    }
+}
+
+export const setFocus = (field) => {
+    return {
+        type: actionTypes.SET_FOCUS,
+        field: field
+    }
+}
+
+export const requestAbendReport = (request) => {
+    const payload = {
+        "compilationJobid": request.compilationJobid,
+        "user": request.user,
+        "password": request.password,
+        "programName": request.programName,
+        "abendId": request.abendId,
+        "abendFile": request.abendFile,
+        "compilationReport": null, 
+        "baseLocators": null
+    }
+
+    return requestAbendResponseHandler(programResponse);
+
+    // return dispatch => {
+    //     axios.post ("http://localhost:3000/programreport", payload)
+    //         .then ( response => { 
+    //             dispatch(requestAbendResponseHandler(response));
+    //         });
+    // };
+}
+
+export const requestAbendResponseHandler = (response) => {
+    return {
+        type: actionTypes.SET_REPORT_OBJECT,
+        report: response.data
+    }
+>>>>>>> f05c7c9d66688a1a6a62611bfe05f9481e6d0273:frontend/web3270/src/store/actions.js
+}

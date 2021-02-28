@@ -43,8 +43,8 @@ class RequestReportForm extends Component {
     render() {
         return (
         <div className="RequestReportForm">
-            { this.state.form.map((item) => {
-                return <Input type="text" label={item.label} maxLength={item.maxLength} onChange={(event) => this.onchange(event, item.id)} />
+            { this.state.form.map((item, index) => {
+                return <Input key={item.label + index} type="text" label={item.label} maxLength={item.maxLength} onChange={(event) => this.onchange(event, item.id)} />
             })}
             <input type="button" className="RequestReportFormButton" value="Request Report" onClick={this.onclick} />
         </div>

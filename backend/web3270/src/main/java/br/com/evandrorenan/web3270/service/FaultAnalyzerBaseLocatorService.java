@@ -25,9 +25,9 @@ public class FaultAnalyzerBaseLocatorService implements IBaseLocatorService {
 
 	@Autowired
 	public FaultAnalyzerBaseLocatorService(ISessionService sessionService) {
-		if (sessionService == null ) {
-			this.sessionService = new SessionService();
-		}
+//		if (sessionService == null ) {
+//			this.sessionService = new SessionService();
+//		}
 		this.sessionService = sessionService;
 	}
 	

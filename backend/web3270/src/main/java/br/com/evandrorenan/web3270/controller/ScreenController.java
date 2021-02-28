@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.evandrorenan.web3270.dto.ScreenDto;
 import br.com.evandrorenan.web3270.dto.UserInputDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
+import br.com.evandrorenan.web3270.session._interface.IMySession;
 import br.com.evandrorenan.web3270.session._interface.IScreenService;
+import br.com.evandrorenan.web3270.session._interface.ISessionService;
 
 @RestController
 /**
@@ -20,28 +22,25 @@ import br.com.evandrorenan.web3270.session._interface.IScreenService;
 public class ScreenController {
 	
 	private IScreenService screenService;
+	private ISessionService sessionService;
 	
 	@Autowired	
-	public ScreenController(IScreenService screenService) {
+	public ScreenController(IScreenService screenService, ISessionService sessionService) {
 		this.screenService = screenService;
+		this.sessionService = sessionService;
 	}
 	
     /**
      * Create a new session and send it to be subscribed in the Websocket
      *
      * @param   data     {@code SessionPropertiesDto} object.
+     * @return 
      * @return  a {@code SessionDto} that contains the Session Id and Connection Status.
      * @throws ExceptionWeb3270 
      */	
 	@MessageMapping("/sendkeys")
-	@SendTo("/topic/screens")
-    public ScreenDto getScreen(UserInputDto payload) throws ExceptionWeb3270 {
-		this.screenService.sendKeysAsync(payload);
-		ScreenDto screen = new ScreenDto();
-		screen.setCursorPos(10);
-		screen.setScreendId("A");
-		screen.setSessionId(payload.getSessionId());
-		System.out.println("getScreen:" + payload);
-		return screen;		
+    public void getScreen(UserInputDto payload) throws ExceptionWeb3270 {
+		IMySession mySession = this.sessionService.getSession(payload.getSessionId());
+		this.screenService.sendKeysAsync(mySession, payload);
     }
 }

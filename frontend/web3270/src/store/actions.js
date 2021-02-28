@@ -1,22 +1,20 @@
 import axios                from 'axios';
 import * as actionTypes from "../store/actionTypes";
-
+// import SockJS from 'sockjs-client';
+// import Stomp from 'stomp-websocket';
+import { Client } from '@stomp/stompjs';
 import { programResponse } from "../Session/ProgramReportObjects";
+import { myStore } from '../../src/index';
 
-// Functions exported on this class have to return an Action object.
+// Functions exported on this file have to return an Action object.
 // All actions has to have a type.
 
 const STATUS_CONNECTING = "Connecting...";
+const STATUS_CONNECTING_WEBSOCKET = "Connecting Websocket...";
+const STATUS_SUBSCRIBING_WEBSOCKET = "Subscribing Websocket...";
 const STATUS_RETRIEVING_SCREEN = "Retrieving screen data...";
 const STATUS_READY = "Ready";
 const STATUS_SENDING_INPUT_DATA = "Sending input data...";
-
-export const setStatus = (localStatus) => {
-    return { 
-        type: actionTypes.SET_STATUS,
-        status : localStatus
-    }
-}
 
 export const createRef = (localIndex, localRef) => {
     return { 
@@ -48,14 +46,20 @@ export const newSessionAsync = () => {
     };
 };
 
+export const setStatus = (localStatus) => {
+    return { 
+        type: actionTypes.SET_STATUS,
+        status : localStatus
+    }
+}
+
 const newSessionResponseHandler = (response) => {
-    const x =  dispatch => {
+    return dispatch => {
         dispatch(newSessionAction(response.data.sessionId));
+        dispatch(connectScreenWebsocket(response.data.sessionId));
         dispatch(setStatus(STATUS_RETRIEVING_SCREEN));
         dispatch(getScreenFieldsAsync(response.data.sessionId));
-        return newSessionAction(response.data.sessionId);
     }
-    return x;
 }
 
 export const newSessionAction = (localSessionId) => {
@@ -65,6 +69,97 @@ export const newSessionAction = (localSessionId) => {
         isConnecting: false
     };
 };
+
+const connectScreenWebsocket = (sessionId) => {
+    let stompClient;
+
+    const onMessage = (message) => {
+        console.log("OnMessage: " + message);
+        let response = {};
+        response.data = JSON.parse(message.body);
+        myStore.dispatch(getScreenAction(response.data));
+    }
+
+    const wsConnectSuccess = (frame) => {
+        console.log("wsConnectSuccess - frame: " + frame);
+        console.log("wsConnectSuccess - stompClient: " + stompClient);
+
+        stompClient.subscribe('/queue/screens/' + sessionId, 
+                              message => onMessage (message)); 
+    }    
+
+    const stompConfig = {
+        connectHeaders: {},
+        brokerURL: "ws://localhost:3000/web3270-websocket",
+        
+        // Keep it off for production, it can be quit verbose
+        // Skip this key to disable
+        debug: function (str) {
+          console.log('STOMP: ' + str);
+        },
+        // If disconnected, it will retry after 200ms
+        reconnectDelay: 200,
+          
+        // Subscriptions should be done inside onConnect as those need to reinstated when the broker reconnects
+        onConnect: (frame) => wsConnectSuccess(frame)
+    }
+    
+    // Create an instance
+    stompClient = new Client(stompConfig);
+    console.log(stompClient);
+
+    // You can set additional configuration here
+
+    console.log('STOMP Client activate');
+    // Attempt to connect
+    stompClient.activate();
+
+    return { 
+        type: actionTypes.SET_STATUS,
+        status : STATUS_CONNECTING_WEBSOCKET
+    }
+}
+
+// const connectScreenWebsocket = (sessionId) => {
+//     let socket = new SockJS('/web3270-websocket');
+//     let stompClient = Stomp.over(socket);    
+//     // connect ( headers, callback , onerror )
+//     console.log("connectScreenWebsocket:" + sessionId)
+//     stompClient.connect({}, function (frame) {        
+//         console.log("connect callback:" + frame)
+//         return dispatch => { 
+//             subscribeScreenWebsocket(stompClient, sessionId);
+//         };
+//     },  function (frame) { 
+//         console.log("Connection failed: " + frame);
+//     });
+//     return { 
+//         type: actionTypes.SET_STATUS,
+//         status : STATUS_CONNECTING
+//     }
+// }
+
+// const subscribeScreenWebsocket = (stompClient, sessionId) => {
+//     console.log("subscribeScreenWebsocket:" + sessionId)
+//     stompClient.subscribe('/queue/screens/' + sessionId, function (message) {
+//         console.log("subscribe callback:" + message)
+//         let response = {};
+//         response.data = JSON.parse(message.body);
+//         return dispatch => { 
+//             dispatch (getScreenAction(response.data));
+//         }
+//     });
+//     return { 
+//         type: actionTypes.SET_STATUS,
+//         status : STATUS_CONNECTING
+//     }
+// }
+
+export const getScreenFromWebSocket = (message) => {
+    let response = {};
+    response.data = JSON.parse(message.body);
+    getScreenAction(response.data);
+}
 
 export const getScreenAsync = (sessionId) => {
     if (!sessionId) {
@@ -140,28 +235,6 @@ const buildRequestBody = (row, col, currentFieldText, userFunctionKey, fields, s
     return requestBody;
 }
 
-const buildRequestBodyOld = (row, col, currentFieldText, functionKey, fields, sessionId) => {
-    let requestBody = {};
-    let localText = "";
-    requestBody.sessionId = sessionId;
-    requestBody.sendKeys = [];
-    for (let i = 0; i < fields.length; i++) {
-        if (!fields[i].protected) {
-            localText = fields[i].text;
-            if (fields[i].row === row 
-            &&  fields[i].col === col ) {
-                localText = currentFieldText + functionKey;
-            } 
-            requestBody.sendKeys.push({
-                row : fields[i].row,
-                col : fields[i].col,
-                text : localText }
-            )
-        }
-    }
-    return requestBody;
-}
-
 export const sendKeys = (row, col, currentFieldText, functionKey, fields, sessionId) => {
 
     const requestBody = buildRequestBody(row, col, currentFieldText, functionKey, fields, sessionId);
@@ -171,11 +244,9 @@ export const sendKeys = (row, col, currentFieldText, functionKey, fields, sessio
         console.log("A");
         dispatch(setStatus(STATUS_SENDING_INPUT_DATA));
         console.log("b");
-        axios.post ("http://localhost:3000/session/sendkeys", requestBody)
+        axios.post ("http://localhost:3000/ws/sendkeys", requestBody)
         .then ( response => { 
-                console.log("c");
                 dispatch(setStatus(STATUS_READY));
-                dispatch(getScreenResponseHandler(response));
             });
     };
 };

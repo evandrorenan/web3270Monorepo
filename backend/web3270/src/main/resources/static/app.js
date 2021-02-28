@@ -18,7 +18,7 @@ function connect() {
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/screens', function (message) {
+        stompClient.subscribe('/queue/session/20201117192908268', function (message) {
         	// showGreeting(message.body);
             showGreeting(JSON.parse(message.body).sessionId);
         });
@@ -34,8 +34,12 @@ function disconnect() {
 }
 
 function sendName() {
-    stompClient.send("/session/sendkeys", {}, JSON.stringify({
-    "sessionId": "20201117192908268",
+    let s = document.getElementById("name").value;
+    if (!s || s === "") {
+        s = "20201117192908268";
+    }
+    stompClient.send("/ws/sendkeys", {}, JSON.stringify({
+    "sessionId": s,
     "sendKeys": [
         {
             "row": 24,

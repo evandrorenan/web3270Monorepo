@@ -3,6 +3,7 @@ package br.com.evandrorenan.web3270.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import br.com.evandrorenan.web3270.dto.CompilationReportDto;
@@ -20,6 +21,12 @@ import lombok.Data;
 @Data
 public class EvtService implements IEvtService {
 	
+	@Value("${BRADESCO_HOST_IP}")
+	private String bradescoHostIp;
+	
+	@Value("${BRADESCO_HOST_PORT}")
+	private String bradescoHostPort;
+	
 	private ISessionService sessionService;
 	
 	public EvtService(ISessionService sessionService) {
@@ -27,8 +34,60 @@ public class EvtService implements IEvtService {
 	}
 	
 	@Override
+	public String getSysoutHtml(String opcao, String jobId) throws ExceptionWeb3270 {
+		return getSysoutHtml("EVT04", opcao, jobId);	
+	}
+
+	@Override
+	public String getSysoutHtml(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+		StringBuilder sysout = new StringBuilder();
+		
+		sysout.append("<html>");
+		sysout.append("<head>");
+		sysout.append("<style>p {font: 11px/1.5 Monaco, MonoSpace;white-space: pre;line-height: 0;}</style>");
+		sysout.append("</head>");
+		sysout.append("<body>");
+		sysout.append("</head>");
+		sysout.append("<body>");
+		
+		for (String line : this.getSysout(evt, opcao, jobId)) {
+			sysout.append("<p>" + line + "</p>");
+		}
+		
+		sysout.append("</body>");
+		sysout.append("</html>");
+		return sysout.toString();
+	}
+
+	@Override
+	public List<String> getSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+		List<String> sysout = new ArrayList<>();
+		
+		IMySession mySession = this.navigateToSysout(evt, opcao, jobId);
+		while (! mySession.getTextScreen(2, 49, 7).equals("LIHAS->")) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+ 		while (true) {
+			List<String> page = this.getPage(mySession).subList(4, 24);
+			
+			for (String line : page) {
+				if (line.contains("----  FINAL DO RELATORIO  ----")) {
+					return sysout;
+				}
+				sysout.add("<p>" + line + "</p>");
+			}			
+			mySession.sendKeys("[pf8]", 1, 27);			
+		}
+	}
+	
+	@Override
 	public CompilationReportDto getCompilationReport(String jobId) throws ExceptionWeb3270 {
-		IMySession mySession = this.navigateToCompilationReport(jobId);
+		IMySession mySession = this.navigateToSysout(jobId);
 		
 		CompilationReportDto compilationReportDto = new CompilationReportDto();
 		compilationReportDto.setProgramName(mySession.getTextScreen().substring(90, 98).trim());
@@ -45,12 +104,16 @@ public class EvtService implements IEvtService {
 		return compilationReportDto;
 	}
 	
-	private IMySession navigateToCompilationReport(String jobId) throws ExceptionWeb3270 {
-		SessionDto sessionDto = sessionService.createNewSessionDto("192.168.240.1", "51004");
+	private IMySession navigateToSysout(String jobId) throws ExceptionWeb3270 {
+		return navigateToSysout("EVTO4", "C", jobId);			
+	}
+	
+	private IMySession navigateToSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+		SessionDto sessionDto = sessionService.createNewSessionDto(bradescoHostIp, bradescoHostPort);
 		IMySession mySession = this.sessionService.getSession(sessionDto.getSessionId());
-		mySession.sendKeys("EVT04[enter]", 24, 29);
+		mySession.sendKeys(evt + "[enter]", 24, 29);
 		mySession.sendKeys("4253-440[enter]", 4, 25);
-		mySession.sendKeys("C[enter]", 5, 38);
+		mySession.sendKeys(opcao + "[enter]", 5, 38);
 		mySession.sendKeys("[pf3]", 1, 27);
 		mySession.sendKeys(jobId + "[enter]", 21, 38);
 		return mySession;
@@ -59,7 +122,7 @@ public class EvtService implements IEvtService {
 	private List<CompiledSourceCodeLineDto> getExpandedSourceCode(IMySession mySession) throws ExceptionWeb3270 {
 		List <CompiledSourceCodeLineDto> sourceCodeLines = new ArrayList<>();
 
-		mySession.sendKeys("M" + MySessionConstants.F7_STR, 1, 27); // se linha <> 1
+		mySession.sendKeys("M" + MySessionConstants.F7_STR, 1, 27);
 		mySession.sendKeys("f '----+-*A-1-B--+----2'" + MySessionConstants.ENDLINE_STR + MySessionConstants.ENTER_STR, 1 , 27);
 		
 		if (mySession.getTextScreen(5, 2, "SELECAO OU PESQUISA".length()).equals("SELECAO OU PESQUISA")) {

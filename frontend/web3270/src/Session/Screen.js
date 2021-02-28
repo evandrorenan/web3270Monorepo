@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import Field                from './Field';
 import { connect          } from 'react-redux';
-import * as actionCreators  from "../store/actions";
+import * as connectActions from '../store/connectionActions/connectActions';
 
 import './Screen.css';
 import './Position.css';
 
 class Screen extends Component {
     
+    constructor(props){
+        super();
+        this.state = { initialConnect : false};
+    }
+
     componentDidMount() {
-        if (!this.props.sessionId) {
-            this.props.screenRequest(null);
+        if (!this.state.initialConnect ) {
+            this.setState({ initialConnect : true});     
+            console.log("Screen.js connecting new session");
+            this.props.connectSession(null);
         }
     }
 
@@ -24,6 +31,8 @@ class Screen extends Component {
 
     render() {
         let rows = [24];
+
+        console.log("Screen props" + this.props);
 
         for (let row = 0; row < 24; row++) {
             rows[row] = [];
@@ -80,8 +89,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return { 
-        newSessionRequest: (sessionId) => dispatch(actionCreators.newSessionAsync()),
-        screenRequest: (sessionId) => dispatch(actionCreators.getScreenAsync(sessionId)),
+        connectSession: (sessionId) => dispatch(connectActions.connectSession())
     }
 }
 

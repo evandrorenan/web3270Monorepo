@@ -13,7 +13,7 @@ class NavigationBar extends Component {
         return (
             <div className="NavigationBar" key="NavigationBar">
                 {this.state.items.map((item) => {
-                    return <TabItem id={item.id} name={item.name} isActive={item.isActive} onclick={this.props.onclick} />
+                    return <TabItem key={item.id} id={item.id} name={item.name} isActive={item.isActive} onclick={this.props.onclick} />
                 })}
             </div>
         );

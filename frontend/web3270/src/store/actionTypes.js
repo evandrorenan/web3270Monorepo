@@ -11,3 +11,4 @@ export const SET_FOCUSED_FIELD = "SET_FOCUSED_FIELD";
 export const SET_FOCUS = "SET_FOCUS";
 export const DUMMY = "DUMMY";
 export const SET_REPORT_OBJECT = "SET_REPORT_OBJECT";
+export const SET_STOMP_CLIENT = "SET_STOMP_CLIENT";
