@@ -1,5 +1,5 @@
 import axios                from 'axios';
-import * as customActions         from '../CustomActions';
+import * as customActions         from '../customActions';
 import * as websocketActions from "./websocketActions";
 
 // Functions exported on this class have to return an Action object.

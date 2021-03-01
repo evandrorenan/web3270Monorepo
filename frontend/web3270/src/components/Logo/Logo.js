@@ -1,7 +1,7 @@
 import React from 'react';
 
 import web3270Logo from '../../assets/images/logoWeb3270TransparentBg.png';
-import classes from './Logo.css';
+import './Logo.css';
 
 const logo = (props) => (
     <div className="Logo">

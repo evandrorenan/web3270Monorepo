@@ -1,16 +1,10 @@
-import axios                from 'axios';
 import * as actionTypes from "./actionTypes";
-import * as httpActions     from "./connectionActions/httpActions";
 import * as websocketActions from "./connectionActions/websocketActions";
 
-import { programResponse } from "../Session/ProgramReportObjects";
+import { programResponse } from "../components/layout/mainContent/reports/programReport/programReportObjects";
 
 // Functions exported on this class have to return an Action object.
 // All actions has to have a type.
-
-const STATUS_RETRIEVING_SCREEN = "Retrieving screen data...";
-const STATUS_READY = "Ready";
-const STATUS_SENDING_INPUT_DATA = "Sending input data...";
 
 export const setStatus = (localStatus) => {
     return { 
@@ -62,7 +56,6 @@ export const getScreenAction = (responseData) => {
 
     return {
         type: actionTypes.GET_SCREEN,
-        positions: responseData.positions,
         fields: responseData.fields,
         fieldPos: responseData.fieldPos,
         cursorPos: responseData.cursorPos,
@@ -143,25 +136,7 @@ export const setFocus = (field) => {
 }
 
 export const requestAbendReport = (request) => {
-    const payload = {
-        "compilationJobid": request.compilationJobid,
-        "user": request.user,
-        "password": request.password,
-        "programName": request.programName,
-        "abendId": request.abendId,
-        "abendFile": request.abendFile,
-        "compilationReport": null, 
-        "baseLocators": null
-    }
-
     return requestAbendResponseHandler(programResponse);
-
-    // return dispatch => {
-    //     axios.post ("http://localhost:3000/programreport", payload)
-    //         .then ( response => { 
-    //             dispatch(requestAbendResponseHandler(response));
-    //         });
-    // };
 }
 
 export const requestAbendResponseHandler = (response) => {

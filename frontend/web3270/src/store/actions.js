@@ -1,9 +1,7 @@
 import axios                from 'axios';
 import * as actionTypes from "../store/actionTypes";
-// import SockJS from 'sockjs-client';
-// import Stomp from 'stomp-websocket';
 import { Client } from '@stomp/stompjs';
-import { programResponse } from "../Session/ProgramReportObjects";
+import { programResponse } from "../components/layout/mainContent/reports/programReport/programReportObjects";
 import { myStore } from '../../src/index';
 
 // Functions exported on this file have to return an Action object.
@@ -11,7 +9,6 @@ import { myStore } from '../../src/index';
 
 const STATUS_CONNECTING = "Connecting...";
 const STATUS_CONNECTING_WEBSOCKET = "Connecting Websocket...";
-const STATUS_SUBSCRIBING_WEBSOCKET = "Subscribing Websocket...";
 const STATUS_RETRIEVING_SCREEN = "Retrieving screen data...";
 const STATUS_READY = "Ready";
 const STATUS_SENDING_INPUT_DATA = "Sending input data...";
@@ -290,25 +287,7 @@ export const setFocus = (field) => {
 }
 
 export const requestAbendReport = (request) => {
-    const payload = {
-        "compilationJobid": request.compilationJobid,
-        "user": request.user,
-        "password": request.password,
-        "programName": request.programName,
-        "abendId": request.abendId,
-        "abendFile": request.abendFile,
-        "compilationReport": null, 
-        "baseLocators": null
-    }
-
     return requestAbendResponseHandler(programResponse);
-
-    // return dispatch => {
-    //     axios.post ("http://localhost:3000/programreport", payload)
-    //         .then ( response => { 
-    //             dispatch(requestAbendResponseHandler(response));
-    //         });
-    // };
 }
 
 export const requestAbendResponseHandler = (response) => {

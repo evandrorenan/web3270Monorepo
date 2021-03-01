@@ -19,6 +19,7 @@ import com.ibm.eNetwork.ECL.ECLErr;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.pcomm.PcommSession;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
+import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import lombok.Data;
 
 @PropertySource("classpath:pcommConnect.properties")
@@ -30,8 +31,8 @@ public class MySessionFactory {
 	
 	private Boolean isMonitoring;
 
-	@Autowired
 	private SimpMessagingTemplate messageTemplate;
+	private IScreenService screenService;
 	
 	@Value("${SESSION_TYPE}")
 	private String sessionType;
@@ -51,7 +52,9 @@ public class MySessionFactory {
 		PCOMM;
 	}
 	
-	public MySessionFactory() {
+	@Autowired
+	public MySessionFactory(SimpMessagingTemplate messageTemplate, IScreenService screenService) {
+		this.screenService = screenService;
 		this.sessionMap = new HashMap<>();
 	}
 	
@@ -72,7 +75,7 @@ public class MySessionFactory {
 					properties.setProperty("codePage", this.codePage);
 					properties.setProperty("3D", this.screen3D);
 					
-					PcommSession pcomm = new PcommSession(messageTemplate);
+					PcommSession pcomm = new PcommSession(messageTemplate, screenService);
 					pcomm.StartCommunication();
 					pcomm.connect();
 					pcomm.GetOIA().WaitForInput();

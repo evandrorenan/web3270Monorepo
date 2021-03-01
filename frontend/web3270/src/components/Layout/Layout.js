@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Toolbar from './Toolbar';
-import Content from './Content';
+import Toolbar from './toolbar/Toolbar';
+import Content from './mainContent/Content';
 import './Layout.css';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './navigationBar/NavigationBar';
 
 class Layout extends Component {
 

@@ -1,6 +1,5 @@
 package br.com.evandrorenan.web3270.session._interface;
 
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 

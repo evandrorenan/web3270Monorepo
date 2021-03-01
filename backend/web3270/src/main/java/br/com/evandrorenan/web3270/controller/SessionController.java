@@ -1,11 +1,8 @@
 package br.com.evandrorenan.web3270.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,18 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import br.com.evandrorenan.web3270.dto.BaseLocatorDto;
-import br.com.evandrorenan.web3270.dto.CompilationReportDto;
-import br.com.evandrorenan.web3270.dto.ProgramReportDto;
-import br.com.evandrorenan.web3270.dto.ProgramReportRequestDto;
 import br.com.evandrorenan.web3270.dto.ScreenDto;
 import br.com.evandrorenan.web3270.dto.SessionDto;
 import br.com.evandrorenan.web3270.dto.SessionPropertiesDto;
 import br.com.evandrorenan.web3270.dto.UserInputDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
-import br.com.evandrorenan.web3270.service.ProgramReportService;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
-import br.com.evandrorenan.web3270.session._interface.IProgramReportService;
 import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import br.com.evandrorenan.web3270.session._interface.ISessionService;
 
@@ -39,7 +30,6 @@ public class SessionController {
 	
 	private ISessionService sessionService;
 	private IScreenService screenService;
-	private IProgramReportService programReportService;
 	
 	@Autowired
 	public SessionController(
@@ -47,8 +37,6 @@ public class SessionController {
 			IScreenService screenService) {
 		this.sessionService = sessionService;
 		this.screenService = screenService;
-		this.programReportService = new ProgramReportService(sessionService);
-//		System.out.println("ProgramReportService SessionSerivice: " + sessionService.toString());
 	}
 	
     /**

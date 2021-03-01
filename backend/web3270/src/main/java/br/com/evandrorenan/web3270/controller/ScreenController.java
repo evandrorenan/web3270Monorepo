@@ -2,10 +2,8 @@ package br.com.evandrorenan.web3270.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.evandrorenan.web3270.dto.ScreenDto;
 import br.com.evandrorenan.web3270.dto.UserInputDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session._interface.IMySession;

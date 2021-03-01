@@ -1,13 +1,10 @@
 package br.com.evandrorenan.web3270.service;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import br.com.evandrorenan.web3270.dto.FieldDto;
 import br.com.evandrorenan.web3270.dto.ScreenDto;
 import br.com.evandrorenan.web3270.dto.SendKeysDto;
 import br.com.evandrorenan.web3270.dto.UserInputDto;

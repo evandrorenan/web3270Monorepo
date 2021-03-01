@@ -20,6 +20,7 @@ import br.com.evandrorenan.web3270.dto.FieldDto;
 import br.com.evandrorenan.web3270.dto.PositionDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
+import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import lombok.ToString;
 
 @Component
@@ -36,7 +37,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 	
 	private String sessionId;
 
-	public MyPcommSession(Properties props, SimpMessagingTemplate messageTemplate) throws ECLErr {
+	public MyPcommSession(Properties props, SimpMessagingTemplate messageTemplate, IScreenService screenService) throws ECLErr {
 		super(props);
 		
 		this.sessionId = new Timestamp(System.currentTimeMillis()).toString()
@@ -47,7 +48,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		
 		this.autoReconnect = false;
 		
-		ECLPSListener pcommEventListener = new PcommEventListener(this, messageTemplate);
+		ECLPSListener pcommEventListener = new PcommEventListener(this, messageTemplate, screenService);
 		this.GetPS().RegisterPSEvent(pcommEventListener);
 		
 	}

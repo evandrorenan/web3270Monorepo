@@ -23,6 +23,7 @@ import br.com.evandrorenan.web3270.dto.SessionDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.pcomm.MyPcommSession;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
+import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import br.com.evandrorenan.web3270.session._interface.ISessionService;
 import lombok.Data;
 
@@ -36,12 +37,13 @@ public class SessionService implements ISessionService {
 
 	private Map<String, IMySession> sessionMap;
 	private SimpMessagingTemplate messageTemplate;
-
+	private IScreenService screenService;
 	
 	@Autowired
-	public SessionService(SimpMessagingTemplate messageTemplate) {
+	public SessionService(SimpMessagingTemplate messageTemplate, IScreenService screenService) {
 		this.messageTemplate = messageTemplate;
 		this.sessionMap = new HashMap<>();
+		this.screenService = screenService;
 		System.out.println("SessionService constructed;");
 	}
 	
@@ -116,7 +118,8 @@ public class SessionService implements ISessionService {
 		props.setProperty("AutoConnect"			, "N");
 
 		try {
-			MyPcommSession pcomm = new MyPcommSession(props, messageTemplate);
+			MyPcommSession pcomm = new MyPcommSession(props, this.messageTemplate, this.screenService);
+			
 			TimeLimiter limiter = new SimpleTimeLimiter();
 			IMySession proxyPcomm = limiter.newProxy(
 					pcomm, IMySession.class, 1000, TimeUnit.MILLISECONDS);
