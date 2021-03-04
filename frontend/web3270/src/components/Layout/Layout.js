@@ -41,8 +41,10 @@ class Layout extends Component {
         return (
             <div className="Layout">
                 <Toolbar />
-                <NavigationBar state={this.state} onclick={this.onclick} />
-                <Content activeTab={this.activeTab} />
+                <div className="MainDiv">
+                    <NavigationBar state={this.state} onclick={this.onclick} />
+                    <Content activeTab={this.activeTab} />
+                </div>
             </div>
         );
     }

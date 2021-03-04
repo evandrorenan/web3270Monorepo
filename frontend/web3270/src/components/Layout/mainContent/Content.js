@@ -16,7 +16,7 @@ const Content = (props) => {
                 <Screen />
             </span>
             <span className={props.activeTab() === "Report" ? "NotHiddenDiv" : "HiddenDiv"}>
-                <div className="report">
+                <div className="Report">
                     <ProgramReport />
                     <DataDivisionMap />
                 </div> 

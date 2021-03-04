@@ -1,7 +1,7 @@
 .RequestReportForm {
-    margin: auto;
-    width: 600px;
-    padding: 10px 50px;
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco;
+    font-size: 100%;
+    padding: 10px 10px;
     border: 0px #ccc solid;
     background-color: white;
     

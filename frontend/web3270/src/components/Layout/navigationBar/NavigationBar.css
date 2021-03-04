@@ -1,32 +1,26 @@
 .NavigationBar {
     color: cyan;
-    width: 100%;
-    height: 15px;
+    width: 10%;
+    height: 100%;
     top: 54px;
     left: 0;
-    background-image: linear-gradient(to right, black , lightgray);
-    display: flex;
+    display: inline-block;
     align-items: center;
     padding-left: 15px;
-    box-sizing: border-box;
     border-bottom: 0;
-    display: flex;
 }
 
 .NavigationBar .button {
-    display: flex;
+    display: block;
+    border-radius: 0%;
     margin-left: 0px;
-    width: 10%;
-    margin-right: 10px;
+    width: 100%;
     color: cyan;
-    width: fit-content;
     background-color: transparent;
-    text-align: center;
-    padding: 0 20px 0 20px;
-    border-width: 1px 1px 0px 1px;
+    text-align: left;
+    border-width: 0px 0px 1px 0px;
     border-style: solid;
-    border-radius: 5px 5px 0px 0px;
-    border-color: grey;
+    border-color: white;
     font-family: "Lucida Console", "Courier New", monaco;
     z-index: 90;
 

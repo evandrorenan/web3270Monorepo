@@ -1,7 +1,9 @@
 .SourceDiv {
     font-family: "Lucida Console", "Courier New", monaco;
     text-align: left;
-    width: 100%;
+    width: 40%;
+    height: 90%;
+    display: flex;
     font-size: 9pt;
     overflow: scroll;
     overflow-x: hidden;
