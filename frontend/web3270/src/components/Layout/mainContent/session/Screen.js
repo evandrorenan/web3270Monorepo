@@ -16,7 +16,6 @@ class Screen extends Component {
     componentDidMount() {
         if (!this.state.initialConnect ) {
             this.setState({ initialConnect : true});     
-            console.log("Screen.js connecting new session");
             this.props.connectSession(null);
         }
     }
@@ -31,8 +30,6 @@ class Screen extends Component {
 
     render() {
         let rows = [24];
-
-        console.log("Screen props" + this.props);
 
         for (let row = 0; row < 24; row++) {
             rows[row] = [];

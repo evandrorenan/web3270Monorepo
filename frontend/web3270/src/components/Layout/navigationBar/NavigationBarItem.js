@@ -3,7 +3,6 @@ import React from 'react';
 import './NavigationBar.css';
 
 const NavigationBarItem = (props) => {
-    console.log('TabItem:' + props.id)
     return (
         <button id={props.id} 
                 key={"TabItem" + props.id} 

@@ -18,7 +18,7 @@ export const newStompClient = (url) => {
         brokerURL: 'ws:/localhost:3000/web3270-websocket',
         connectHeaders: {},
         debug: (str) => {
-            console.log(str)
+            console.log("[webSocketActions]:" + str)
         },
         reconnectDelay: 500,
         heartbeatIncoming: 4000,

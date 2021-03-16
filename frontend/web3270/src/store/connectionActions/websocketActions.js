@@ -50,8 +50,6 @@ export const sendWebSocketMessage = (payload, stompClient) => {
         //     ]})
         // );
 
-    console.log('payload: ', payload);
-
     return {
         type: actionTypes.DUMMY
     }

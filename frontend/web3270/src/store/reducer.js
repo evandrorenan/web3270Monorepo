@@ -37,6 +37,19 @@ const initialState = {
     stompClient : null
 }
 
+const printScreenOnConsole = (fields) => {
+    let localRow = "";
+    for (let index = 0; index < fields.length; index++) {
+        if ( index > 0 && fields[index-1].row !== fields[index].row) {
+            console.log(localRow);
+            localRow = fields[index].text;
+        } else {
+            localRow += fields[index].text;
+        }
+    }
+    console.log(localRow);
+}
+
 const reducer = (state = initialState, action) => {
     if ( action.type === actionTypes.DUMMY ) {
         return state;
@@ -56,6 +69,7 @@ const reducer = (state = initialState, action) => {
             newState.fields = action.fields;
             newState.cursorPos = action.cursorPos;
             newState.sessionId = action.sessionId;
+            printScreenOnConsole(newState.fields);
             return newState;
 
         case actionTypes.GET_SCREEN_FIELDS:

@@ -71,16 +71,12 @@ const connectScreenWebsocket = (sessionId) => {
     let stompClient;
 
     const onMessage = (message) => {
-        console.log("OnMessage: " + message);
         let response = {};
         response.data = JSON.parse(message.body);
         myStore.dispatch(getScreenAction(response.data));
     }
 
     const wsConnectSuccess = (frame) => {
-        console.log("wsConnectSuccess - frame: " + frame);
-        console.log("wsConnectSuccess - stompClient: " + stompClient);
-
         stompClient.subscribe('/queue/screens/' + sessionId, 
                               message => onMessage (message)); 
     }    
@@ -116,41 +112,6 @@ const connectScreenWebsocket = (sessionId) => {
         status : STATUS_CONNECTING_WEBSOCKET
     }
 }
-
-// const connectScreenWebsocket = (sessionId) => {
-//     let socket = new SockJS('/web3270-websocket');
-//     let stompClient = Stomp.over(socket);    
-//     // connect ( headers, callback , onerror )
-//     console.log("connectScreenWebsocket:" + sessionId)
-//     stompClient.connect({}, function (frame) {        
-//         console.log("connect callback:" + frame)
-//         return dispatch => { 
-//             subscribeScreenWebsocket(stompClient, sessionId);
-//         };
-//     },  function (frame) { 
-//         console.log("Connection failed: " + frame);
-//     });
-//     return { 
-//         type: actionTypes.SET_STATUS,
-//         status : STATUS_CONNECTING
-//     }
-// }
-
-// const subscribeScreenWebsocket = (stompClient, sessionId) => {
-//     console.log("subscribeScreenWebsocket:" + sessionId)
-//     stompClient.subscribe('/queue/screens/' + sessionId, function (message) {
-//         console.log("subscribe callback:" + message)
-//         let response = {};
-//         response.data = JSON.parse(message.body);
-//         return dispatch => { 
-//             dispatch (getScreenAction(response.data));
-//         }
-//     });
-//     return { 
-//         type: actionTypes.SET_STATUS,
-//         status : STATUS_CONNECTING
-//     }
-// }
 
 export const getScreenFromWebSocket = (message) => {
     let response = {};
@@ -235,12 +196,9 @@ const buildRequestBody = (row, col, currentFieldText, userFunctionKey, fields, s
 export const sendKeys = (row, col, currentFieldText, functionKey, fields, sessionId) => {
 
     const requestBody = buildRequestBody(row, col, currentFieldText, functionKey, fields, sessionId);
-    console.log("requestBody:" + requestBody.sessionId + " " + requestBody.sendKeys[0].text);
 
     return dispatch => {
-        console.log("A");
         dispatch(setStatus(STATUS_SENDING_INPUT_DATA));
-        console.log("b");
         axios.post ("http://localhost:3000/ws/sendkeys", requestBody)
         .then ( response => { 
                 dispatch(setStatus(STATUS_READY));

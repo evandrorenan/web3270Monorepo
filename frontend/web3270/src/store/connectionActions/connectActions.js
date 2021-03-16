@@ -3,6 +3,7 @@ import * as customActions   from '../customActions';
 import SockJS               from 'sockjs-client';
 import Stomp                from 'stompjs';
 import * as actionTypes     from '../actionTypes';
+import {myStore}            from '../../index';
 
 const STATUS_CONNECTING = "Connecting...";
 const STATUS_READY = "Ready";
@@ -21,9 +22,7 @@ export const connectWebsocket = (sessionId) => {
         console.log("Websocket connected");
         console.log('subscribing: /queue/session/' + sessionId);
         localStompClient.subscribe('/queue/session/' + sessionId , function (message) {
-            console.log('new message. Body: ', message.body);
-            //this is wrong... should be a dispatch
-            customActions.getScreenAction(JSON.parse(message.body));
+            myStore.dispatch (customActions.getScreenAction(JSON.parse(message.body)));
         });        
     });
     return {
@@ -56,8 +55,6 @@ export const sendWebSocketMessage = (payload, stompClient) => {
         //         }    
         //     ]})
         // );
-
-    console.log('payload: ', payload);
 
     return {
         type: actionTypes.DUMMY
