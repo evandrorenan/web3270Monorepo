@@ -1,6 +1,5 @@
 import axios                from 'axios';
 import * as customActions   from '../customActions';
-import * as actions         from '../customActions';
 import SockJS               from 'sockjs-client';
 import Stomp                from 'stompjs';
 import * as actionTypes     from '../actionTypes';
@@ -23,6 +22,7 @@ export const connectWebsocket = (sessionId) => {
         console.log('subscribing: /queue/session/' + sessionId);
         localStompClient.subscribe('/queue/session/' + sessionId , function (message) {
             console.log('new message. Body: ', message.body);
+            //this is wrong... should be a dispatch
             customActions.getScreenAction(JSON.parse(message.body));
         });        
     });

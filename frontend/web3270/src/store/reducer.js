@@ -67,7 +67,7 @@ const reducer = (state = initialState, action) => {
             newState.status = action.status;
             return newState;
 
-        case actionTypes.CREATE_REF:            
+        case actionTypes.CREATE_REF:
             newState.fields[action.index].ref = action.ref;
             return newState;
 

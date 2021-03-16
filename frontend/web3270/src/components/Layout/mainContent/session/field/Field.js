@@ -13,7 +13,6 @@ class Field extends Component {
           this.state = { currentField : props.field,
                          insertMode : false }
           let ref = React.createRef();
-          this.state.currentField.ref = 
           props.createRef(
                props.fields.findIndex(field => field.fieldId === props.field.fieldId),
                ref);

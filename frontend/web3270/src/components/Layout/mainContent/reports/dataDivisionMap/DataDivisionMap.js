@@ -207,7 +207,7 @@ class DataDivisionMap extends Component {
                 </div>
                 <div className="DataItemDetail">
                     <div className="ContentDetail">
-                        <textarea id="contentDetail" className="Textarea" onChange={null} value={this.state.selectedItem} />
+                        <textarea id="contentDetail" className="Textarea" onChange={null} defaultValue={this.state.selectedItem} />
                     </div>
                 </div>
             </div> 

@@ -24,7 +24,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	// Connection url ws://<host>/web3270-websocket
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		registry.addEndpoint("/web3270-websocket");
-		registry.addEndpoint("/web3270-websocket").withSockJS();
+		registry.addEndpoint("/web3270-websocket").setAllowedOrigins("*");
+		registry.addEndpoint("/web3270-websocket").setAllowedOrigins("*").withSockJS();
 	}
 }

@@ -8,7 +8,7 @@
     border-collapse: collapse;
     display:table-cell;
     padding: 0%;
-    caret-color: black;
+    caret-color: auto;
     margin: 0%;
     padding: none;
 }
