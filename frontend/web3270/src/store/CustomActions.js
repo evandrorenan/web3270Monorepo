@@ -53,7 +53,6 @@ export const getScreenResponseHandler = (response) => {
 }
 
 export const getScreenAction = (responseData) => {
-
     return {
         type: actionTypes.GET_SCREEN,
         fields: responseData.fields,

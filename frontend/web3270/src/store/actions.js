@@ -99,11 +99,9 @@ const connectScreenWebsocket = (sessionId) => {
     
     // Create an instance
     stompClient = new Client(stompConfig);
-    console.log(stompClient);
 
     // You can set additional configuration here
 
-    console.log('STOMP Client activate');
     // Attempt to connect
     stompClient.activate();
 
@@ -154,8 +152,6 @@ const getScreenResponseHandler = (response) => {
 }
 
 export const getScreenAction = (responseData) => {
-    console.log("fieldPos: " + responseData.fieldPos[0]);
-
     return {
         type: actionTypes.GET_SCREEN,
         positions: responseData.positions,
@@ -227,8 +223,6 @@ export const setFocusedField = (localIndex, field) => {
             type: actionTypes.DUMMY,
         }
     }
-    console.log("Action Set focused field-index: " + field.index);
-    console.log("Action Set focused field-row: " + field.row);
 
     return {
         type : actionTypes.SET_FOCUSED_FIELD,

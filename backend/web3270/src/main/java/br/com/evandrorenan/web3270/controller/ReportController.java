@@ -30,7 +30,6 @@ public class ReportController {
 	@PostMapping(path = {"/programreport"})
 	public ProgramReportDto programReport(@RequestBody ProgramReportRequestDto request) throws ExceptionWeb3270 {
 		
-		System.out.println("Program report:" + request.toString());
 		if (request.getBaseLocators() == null && request.getCompilationReport() == null ) {
 			return this.programReportService.generateReport(
 					request.getCompilationJobid(), 

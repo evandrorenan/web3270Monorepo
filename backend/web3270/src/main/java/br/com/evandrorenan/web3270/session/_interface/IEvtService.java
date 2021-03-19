@@ -13,5 +13,7 @@ public interface IEvtService {
 
 	public String getSysoutHtml(String evt, String opcao, String jobId) throws ExceptionWeb3270;
 	
+	public String getSysoutTxt(String evt, String opcao, String jobId) throws ExceptionWeb3270;
+
 	public List<String> getSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270;
 }

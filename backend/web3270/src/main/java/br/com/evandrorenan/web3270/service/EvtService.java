@@ -60,6 +60,12 @@ public class EvtService implements IEvtService {
 	}
 
 	@Override
+	public String getSysoutTxt(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+		String join = String.join("", this.getSysout(evt, opcao, jobId));
+		return join;
+	}
+
+	@Override
 	public List<String> getSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
 		List<String> sysout = new ArrayList<>();
 		
@@ -79,9 +85,9 @@ public class EvtService implements IEvtService {
 				if (line.contains("----  FINAL DO RELATORIO  ----")) {
 					return sysout;
 				}
-				sysout.add("<p>" + line + "</p>");
+				sysout.add(line + "\n");
 			}			
-			mySession.sendKeys("[pf8]", 1, 27);			
+			mySession.sendKeys(MySessionConstants.F8_STR, 1, 27);			
 		}
 	}
 	
@@ -111,11 +117,14 @@ public class EvtService implements IEvtService {
 	private IMySession navigateToSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
 		SessionDto sessionDto = sessionService.createNewSessionDto(bradescoHostIp, bradescoHostPort);
 		IMySession mySession = this.sessionService.getSession(sessionDto.getSessionId());
-		mySession.sendKeys(evt + "[enter]", 24, 29);
-		mySession.sendKeys("4253-440[enter]", 4, 25);
-		mySession.sendKeys(opcao + "[enter]", 5, 38);
-		mySession.sendKeys("[pf3]", 1, 27);
-		mySession.sendKeys(jobId + "[enter]", 21, 38);
+		mySession.sendKeys(evt + MySessionConstants.ENTER_STR, 24, 29);
+		mySession.sendKeys("4253-440", 4, 25);
+		mySession.sendKeys("4253-440" + MySessionConstants.ENTER_STR, 5, 25);
+		if ( ! evt.substring(3, 4).toUpperCase().equals("S")) {
+			mySession.sendKeys(opcao + MySessionConstants.ENTER_STR, 5, 38);
+			mySession.sendKeys(MySessionConstants.F3_STR, 1, 27);
+		}		
+		mySession.sendKeys(jobId + MySessionConstants.ENTER_STR, 21, 38);
 		return mySession;
 	}
 
@@ -145,7 +154,7 @@ public class EvtService implements IEvtService {
 					sourceCodeLines.add(scLine);
 				}				
 			}			
-			mySession.sendKeys("[pf8]", 1, 27);			
+			mySession.sendKeys(MySessionConstants.F8_STR, 1, 27);			
 		}
 	}
 	
@@ -174,7 +183,7 @@ public class EvtService implements IEvtService {
 					dataDivisionMapItems.add(ddMapItem);
 				}				
 			}			
-			mySession.sendKeys("[pf8]", 1, 27);			
+			mySession.sendKeys(MySessionConstants.F8_STR, 1, 27);			
 		}
 	}
 	
@@ -184,11 +193,11 @@ public class EvtService implements IEvtService {
 		List<String> pagePart2 = null;
 		
 		if ( pagePart1.get(2).substring(32, 35).equals("001")) {
-			mySession.sendKeys("[pf11]", 1, 27);
+			mySession.sendKeys(MySessionConstants.F11_STR, 1, 27);
 			pagePart2 = this.getArrStrScreen(mySession.getTextScreen());
 		} else {
 			pagePart2 = pagePart1;
-			mySession.sendKeys("[pf10]", 1, 27);
+			mySession.sendKeys(MySessionConstants.F10_STR, 1, 27);
 			pagePart1 = this.getArrStrScreen(mySession.getTextScreen());
 		}
 		

@@ -3,6 +3,7 @@ package br.com.evandrorenan.web3270.pcomm;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import com.ibm.eNetwork.ECL.ECLErr;
+import com.ibm.eNetwork.ECL.ECLOIA;
 import com.ibm.eNetwork.ECL.ECLPS;
 import com.ibm.eNetwork.ECL.event.ECLPSEvent;
 import com.ibm.eNetwork.ECL.event.ECLPSListener;
@@ -16,45 +17,49 @@ public class PcommEventListener implements ECLPSListener {
 	
 	private SimpMessagingTemplate messageTemplate;
 	
-	private IMySession mySession;
+	private MyPcommSession myPcommSession;
 
 	private IScreenService screenService;
 
 	public PcommEventListener(IMySession session, SimpMessagingTemplate messageTemplate, IScreenService screenService) {
-		System.out.println("PcommEventListener instantiated: " + session.toString() + messageTemplate);
-		this.mySession = session;
+		this.myPcommSession = (MyPcommSession) session;
 		this.messageTemplate = messageTemplate;
 		this.screenService = screenService;
 	}
 
 	@Override
 	public void PSNotifyError(ECLPS ps, ECLErr error) {
-		System.out.println("PSNotifyError: "  + ps + " - " + error);		
 	}
 
 	@Override
 	public void PSNotifyEvent(ECLPSEvent event) {
-		System.out.println("PSNotifyEvent" + event);
+		
+		this.myPcommSession.printScreenOnConsole();
 		ScreenDto screen;
 		
 		try {
-			screen = this.screenService.getScreenFields(this.mySession);
-			System.out.println("adding new event to queue " + mySession.getSessionId());
-	        System.out.println(" fields: " + screen.getFields());
-	        System.out.println(" fields: " + screen.getFieldPos());
-	        System.out.println(" fields: " + screen.getCursorPos());
-	        System.out.println(" fields: " + screen.getSessionId());
-			String queue = "/queue/session/" + mySession.getSessionId();
-			System.out.println(queue);
+			screen = this.screenService.getScreenFields(this.myPcommSession);
+			String queue = "/queue/session/" + myPcommSession.getSessionId();
 			messageTemplate.convertAndSend(queue, screen);
 		} catch (ExceptionWeb3270 e) {
-			this.mySession.dispose();
+			this.myPcommSession.dispose();
 			e.printStackTrace();
 		}
+		
+		if (this.myPcommSession.getCountDownLatch() != null ) {
+			if (this.myPcommSession.GetOIA().InputInhibited() == ECLOIA.INHIBIT_NOTINHIBITED) {
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.myPcommSession.getCountDownLatch().countDown();
+			}
+		} 	
 	}
 
 	@Override
 	public void PSNotifyStop(ECLPS ps, int reason) {
-		System.out.println("PSNotifyStop: "  + ps + " - " + reason);		
 	}
 }

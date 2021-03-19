@@ -11,7 +11,6 @@ const StompEventTypes = {
 }
 
 export const newStompClient = (url) => {
-    console.log('Stomp trying to connect');
     const stompEvent = new EventEmitter();
 
     let  _stompClient = new Client({
@@ -28,23 +27,18 @@ export const newStompClient = (url) => {
             return SockJS(url)
         },
         onStompError: (frame) => {
-            console.log('Stomp Error', frame)
             stompEvent.emit(StompEventTypes.Error, frame)
         },
         onConnect: (frame) => {
-            console.log('Stomp Connect', frame)
             stompEvent.emit(StompEventTypes.Connect, frame)
         },
         onDisconnect: (frame) => {
-            console.log('Stomp Disconnect', frame)
             stompEvent.emit(StompEventTypes.Disconnect, frame)
         },
         onWebSocketClose: (frame) => {
-            console.log('Stomp WebSocket Closed', frame)
             stompEvent.emit(StompEventTypes.WebSocketClose, frame)
         },
         onWebSocketError: (frame) => {
-            console.log('Stomp WebSocket Error', frame)
             stompEvent.emit(StompEventTypes.WebSocketError, frame)
         },
     })

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +39,8 @@ public class MyPcommSession extends ECLSession implements IMySession {
 	
 	private String sessionId;
 
+	private CountDownLatch countDownLatch;
+
 	public MyPcommSession(Properties props, SimpMessagingTemplate messageTemplate, IScreenService screenService) throws ECLErr {
 		super(props);
 		
@@ -50,7 +54,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		
 		ECLPSListener pcommEventListener = new PcommEventListener(this, messageTemplate, screenService);
 		this.GetPS().RegisterPSEvent(pcommEventListener);
-		
+		this.countDownLatch = new CountDownLatch(1);
 	}
 	
 	@Override 
@@ -152,41 +156,23 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		}
 	}
 	
-	private void customWaitScreenUpdate(String oldScreen) {
-		printScreenOnConsole();
-		try {
-			this.waitScreenUpdate();
-			for (int i = 7000 ; i > 10; i -= 50) {
-				String newScreen = this.getTextScreen();
-				if (!oldScreen.equals(newScreen)) {
-//					System.out.println(i + ", ");
-					break;
-				}
-				System.out.print(i + ", ");
-				Thread.sleep(50);
-			}
-			
-		} catch (ExceptionWeb3270 | InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		printScreenOnConsole();
-	}
 	
 	@Override
 	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {	
-		System.out.println("Send keys: " + row + ", " + col + ", " + text);
-		try {
-			
+		try {			
 			this.GetPS().SendKeys(text, row, col);
 			for (String mnemonic : this.GetPS().GetSendKeyMnemonics()) {
 				if (text.contains(mnemonic)) {
-					this.customWaitScreenUpdate(this.getTextScreen());
+					this.countDownLatch = new CountDownLatch(1);
+					countDownLatch.await(6, TimeUnit.SECONDS);
 					return;
 				}
 			}			
 		} catch (ECLErr e) {
 			logger.error("Error on sendKey method. Received key: %d, %d, %s", row, col, text);
+		} catch (InterruptedException e) {
+			logger.error("CountDown was interrupted: %s", e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	
@@ -335,7 +321,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		return returnList;
 	}
 	
-	private void printScreenOnConsole() {
+	public void printScreenOnConsole() {
 		
 		StringBuilder printScreen = new StringBuilder();
 		for (int i = 0; i < 24; i++) {
@@ -365,5 +351,9 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		int end = ini + length > 1919 ? 1919 : ini + length;
 		
 		return getTextScreen().substring(ini, end);		
+	}
+
+	public CountDownLatch getCountDownLatch() {
+		return this.countDownLatch;
 	}
 }

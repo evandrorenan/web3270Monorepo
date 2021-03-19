@@ -35,4 +35,13 @@ public class EvtController {
 		String str = this.evtService.getSysoutHtml(evt, opcao, jobId);
 		return str;
 	}
+
+	@GetMapping(path = {"/sysout/txt/{evt}/{opcao}/{jobId}"})
+	public String getSysoutEvt(
+			@PathVariable String evt,
+			@PathVariable String opcao, 
+			@PathVariable String jobId) throws ExceptionWeb3270 {
+		String str = this.evtService.getSysoutTxt(evt, opcao, jobId);
+		return str;
+	}
 }

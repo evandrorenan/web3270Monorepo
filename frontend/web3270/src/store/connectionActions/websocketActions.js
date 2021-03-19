@@ -11,11 +11,8 @@ const STATUS_READY = "Ready";
 export const connectWebsocket = () => {
     let socket = new SockJS('http://localhost:3000/web3270-websocket');
     let localStompClient = Stomp.over(socket);
-    console.log("StompClient instanciado");
     localStompClient.connect ({}, function (message) {
-        console.log("Websocket connected");
         localStompClient.subscribe('/topic/screens', function (message) {
-            console.log('new message. Body: ', message.body);
             actions.getScreenResponseHandler(message);
         });        
     });
@@ -29,7 +26,6 @@ export const disconnectWebSocket = (stompClient) => {
     if (stompClient !== null) {
         stompClient.disconnect();
     }
-    console.log("Websocket disconnected");
     return {
         type: actionTypes.SET_STOMP_CLIENT,
         stompClient: null
@@ -39,16 +35,6 @@ export const disconnectWebSocket = (stompClient) => {
 export const sendWebSocketMessage = (payload, stompClient) => {
 
     stompClient.send("/ws/sendkeys", {}, JSON.stringify(payload));
-        //     "sessionId": "20201117192908268",
-        //     "sendKeys": [
-        //         {
-        //             "row": 24,
-        //             "col": 29,
-        //             "text": "ACCTER",
-        //             "functionKey": "[enter]"
-        //         }    
-        //     ]})
-        // );
 
     return {
         type: actionTypes.DUMMY
