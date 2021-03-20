@@ -164,7 +164,9 @@ export const downloadReport = (response) => {
     let e = document.createEvent('MouseEvents');
     let a = document.createElement('a');
 
-    a.download = 'sysout';
+    const regex = /\d{2}\.\d{2}\.\d{2}\s(J.{2}\d{5})/gm;
+
+    a.download = response.data.substr(response.data.search(regex) + 9, 8) + ".txt";
     a.href = window.URL.createObjectURL(blob);
     a.dataset.downloadurl =  [contentType, a.download, a.href].join(':');
     e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);

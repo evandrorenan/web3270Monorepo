@@ -12,7 +12,7 @@ class Layout extends Component {
         this.state = { 
             items:[{ id:"SessionItem", name:"Session", isActive: true } ,
                    { id:"Report", name:"Abend Report", isActive: false },
-                   { id:"RequestReport", name:"Request new abend Report", isActive: false }]};
+                   { id:"RequestSysoutEvt", name:"Sysout download", isActive: false }]};
     }
 
     onclick = (event) => {

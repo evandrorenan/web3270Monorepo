@@ -10,7 +10,7 @@ import RequestSysoutEvt from './forms/requestSysoutEvt/RequestSysoutEvt';
 const Content = (props) => {
     return (
         <div className="Content">
-            <span className={props.activeTab() === "RequestReport" ? "NotHiddenDiv" : "HiddenDiv"}>
+            <span className={props.activeTab() === "RequestSysoutEvt" ? "NotHiddenDiv" : "HiddenDiv"}>
                 <RequestSysoutEvt />
             </span>
             <span className={props.activeTab() === "SessionItem" ? "NotHiddenDiv" : "HiddenDiv"}>

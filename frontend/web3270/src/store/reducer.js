@@ -131,7 +131,7 @@ const reducer = (state = initialState, action) => {
             return newState;
                 
         case actionTypes.SET_WAITING_STATUS_FALSE:
-            newState.waitingStatus = true;
+            newState.waitingStatus = false;
             return newState;
                     
         default:

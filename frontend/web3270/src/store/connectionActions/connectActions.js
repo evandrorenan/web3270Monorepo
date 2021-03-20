@@ -81,7 +81,7 @@ export const requestSysoutEvt = (request) => {
     
     return dispatch => {
         dispatch(customActions.setWaitingStatusTrue());
-        axios.get ("http://localhost:3000/sysout/html/" 
+        axios.get ("http://localhost:3000/sysout/txt/" 
                   + request.evt    + "/" 
                   + request.option + "/" 
                   + request.jobId )
@@ -89,5 +89,9 @@ export const requestSysoutEvt = (request) => {
                 dispatch(customActions.setWaitingStatusFalse());
                 customActions.downloadReport(response);
             } )
+            .catch ( err => {
+                dispatch(customActions.setWaitingStatusFalse());
+                console.log('[reducer] err: ', err);
+            })
     };
 };

@@ -15,20 +15,24 @@ class RequestSysoutEvt extends Component {
             {id: 1, label: "Usuario",                   value:"", maxLength: "8" },
             {id: 2, label: "Senha",                     value:"", maxLength: "8" },
             {id: 3, label: "Opcao (Z ou C)",            value:"", maxLength: "1" },
-            {id: 4, label: "Job id",                    value:"", maxLength: "7" },
+            {id: 4, label: "Job id",                    value:"", maxLength: "200" },
         ]};
 
         this.onclick = this.onclick.bind(this);
     }
     
     onclick(event) {
-        this.props.requestSysoutEvt({
-            "evt":      this.state.form[0].value,
-            "user":     this.state.form[1].value,
-            "password": this.state.form[2].value,
-            "option":   this.state.form[3].value,
-            "jobId":    this.state.form[4].value
-        })
+        let jobs = this.state.form[4].value.split(",");
+
+        for (let index = 0; index < jobs.length; index++) {
+            this.props.requestSysoutEvt({
+                "evt":      this.state.form[0].value,
+                "user":     this.state.form[1].value,
+                "password": this.state.form[2].value,
+                "option":   this.state.form[3].value,
+                "jobId":    jobs[index]
+            })
+        }
     }
     
     onchange(event, id) {        
@@ -51,7 +55,7 @@ class RequestSysoutEvt extends Component {
             <input type="button" 
                    className="FormButton" 
                    disabled={this.props.waitingStatus} 
-                   value="Request Report" 
+                   value="Download sysout" 
                    onClick={this.onclick} />
             {this.props.waitingStatus === true ? 
             <div className="Spinner" ></div> : <span /> }
