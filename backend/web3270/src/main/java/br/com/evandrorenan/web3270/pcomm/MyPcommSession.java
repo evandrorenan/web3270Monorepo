@@ -29,8 +29,6 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class MyPcommSession extends ECLSession implements IMySession {
 	
-	private static final String ERROR_ON_WAIT_SCREEN_UPDATE = "Error on waitScreenUpdate.";
-
 	private static final String ERROR_ON_GET_POSITIONS_METHOD = "Error on getPositions method.";
 
 	private static final String ECLERR_WHEN_TRYING_TO_GET_SCREEND_FIELDS_INITIAL_POSITION = "ECLErr when trying to get screend fields initial position.";
@@ -128,37 +126,20 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		return positions;
 	}
 	
-	private void waitScreenUpdate() throws ExceptionWeb3270 {
-		for (int i = 0;i < 1000; i+= 50) {
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				throw new ExceptionWeb3270(
-						ERROR_ON_WAIT_SCREEN_UPDATE, 
-						"Received key: " + e.getMessage(),
-						e);
-			}
-		}
-	}
-	
 	@Override
 	public boolean isConnected() {
 		return ! this.isDisconnected();
 	}
 
 	@Override
-	public void sendKey(String key) throws ExceptionWeb3270 {	
-		try {
-			this.GetPS().SendKeys(key);
-			this.waitScreenUpdate();
-		} catch (ECLErr e) {
-			logger.error("Error on sendKey method. Received key: %s", key);
-		}
+	public void sendKey(String key) throws ExceptionWeb3270 {
+		this.sendKeys(key, this.GetPS().GetCursorRow(), this.GetPS().GetCursorCol());
 	}
 	
 	
 	@Override
-	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {	
+	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {
+		
 		try {			
 			this.GetPS().SendKeys(text, row, col);
 			for (String mnemonic : this.GetPS().GetSendKeyMnemonics()) {
@@ -202,15 +183,16 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		int lastPos = 1;
 		
 		try {
+
 			String baseFieldName = new Timestamp(System.currentTimeMillis()).toString()
 					.replace(" ", "")
 					.replace("-", "")
 					.replace(".", "")
-					.replace(":", "");			
+					.replace(":", "").substring(10);
 			
 			for (int i = 0; i < this.GetPS().GetFieldList().size(); i++) {
 				FieldDto field = new FieldDto(
-						baseFieldName + '_' + 
+						baseFieldName +  
 						String.valueOf(((ECLField) this.GetPS().GetFieldList().get(i)).GetStart()));
 				field.setStart        (((ECLField) this.GetPS().GetFieldList().get(i)).GetStart());
 				field.setEnd          (((ECLField) this.GetPS().GetFieldList().get(i)).GetEnd());
@@ -287,7 +269,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		List<FieldDto> returnList = new ArrayList<>();
 
 		if (lastPos < field.getStart() ) {
-			FieldDto newHiddenField = new FieldDto(field.getFieldId() + "1");
+			FieldDto newHiddenField = new FieldDto(this.nameField(field.getFieldId(), false));
 			newHiddenField.setStart(lastPos);
 			newHiddenField.setEnd(field.getStart() - 1);
 			newHiddenField.setText("");
@@ -300,8 +282,10 @@ public class MyPcommSession extends ECLSession implements IMySession {
 			lastPos = newHiddenField.getStart();
 			returnList.addAll(breakField(newHiddenField, lastPos));
 		}
-		if ((int) Math.ceil(field.getStart() / 80.0) != (int) Math.ceil(field.getEnd() / 80.0)) {
-			FieldDto newField = new FieldDto(field.getFieldId() + "2");
+		
+		
+		if ((int) Math.ceil(field.getStart() / 80.0) != (int) Math.ceil(field.getEnd() / 80.0)) {			
+			FieldDto newField = new FieldDto(this.nameField(field.getFieldId(), true));
 			newField.setStart		 (((int) Math.ceil(field.getStart() / 80.0)) * 80 + 1);
 			newField.setEnd			 (field.getEnd());
 			newField.setProtected	 (field.isProtected());
@@ -319,6 +303,17 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		}
 		returnList.add(field);
 		return returnList;
+	}
+	
+	
+	private String nameField(String baseName, boolean maiuscula) {
+		
+		if (baseName.indexOf("_") < 0 ) {
+			return baseName + "_" + (maiuscula ? "A" : "a");
+		}
+			
+		int currentLetter = baseName.charAt(baseName.indexOf("_") + 1);
+		return baseName.split("_")[0] + "_" + ((char) (currentLetter + 1));
 	}
 	
 	public void printScreenOnConsole() {

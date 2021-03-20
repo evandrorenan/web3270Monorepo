@@ -37,7 +37,7 @@ public class ScreenController {
      * @throws ExceptionWeb3270 
      */	
 	@MessageMapping("/sendkeys")
-    public void getScreen(UserInputDto payload) throws ExceptionWeb3270 {
+    public void sendKeys(UserInputDto payload) throws ExceptionWeb3270 {
 		IMySession mySession = this.sessionService.getSession(payload.getSessionId());
 		this.screenService.sendKeysAsync(mySession, payload);
     }

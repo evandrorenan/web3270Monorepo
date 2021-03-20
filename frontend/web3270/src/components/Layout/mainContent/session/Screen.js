@@ -39,6 +39,7 @@ class Screen extends Component {
                 }
             }
         }
+        console.log('[Screen] this.props.fields.length: ', this.props.fields.length);
 
         return  (
             <div >
@@ -73,6 +74,7 @@ class Screen extends Component {
 }
 
 const mapStateToProps = state => {
+    console.log('[Screen] state.fields.length: ', state.fields.length);
     return {
         sessionId: state.sessionId,
         fields: state.fields,

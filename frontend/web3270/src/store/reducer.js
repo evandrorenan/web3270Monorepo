@@ -64,9 +64,15 @@ const reducer = (state = initialState, action) => {
             return newState;
         
         case actionTypes.GET_SCREEN:
+            newState.fields = [];
             newState.fieldPos = action.fieldPos;
             newState.keyNameSufix = state.keyNameSufix === 1 ? 1920 : 1;
             newState.fields = action.fields;
+            
+            // for (let index = 0; index < action.fields.length; index++) {
+            //     console.log('[reducer] action.fields[index]: ', action.fields[index].fieldId);                
+            // }
+            console.log('[reducer] action.fields.length: ', action.fields.length);
             newState.cursorPos = action.cursorPos;
             newState.sessionId = action.sessionId;
             printScreenOnConsole(newState.fields);

@@ -55,36 +55,7 @@ public class ScreenService implements IScreenService {
 	
 	@Async
 	public void sendKeysAsync(IMySession mySession, UserInputDto userInputDto) throws ExceptionWeb3270 {
-
+		userInputDto.getSendKeys();
 		this.sendKeys(mySession, userInputDto);
-		
-//		ScreenDto s = new ScreenDto();
-//		s.setPositions(new ArrayList<>());
-//		s.setFields(new ArrayList<>());
-//		
-//		for (int i = 0; i < 24; i++ ) {
-//			FieldDto f = new FieldDto();
-//			f.setFieldId(String.valueOf(i));
-//			f.setStart((i * 80) + 1);
-//			f.setEnd(f.getStart() + 80);
-//			f.setText("....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8");
-//			f.setProtected(false);
-//			f.setHidden(false);
-//			f.setHighIntensity(false);
-//			f.setColor("Cyan");
-//			f.setRow(i);
-//			f.setCol(1);
-//			f.setUnderline(false);
-//			s.getFields().add(f);
-//		}
-//		
-//		s.setPositions(null);
-//		s.setFieldPos(new ArrayList<>());
-//		s.getFieldPos().add(1);
-//		s.setCursorPos(2);
-//		s.setScreendId("ScreendIdMocked");
-//		s.setSessionId(userInputDto.getSessionId());
-//		
-//		template.convertAndSend("/queue/session/" + userInputDto.getSessionId(), s);
 	}
 }

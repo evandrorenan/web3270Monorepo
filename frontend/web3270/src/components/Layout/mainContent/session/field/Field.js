@@ -196,6 +196,8 @@ class Field extends Component {
 
      render() {      
 
+          console.log('[Field] this.state.currentField.fieldId: ', this.state.currentField.fieldId);
+
           return ( 
                <input 
                     key={"Position" + this.state.currentField.fieldId + this.state.sufix}

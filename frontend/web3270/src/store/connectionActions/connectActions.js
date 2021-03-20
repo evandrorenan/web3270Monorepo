@@ -5,7 +5,7 @@ import Stomp                from 'stompjs';
 import * as actionTypes     from '../actionTypes';
 import {myStore}            from '../../index';
 
-const STATUS_READY = "Ready...";
+const STATUS_READY = "Ready";
 const STATUS_CONNECTING = "Connecting...";
 const STATUS_CONNECTING_WEBSOCKET = "Connecting Websocket...";
 
