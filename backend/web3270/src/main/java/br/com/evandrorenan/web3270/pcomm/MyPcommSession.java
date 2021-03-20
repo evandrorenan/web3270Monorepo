@@ -139,7 +139,6 @@ public class MyPcommSession extends ECLSession implements IMySession {
 	
 	@Override
 	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {
-		
 		try {			
 			this.GetPS().SendKeys(text, row, col);
 			for (String mnemonic : this.GetPS().GetSendKeyMnemonics()) {
@@ -157,6 +156,37 @@ public class MyPcommSession extends ECLSession implements IMySession {
 		}
 	}
 	
+	private String sanitizeText(int row, int col, String text) {
+		int currentPosition = ( row - 1 ) * 80 + col; 
+
+		try {
+			for (int i = 0; i < this.GetPS().GetFieldList().size(); i++) {
+				ECLField field = (ECLField) this.GetPS().GetFieldList().get(i);
+				
+				if ( field.GetStart() <= currentPosition
+				&&   field.GetEnd()   >= currentPosition ) {
+					int rightBlanks = field.getLength() - text.length();
+					if (rightBlanks == 0) {
+						return text;
+					}
+					if (rightBlanks < 0) {
+						return text.substring(0, field.getLength());
+					} else {
+						return text 
+						     + String.format("%" 
+						                   + (field.getLength() - text.length())
+						                   + "s", "");
+					}
+				}
+			}
+		} catch (ECLErr e) {
+			e.printStackTrace();
+			return text;
+		}		
+		
+		return text;
+	}
+
 	@Override
 	public String getSessionId() {
 		return this.sessionId;
@@ -255,8 +285,12 @@ public class MyPcommSession extends ECLSession implements IMySession {
 	
 	@Override
 	public void setText(int row, int col, String text) throws ExceptionWeb3270 {
+		if (text.length() == 0) {
+			return;
+		}
+		text = this.sanitizeText(row, col, text);
 		try {
-			this.GetPS().SetText(text, row, col);
+			this.GetPS().SetText(text, row, col);			
 		} catch (ECLErr e) {
 			throw new ExceptionWeb3270(
 				ECLERR_WHEN_TRYING_TO_GET_SCREEND_FIELDS_INITIAL_POSITION, 

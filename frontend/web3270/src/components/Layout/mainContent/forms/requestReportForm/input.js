@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './input.css';
+import '../input.css';
 
 const input = (props) => {
     let inputElement = <input className="InputElement" {...props} />;

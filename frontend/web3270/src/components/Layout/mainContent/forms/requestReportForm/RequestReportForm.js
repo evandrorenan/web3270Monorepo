@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect          } from 'react-redux';
 
-import './RequestReportForm.css';
+import '../form.css';
 import Input from './input';
 
 import * as actionCreators  from '../../../../../store/actions';
@@ -42,11 +42,15 @@ class RequestReportForm extends Component {
 
     render() {
         return (
-        <div className="RequestReportForm">
+        <div className="Form">
             { this.state.form.map((item, index) => {
-                return <Input key={item.label + index} type="text" label={item.label} maxLength={item.maxLength} onChange={(event) => this.onchange(event, item.id)} />
+                return <Input key={item.label + index} 
+                              type="text" 
+                              label={item.label} 
+                              maxLength={item.maxLength} 
+                              onChange={(event) => this.onchange(event, item.id)} />
             })}
-            <input type="button" className="RequestReportFormButton" value="Request Report" onClick={this.onclick} />
+            <input type="button" className="FormButton" value="Request Report" onClick={this.onclick} />
         </div>
         )
     }

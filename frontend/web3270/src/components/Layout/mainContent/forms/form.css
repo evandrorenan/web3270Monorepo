@@ -1,0 +1,51 @@
+.Form {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco;
+    font-size: 100%;
+    padding: 10px 10px;
+    border: 0px #ccc solid;
+    background-color: white;
+    
+}
+
+.FormButton {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px 50px;
+    border-width: 1px;
+    color: rgb(36, 216, 48);
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco;
+    background-color: black;
+}
+
+.FormButton:disabled {
+    color: white;
+    background: grey;
+}
+
+.Spinner {
+    position: ;
+    display: table-row;
+    float: right;
+
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spinner infinite .75s linear;
+       -moz-animation: spinner infinite .75s linear;
+         -o-animation: spinner infinite .75s linear;
+            animation: spinner infinite .75s linear;
+    border: 2px solid rgba(125, 125, 125, 0.9);
+    border-top-color: rgba(0, 0, 0, .1);
+    border-right-color: rgba(0, 0, 0, .1);
+    border-bottom-color: rgba(0, 0, 0, .1);
+    border-radius: 100%;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

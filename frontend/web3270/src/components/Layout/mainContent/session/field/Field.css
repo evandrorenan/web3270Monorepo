@@ -11,6 +11,7 @@
     caret-color: auto;
     margin: 0%;
     padding: none;
+    outline: none;
 }
 
 .Blue {
@@ -95,7 +96,8 @@
 }
 
 .Modified {
-    border-width:2px;
-    border-style:none none dotted none;
-    border-color:grey;
+    /* border-width:2px; */
+    /* border-style:none none dotted none; */
+    /* border-color:grey; */
+    background-color: #111111;
 }

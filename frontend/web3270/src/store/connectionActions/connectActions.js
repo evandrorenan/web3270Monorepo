@@ -76,3 +76,18 @@ export const getScreenFieldsAsync = (sessionId) => {
             } )
     };
 };
+
+export const requestSysoutEvt = (request) => {
+    
+    return dispatch => {
+        dispatch(customActions.setWaitingStatusTrue());
+        axios.get ("http://localhost:3000/sysout/html/" 
+                  + request.evt    + "/" 
+                  + request.option + "/" 
+                  + request.jobId )
+            .then ( response => { 
+                dispatch(customActions.setWaitingStatusFalse());
+                customActions.downloadReport(response);
+            } )
+    };
+};

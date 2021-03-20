@@ -34,7 +34,9 @@ const initialState = {
     isConnecting : false,
     isUpdatingScreen : false,
     status : "",
-    stompClient : null
+    stompClient : null,
+    urlEvt : {},
+    waitingStatus : false
 }
 
 const printScreenOnConsole = (fields) => {
@@ -119,7 +121,19 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_STOMP_CLIENT:
             newState.stompClient = action.stompClient;
             return newState;
+
+        case actionTypes.SET_DOWNLOAD_OBJECT:
+            newState.urlEvt = action.downloadURL;
+            return newState;
+
+        case actionTypes.SET_WAITING_STATUS_TRUE:
+            newState.waitingStatus = true;
+            return newState;
                 
+        case actionTypes.SET_WAITING_STATUS_FALSE:
+            newState.waitingStatus = true;
+            return newState;
+                    
         default:
             break;
     }

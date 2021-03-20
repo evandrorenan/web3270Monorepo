@@ -144,3 +144,30 @@ export const requestAbendResponseHandler = (response) => {
         report: response.data
     }
 }
+
+export const setWaitingStatusTrue = () => {
+    return {
+        type: actionTypes.SET_WAITING_STATUS_TRUE
+    }    
+}
+
+export const setWaitingStatusFalse = () => {
+    return {
+        type: actionTypes.SET_WAITING_STATUS_FALSE
+    }    
+}
+
+export const downloadReport = (response) => {
+
+    const contentType = 'application/octet-stream';
+    const blob = new Blob([response.data], {type: contentType});
+    let e = document.createEvent('MouseEvents');
+    let a = document.createElement('a');
+
+    a.download = 'sysout';
+    a.href = window.URL.createObjectURL(blob);
+    a.dataset.downloadurl =  [contentType, a.download, a.href].join(':');
+    e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    a.dispatchEvent(e);
+
+}
