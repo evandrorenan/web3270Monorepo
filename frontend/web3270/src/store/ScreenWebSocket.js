@@ -16,7 +16,7 @@ class ScreenWebSocket extends Component {
   render() {
     return (
       <span>
-        <SockJsClient url='http://localhost:3000/web3270-websocket' topics={['/topic/screens']}
+        <SockJsClient url='http://10.4.66.22:3000/web3270-websocket' topics={['/topic/screens']}
             ref={ (client) => { this.clientRef = client }} />
       </span>
     );

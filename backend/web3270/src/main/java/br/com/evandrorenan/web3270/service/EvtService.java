@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import br.com.evandrorenan.web3270.dto.CompilationReportDto;
 import br.com.evandrorenan.web3270.dto.DataDivisionMapItemDto;
 import br.com.evandrorenan.web3270.dto.SessionDto;
+import br.com.evandrorenan.web3270.dto.SysoutDto;
 import br.com.evandrorenan.web3270.dto.CompiledSourceCodeLineDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session.MySessionConstants;
@@ -50,7 +51,7 @@ public class EvtService implements IEvtService {
 		sysout.append("</head>");
 		sysout.append("<body>");
 		
-		for (String line : this.getSysout(evt, opcao, jobId)) {
+		for (String line : this.extractSysout(evt, opcao, jobId)) {
 			sysout.append("<p>" + line + "</p>");
 		}
 		
@@ -61,12 +62,11 @@ public class EvtService implements IEvtService {
 
 	@Override
 	public String getSysoutTxt(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
-		String join = String.join("", this.getSysout(evt, opcao, jobId));
+		String join = String.join("", this.extractSysout(evt, opcao, jobId));
 		return join;
 	}
 
-	@Override
-	public List<String> getSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+	private List<String> extractSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
 		List<String> sysout = new ArrayList<>();
 		
 		IMySession mySession = this.navigateToSysout(evt, opcao, jobId);
@@ -216,5 +216,17 @@ public class EvtService implements IEvtService {
 		}
 		
 		return arrStrScreen;
+	}
+
+	@Override
+	public SysoutDto getSysout(String evt, String opcao, String jobId) throws ExceptionWeb3270 {
+		SysoutDto sysoutDto = new SysoutDto();
+		Double dbRandom = Math.random() * 1000; //TODO: Save on database
+		sysoutDto.setId(dbRandom.intValue());   //
+		sysoutDto.setEvt(evt);
+		sysoutDto.setOpcao(opcao);
+		sysoutDto.setJobId(jobId);
+		sysoutDto.setContent(String.join("", this.extractSysout(evt, opcao, jobId)));
+		return sysoutDto;
 	}
 }

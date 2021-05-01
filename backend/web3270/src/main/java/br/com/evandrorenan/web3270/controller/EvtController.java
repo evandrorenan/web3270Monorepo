@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.evandrorenan.web3270.dto.SysoutDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session._interface.IEvtService;
 
@@ -37,11 +38,20 @@ public class EvtController {
 	}
 
 	@GetMapping(path = {"/sysout/txt/{evt}/{opcao}/{jobId}"})
-	public String getSysoutEvt(
+	public String getSysoutTxt(
 			@PathVariable String evt,
 			@PathVariable String opcao, 
 			@PathVariable String jobId) throws ExceptionWeb3270 {
 		String str = this.evtService.getSysoutTxt(evt, opcao, jobId);
 		return str;
+	}
+
+	@GetMapping(path = {"/sysout/{evt}/{opcao}/{jobId}"})
+	public SysoutDto getSysoutEvt(
+			@PathVariable String evt,
+			@PathVariable String opcao, 
+			@PathVariable String jobId) throws ExceptionWeb3270 {
+		SysoutDto sysout = this.evtService.getSysout(evt, opcao, jobId);
+		return sysout;
 	}
 }

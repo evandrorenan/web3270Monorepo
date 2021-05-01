@@ -15,7 +15,7 @@ export const newSessionAsync = () => {
     }
     return dispatch => {
         dispatch(customActions.setStatus(STATUS_CONNECTING));
-        axios.post ("http://localhost:3000/newsession", body)
+        axios.post ("http://10.4.66.22:3000/newsession", body)
             .then ( response => { 
                 dispatch(customActions.newSessionResponseHandler(response));
                 dispatch(websocketActions.connectWebsocket());
@@ -30,7 +30,7 @@ export const getScreenAsync = (sessionId) => {
         }
     }
     return dispatch => {
-        axios.get ("http://localhost:3000/session/" + sessionId + "/screen")
+        axios.get ("http://10.4.66.22:3000/session/" + sessionId + "/screen")
             .then ( response => { 
                 dispatch(customActions.setStatus(STATUS_READY));
                 dispatch(customActions.getScreenResponseHandler(response));

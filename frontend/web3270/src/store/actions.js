@@ -36,7 +36,7 @@ export const newSessionAsync = () => {
     }
     return dispatch => {
         dispatch(setStatus(STATUS_CONNECTING));
-        axios.post ("http://localhost:3000/newsession", body)
+        axios.post ("http://10.4.66.22:3000/newsession", body)
             .then ( response => { 
                 dispatch(newSessionResponseHandler(response));
             });
@@ -83,7 +83,7 @@ const connectScreenWebsocket = (sessionId) => {
 
     const stompConfig = {
         connectHeaders: {},
-        brokerURL: "ws://localhost:3000/web3270-websocket",
+        brokerURL: "ws://10.4.66.22:3000/web3270-websocket",
         
         // Keep it off for production, it can be quit verbose
         // Skip this key to disable
@@ -124,7 +124,7 @@ export const getScreenAsync = (sessionId) => {
         }
     }
     return dispatch => {
-        axios.get ("http://localhost:3000/session/" + sessionId + "/screen")
+        axios.get ("http://10.4.66.22:3000/session/" + sessionId + "/screen")
             .then ( response => { 
                 dispatch(setStatus(STATUS_READY));
                 dispatch(getScreenResponseHandler(response));
@@ -139,7 +139,7 @@ export const getScreenFieldsAsync = (sessionId) => {
         }
     }
     return dispatch => {
-        axios.get ("http://localhost:3000/session/" + sessionId + "/screenfields")
+        axios.get ("http://10.4.66.22:3000/session/" + sessionId + "/screenfields")
             .then ( response => { 
                 dispatch(setStatus(STATUS_READY));
                 dispatch(getScreenResponseHandler(response));
@@ -195,7 +195,7 @@ export const sendKeys = (row, col, currentFieldText, functionKey, fields, sessio
 
     return dispatch => {
         dispatch(setStatus(STATUS_SENDING_INPUT_DATA));
-        axios.post ("http://localhost:3000/ws/sendkeys", requestBody)
+        axios.post ("http://10.4.66.22:3000/ws/sendkeys", requestBody)
         .then ( response => { 
                 dispatch(setStatus(STATUS_READY));
             });
