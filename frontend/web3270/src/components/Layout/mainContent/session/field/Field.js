@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { isFunctionKey, isTypedChar }        from "./keyEvents/keyType";
 import { connect }            from 'react-redux';
-import * as customActions     from "../../../../../store/customActions";
+import * as customActions     from "../../../../../store/CustomActions";
 import { getPfkey }           from './keyEvents/handleFunctionKey';
 
 import './Field.css';

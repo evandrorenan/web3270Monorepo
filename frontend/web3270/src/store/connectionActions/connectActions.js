@@ -1,5 +1,5 @@
 import axios                from 'axios';
-import * as customActions   from '../customActions';
+import * as customActions   from '../CustomActions';
 import SockJS               from 'sockjs-client';
 import Stomp                from 'stompjs';
 import * as actionTypes     from '../actionTypes';

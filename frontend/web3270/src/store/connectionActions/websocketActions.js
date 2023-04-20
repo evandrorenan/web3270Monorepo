@@ -1,6 +1,5 @@
 import axios                from 'axios';
-import * as customActions         from '../customActions';
-import * as actions         from '../customActions';
+import * as customActions   from '../CustomActions';
 import SockJS               from 'sockjs-client';
 import Stomp                from 'stompjs';
 import * as actionTypes     from '../actionTypes';
@@ -13,7 +12,7 @@ export const connectWebsocket = () => {
     let localStompClient = Stomp.over(socket);
     localStompClient.connect ({}, function (message) {
         localStompClient.subscribe('/topic/screens', function (message) {
-            actions.getScreenResponseHandler(message);
+            customActions.getScreenResponseHandler(message);
         });        
     });
     return {

@@ -28,7 +28,6 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/tomcat/embed/tomcat-embed-el/9.0.37/tomcat-embed-el-9.0.37.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/br/com/evandrorenan/hodmain/1/hodmain-1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar" enabled="true" runInBatchMode="false"/>
@@ -45,11 +44,11 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/springfox/springfox-swagger-ui/2.9.2/springfox-swagger-ui-2.9.2.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-messaging/5.3.22/spring-messaging-5.3.22.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-jcl/5.2.8.RELEASE/spring-jcl-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-websocket/5.2.8.RELEASE/spring-websocket-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-websocket/5.3.22/spring-websocket-5.3.22.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-context/5.2.8.RELEASE/spring-context-5.2.8.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/webjars/webjars-locator-core/0.45/webjars-locator-core-0.45.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/github/classgraph/classgraph/4.8.69/classgraph-4.8.69.jar" enabled="true" runInBatchMode="false"/>

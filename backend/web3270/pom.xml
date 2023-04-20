@@ -53,10 +53,8 @@
         	<groupId>br.com.evandrorenan</groupId>
         	<artifactId>hodmain</artifactId>
         	<version>1</version>
-<!-- uncomment this if not enable to execute mvn install file
 	       	<scope>system</scope>
         	<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/hodmain.jar</systemPath>
--->
     	</dependency>
 
 		<!-- Swagger dependencies -->
@@ -75,10 +73,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>
+			<version>5.3.22</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-websocket</artifactId>
+		    <version>5.3.22</version>
 		</dependency>		
 		<dependency>
 			<groupId>org.webjars</groupId>
