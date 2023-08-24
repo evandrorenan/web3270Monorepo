@@ -5,6 +5,15 @@
     display: block;
 }
 
+input::file-selector-button {
+    font-weight: bold;
+    color: cyan;
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco;
+    background-color: black;
+    border-color: cyan;
+    margin-right: 8px;
+}
+
 .Label {
     font-weight: bold;
     display: block;

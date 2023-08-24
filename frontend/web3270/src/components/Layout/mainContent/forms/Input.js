@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../input.css';
+import './Input.css';
 
-const input = (props) => {
+const Input = (props) => {
     let inputElement = <input className="InputElement" {...props} />;
 
     return (
@@ -13,4 +13,4 @@ const input = (props) => {
     )
 }
 
-export default input;
+export default Input;

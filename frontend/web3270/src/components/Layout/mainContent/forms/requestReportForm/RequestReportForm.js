@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect          } from 'react-redux';
 
-import '../form.css';
-import Input from './input';
+import '../Form.css';
+import Input from '../Input';
 
 import * as actionCreators  from '../../../../../store/actions';
 
