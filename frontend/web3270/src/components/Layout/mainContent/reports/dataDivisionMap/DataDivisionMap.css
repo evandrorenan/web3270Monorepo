@@ -49,7 +49,7 @@
     margin: 0;
     padding: auto;
     width: 80%;
-    background-color: #fffff0;
+    background-color: #121212;
 }
 
 .DataDivHex {
@@ -57,7 +57,7 @@
     margin: 0;
     padding: auto;
     width: 80%;
-    background-color: #fffff0;
+    background-color: #121212;
 }
 
 .SelectedDataItem {
@@ -140,5 +140,5 @@
     margin-top: 10px;
     position: relative;
     height: 85%;
-    background-color: #fffff0;
+    background-color: #121212;
 }

@@ -18,7 +18,7 @@ export const connectSession = () => {
 export const connectWebsocket = (sessionId) => {
     myStore.dispatch (customActions.setStatus(STATUS_CONNECTING_WEBSOCKET));
 
-    let socket = new SockJS('http://10.4.66.22:3000/web3270-websocket');
+    let socket = new SockJS('http://localhost:8080/web3270-websocket');
     let localStompClient = Stomp.over(socket);
     localStompClient.connect ({}, function (message) {
         myStore.dispatch (customActions.setStatus(STATUS_READY));
@@ -53,12 +53,12 @@ export const sendWebSocketMessage = (payload, stompClient) => {
 
 export const newSessionAsync = () => {
     const body = {
-        "host": "192.168.240.1",
-        "port": "51004"
+        "host": "127.0.0.1",
+        "port": "3270"
     }
     return dispatch => {
         dispatch(customActions.setStatus(STATUS_CONNECTING));
-        axios.post ("http://10.4.66.22:3000/newsession", body)
+        axios.post ("http://localhost:8080/newsession", body)
             .then ( response => { 
                 dispatch(customActions.newSessionResponseHandler(response));
                 dispatch(getScreenFieldsAsync(response.data.sessionId));
@@ -69,7 +69,7 @@ export const newSessionAsync = () => {
 
 export const getScreenFieldsAsync = (sessionId) => {
     return dispatch => {
-        axios.get ("http://10.4.66.22:3000/session/" + sessionId + "/screenfields")
+        axios.get ("http://localhost:8080/session/" + sessionId + "/screenfields")
             .then ( response => { 
                 // dispatch(customActions.setStatus(STATUS_WAITING_WEBSOCKET));
                 dispatch(customActions.getScreenResponseHandler(response));
@@ -81,7 +81,7 @@ export const requestSysoutEvt = (request) => {
     
     return dispatch => {
         dispatch(customActions.setWaitingStatusTrue());
-        axios.get ("http://10.4.66.22:3000/sysout/txt/" 
+        axios.get ("http://localhost:8080/sysout/txt/" 
                   + request.evt    + "/" 
                   + request.option + "/" 
                   + request.jobId )

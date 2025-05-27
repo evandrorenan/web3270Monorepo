@@ -10,12 +10,12 @@ const STATUS_READY = "Ready";
 
 export const newSessionAsync = () => {
     const body = {
-        "host": "192.168.240.1",
-        "port": "51004"
+        "host": "127.0.0.1",
+        "port": "3270"
     }
     return dispatch => {
         dispatch(customActions.setStatus(STATUS_CONNECTING));
-        axios.post ("http://10.4.66.22:3000/newsession", body)
+        axios.post ("http://localhost:8080/newsession", body)
             .then ( response => { 
                 dispatch(customActions.newSessionResponseHandler(response));
                 dispatch(websocketActions.connectWebsocket());
@@ -30,7 +30,7 @@ export const getScreenAsync = (sessionId) => {
         }
     }
     return dispatch => {
-        axios.get ("http://10.4.66.22:3000/session/" + sessionId + "/screen")
+        axios.get ("http://localhost:8080/session/" + sessionId + "/screen")
             .then ( response => { 
                 dispatch(customActions.setStatus(STATUS_READY));
                 dispatch(customActions.getScreenResponseHandler(response));
