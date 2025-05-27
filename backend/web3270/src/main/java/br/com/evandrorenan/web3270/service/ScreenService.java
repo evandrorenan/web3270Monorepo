@@ -1,5 +1,6 @@
 package br.com.evandrorenan.web3270.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Async;
@@ -15,13 +16,14 @@ import lombok.Data;
 
 @Component
 @Data
+@Slf4j
 public class ScreenService implements IScreenService {
 	
 	@Autowired
 	private SimpMessagingTemplate template;
 	
 	public ScreenService() {
-		System.out.println("ScreenService constructed;");
+		log.info("ScreenService constructed;");
 	}
 
 	public ScreenDto getScreenDto(IMySession mySession) throws ExceptionWeb3270 {

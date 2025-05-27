@@ -1,6 +1,6 @@
 package br.com.evandrorenan.web3270.doc;
 
-import org.springframework.context.annotation.Bean;
+/*import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -38,4 +38,4 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(this.apiInfo());
 	}
-}
+}*/

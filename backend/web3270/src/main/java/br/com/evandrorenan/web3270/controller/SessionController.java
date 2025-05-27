@@ -42,7 +42,7 @@ public class SessionController {
     /**
      * Create a new Terminal 3270 Session and return a it's Id.
      *
-     * @param   data     {@code SessionPropertiesDto} object.
+     * @param  sessionPropertiesDto {@code SessionPropertiesDto} object.
      * @return  a {@code SessionDto} that contains the Session Id and Connection Status.
      * @throws ExceptionWeb3270 
      */	

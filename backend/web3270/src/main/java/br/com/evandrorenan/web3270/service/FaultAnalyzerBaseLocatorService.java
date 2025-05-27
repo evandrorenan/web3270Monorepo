@@ -3,6 +3,7 @@ package br.com.evandrorenan.web3270.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +20,7 @@ import lombok.Data;
 
 @Component
 @Data
+@Slf4j
 public class FaultAnalyzerBaseLocatorService implements IBaseLocatorService {
 	
 	private ISessionService sessionService;
@@ -80,7 +82,7 @@ public class FaultAnalyzerBaseLocatorService implements IBaseLocatorService {
 	}
 
 	private void customWaitScreenUpdate(IMySession mySession) {
-		System.out.println(mySession.getTextScreen());
+		log.info(mySession.getTextScreen());
 		String oldScreen = mySession.getTextScreen();
 		try {
 			for (int i = 3000 ; i > 10; i -= 50) {
@@ -96,7 +98,7 @@ public class FaultAnalyzerBaseLocatorService implements IBaseLocatorService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(mySession.getTextScreen());
+		log.info(mySession.getTextScreen());
 	}
 
 	private IMySession getNewSession() {

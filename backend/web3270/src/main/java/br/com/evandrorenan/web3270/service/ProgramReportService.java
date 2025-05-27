@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,8 +30,10 @@ import lombok.Data;
 
 @Component
 @Data
+@Slf4j
 public class ProgramReportService implements IProgramReportService {
-	
+
+	public static final String SPACE_TAB_ENTER_FORMFEED = " \\t\\n\\r\\f.";
 	private IEvtService evtService;
 	
 	private IBaseLocatorService abendService;
@@ -39,7 +42,7 @@ public class ProgramReportService implements IProgramReportService {
 	
 	@Autowired
 	public ProgramReportService(ISessionService sessionService) {
-		System.out.println("ProgramReportService constructed;");
+		log.info("ProgramReportService constructed;");
 
 		this.abendService = new FaultAnalyzerBaseLocatorService(sessionService);
 		this.evtService = new EvtService(sessionService);
@@ -105,10 +108,9 @@ public class ProgramReportService implements IProgramReportService {
 		
 		ProgramReportDto programReportDto = this.attachRefContentToSourceCode(
 				compilationReportDto.getSourceCodeLines(), 
-				dataDivisionMap); 
-		
-		programReportDto.setDataDivisionMap(dataDivisionMap);
-		
+				dataDivisionMap);
+
+		if (programReportDto != null) programReportDto.setDataDivisionMap(dataDivisionMap);
 		
 		return programReportDto;
 	}
@@ -146,7 +148,7 @@ public class ProgramReportService implements IProgramReportService {
 
 		return report;
 		} catch (Exception e) {
-			System.out.println(e);
+			log.error(e.getMessage());
 			return null;
 		}
 		
@@ -173,7 +175,7 @@ public class ProgramReportService implements IProgramReportService {
 			String token,
 			Map<Integer, DataDivisionMapItemContentDto> dataDivisionMap) {
 		
-		StringTokenizer refs = new StringTokenizer(mapReference, " \\t\\n\\r\\f.");
+		StringTokenizer refs = new StringTokenizer(mapReference, SPACE_TAB_ENTER_FORMFEED);
 		
 		while (refs.hasMoreTokens()) {
 			String ref = refs.nextToken();
@@ -200,7 +202,7 @@ public class ProgramReportService implements IProgramReportService {
 			return dataDivisionMapContent;
 		}		
 		
-		System.out.println("Start loading data division Content: ");
+		log.info("Start loading data division Content: ");
 		Instant antes = java.time.Instant.now();
 		
 		
@@ -208,19 +210,14 @@ public class ProgramReportService implements IProgramReportService {
 			antes = this.sysout(i, String.valueOf(i), antes);
 			
 			DataDivisionMapItemDto item = dataDivisionMap.get(i);
-//			antes = this.sysout(i, "b", antes);
 			BaseLocatorDto currentBaseLocator = this.findBaseLocator(item.getBaseLocatorType(), item.getBaseLocatorId(), baseLocators);
-//			antes = this.sysout(i, "c", antes);
-			
+
 			if (currentBaseLocator != null ) {				
-//				antes = this.sysout(i, "d", antes);
-				DataDivisionMapItemContentDto ddContent = mapContentFromBaseLocator(item, baseLocators, baseLocators.indexOf(currentBaseLocator)); 
-//				antes = this.sysout(i, "e", antes);
+				DataDivisionMapItemContentDto ddContent = mapContentFromBaseLocator(item, baseLocators, baseLocators.indexOf(currentBaseLocator));
 				dataDivisionMapContent.add(ddContent);
-//				antes = this.sysout(i, "f", antes);
 			}
 		}
-		System.out.println("End loading data division Content: " + java.time.Instant.now());
+		log.info("End loading data division Content: " + java.time.Instant.now());
 		
 		return dataDivisionMapContent;
 	}
@@ -228,7 +225,7 @@ public class ProgramReportService implements IProgramReportService {
 	private Instant sysout(int i, String a, Instant antes) {
 //		if (i < 5) {
 			Instant depois = java.time.Instant.now();
-			System.out.println(a + " - " + depois.toString() + " +" + (depois.toEpochMilli() - antes.toEpochMilli())); 
+			log.info(a + " - " + depois.toString() + " +" + (depois.toEpochMilli() - antes.toEpochMilli())); 
 			return depois;
 //		}		
 //		return null;

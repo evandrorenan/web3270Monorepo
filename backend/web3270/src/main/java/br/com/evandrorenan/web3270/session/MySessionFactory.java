@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ import lombok.Data;
 @PropertySource("classpath:pcommConnect.properties")
 @Component
 @Data
+@Slf4j
 public class MySessionFactory {
 
 	private static final Logger logger = LoggerFactory.getLogger(MySessionFactory.class);
@@ -84,7 +86,7 @@ public class MySessionFactory {
 				
 				    return pcomm;
 				} catch (ECLErr e) {
-					System.out.println(e.getMessage() + "," + e.getLocalizedMessage());
+					log.info(e.getMessage() + "," + e.getLocalizedMessage());
 					throw new ExceptionWeb3270("New Session creation failed.", "New Session creation failed.", e);
 				}
 			default :
@@ -101,7 +103,7 @@ public class MySessionFactory {
 	@Async
 	public void monitorConnectionStatus() throws ExceptionWeb3270 {
 		
-		System.out.println("start async method");
+		log.info("start async method");
 		if (Boolean.TRUE.equals(isMonitoring)) {
 			return;
 		}
@@ -146,6 +148,6 @@ public class MySessionFactory {
 			}
 		}
 		this.isMonitoring = false;
-		System.out.println("end async method");
+		log.info("end async method");
 	}
 }

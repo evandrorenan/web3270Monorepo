@@ -4,8 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.UUID;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.threads.VirtualThreadExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +31,7 @@ import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import br.com.evandrorenan.web3270.session._interface.ISessionService;
 import lombok.Data;
 
+@Slf4j
 @Component
 @Data
 public class SessionService implements ISessionService {
@@ -44,7 +49,7 @@ public class SessionService implements ISessionService {
 		this.messageTemplate = messageTemplate;
 		this.sessionMap = new HashMap<>();
 		this.screenService = screenService;
-		System.out.println("SessionService constructed;");
+		logger.info("SessionService constructed;");
 	}
 	
 	public SessionDto createNewSessionDto(String host, String port) {
@@ -119,8 +124,9 @@ public class SessionService implements ISessionService {
 
 		try {
 			MyPcommSession pcomm = new MyPcommSession(props, this.messageTemplate, this.screenService);
-			
-			TimeLimiter limiter = new SimpleTimeLimiter();
+
+			ExecutorService executor = new VirtualThreadExecutor(UUID.randomUUID().toString());
+			TimeLimiter limiter = SimpleTimeLimiter.create(executor);
 			IMySession proxyPcomm = limiter.newProxy(
 					pcomm, IMySession.class, 1000, TimeUnit.MILLISECONDS);
 
@@ -139,7 +145,7 @@ public class SessionService implements ISessionService {
 			return pcomm;
 
 		} catch (UncheckedTimeoutException e) {
-			System.out.println("Connection timeout");
+			log.info("Connection timeout");
 			return null;
 		} catch (ECLErr e) {
 			throw new ExceptionWeb3270(
@@ -218,6 +224,6 @@ public class SessionService implements ISessionService {
 			break; //test
 		}
 		this.isMonitoring = false;
-		System.out.println("end async Call");
+		log.info("end async Call");
 	}
 }

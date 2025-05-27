@@ -3,6 +3,7 @@ package br.com.evandrorenan.web3270.service;
 import java.util.Map.Entry;
 import java.util.concurrent.CompletableFuture;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import br.com.evandrorenan.web3270.session._interface.IMySession;
 
+@Slf4j
 @Component
 public class SessionMonitor {
 	
@@ -42,10 +44,10 @@ public class SessionMonitor {
 //			if (service.getSessionMap().isEmpty() ) {
 //				break;
 //			}
-			System.out.println(service.getSessionMap().toString());
+			log.info(service.getSessionMap().toString());
 			i++;
 			if (i > 20) {
-				System.out.println("Forced break");
+				log.info("Forced break");
 				break;
 			}
 		}

@@ -357,7 +357,7 @@ public class MyPcommSession extends ECLSession implements IMySession {
 			printScreen.append(this.GetPS().getString().substring(i * 80, i * 80 + 79) + "\n");
 		}
 		
-		System.out.println(printScreen.toString());		
+		logger.info(printScreen.toString());
 	}
 
 	@Override

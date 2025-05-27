@@ -1,16 +1,10 @@
 package br.com.evandrorenan.web3270.pcomm;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-
+import br.com.evandrorenan.web3270.dto.FieldDto;
+import br.com.evandrorenan.web3270.dto.PositionDto;
+import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
+import br.com.evandrorenan.web3270.session._interface.IMySession;
+import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import com.google.common.util.concurrent.SimpleTimeLimiter;
 import com.google.common.util.concurrent.TimeLimiter;
 import com.google.common.util.concurrent.UncheckedTimeoutException;
@@ -18,15 +12,20 @@ import com.ibm.eNetwork.ECL.ECLConnection;
 import com.ibm.eNetwork.ECL.ECLErr;
 import com.ibm.eNetwork.ECL.ECLField;
 import com.ibm.eNetwork.ECL.ECLSession;
-
-import br.com.evandrorenan.web3270.dto.FieldDto;
-import br.com.evandrorenan.web3270.dto.PositionDto;
-import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
-import br.com.evandrorenan.web3270.session._interface.IMySession;
-import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.threads.VirtualThreadExecutor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+
+import java.sql.Timestamp;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
 
 @ToString(callSuper = true)
+@Slf4j
 public class PcommSession extends ECLSession implements IMySession {
 	
 	private static final String ERROR_ON_WAIT_SCREEN_UPDATE = "Error on waitScreenUpdate.";
@@ -41,15 +40,16 @@ public class PcommSession extends ECLSession implements IMySession {
 	
 	public PcommSession(SimpMessagingTemplate messageTemplate, IScreenService screenService) throws ECLErr {
 		super(tn3270Properties());
-		
-		TimeLimiter limiter = new SimpleTimeLimiter();
+
+		ExecutorService executor = new VirtualThreadExecutor(UUID.randomUUID().toString());
+		TimeLimiter limiter = SimpleTimeLimiter.create(executor);
 		IMySession proxyPcomm = limiter.newProxy(
-				this, IMySession.class, 1000, TimeUnit.MILLISECONDS);
+				this, IMySession.class, 1000L, TimeUnit.MILLISECONDS);
 
 		try {
 			proxyPcomm.connect();
 		} catch (UncheckedTimeoutException e) {
-			System.out.println("Connection timeout");
+			log.info("Connection timeout");
 			e.printStackTrace();
 			this.sessionId = null;
 			return;
@@ -58,7 +58,7 @@ public class PcommSession extends ECLSession implements IMySession {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			System.out.println("Connection timeout");
+			log.info("Connection timeout.");
 			e.printStackTrace();
 			this.sessionId = null;
 			return;
@@ -205,7 +205,7 @@ public class PcommSession extends ECLSession implements IMySession {
 			for (int i = 7000 ; i > 10; i -= 50) {
 				String newScreen = this.getTextScreen();
 				if (!oldScreen.equals(newScreen)) {
-//					System.out.println(i + ", ");
+//					log.info(i + ", ");
 					break;
 				}
 				System.out.print(i + ", ");
@@ -220,8 +220,8 @@ public class PcommSession extends ECLSession implements IMySession {
 	}
 	
 	@Override
-	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {	
-		System.out.println("Send keys: " + row + ", " + col + ", " + text);
+	public void sendKeys(String text, int row, int col) throws ExceptionWeb3270 {
+		log.info("Send keys: " + row + ", " + col + ", " + text);
 		try {
 			
 			this.GetPS().SendKeys(text, row, col);
@@ -387,8 +387,8 @@ public class PcommSession extends ECLSession implements IMySession {
 		for (int i = 0; i < 24; i++) {
 			printScreen.append(this.GetPS().getString().substring(i * 80, i * 80 + 79) + "\n");
 		}
-		
-		System.out.println(printScreen.toString());		
+
+		log.info(printScreen.toString());
 	}
 
 	@Override
