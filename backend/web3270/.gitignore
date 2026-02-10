@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+.classpath
+.factorypath
+.project
+.settings/org.eclipse.jdt.apt.core.prefs     
+.settings/org.eclipse.jdt.core.prefs
