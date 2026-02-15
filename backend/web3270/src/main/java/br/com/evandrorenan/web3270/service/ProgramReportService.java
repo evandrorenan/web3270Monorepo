@@ -144,9 +144,12 @@ public class ProgramReportService implements IProgramReportService {
 			report.getSourceCode().add(repLineDto);
 		}
 		
-
 		return report;
+	} catch (Exception e) {
+		log.error("Error attaching ref content to source code: {}", e.getMessage());
+		return null;
 	}
+}
 
 	private TokenDto createNewTokenDto(Map<Integer, DataDivisionMapItemContentDto> dataDivisionMap,
 			CompiledSourceCodeLineDto scLine, String token) {

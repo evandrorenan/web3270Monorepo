@@ -28,7 +28,8 @@ import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
-import br.com.evandrorenan.web3270.controller.ScreenController;
+import br.com.evandrorenan.web3270.application.usecase.SendKeysUseCase;
+import br.com.evandrorenan.web3270.application.usecase.GetSessionScreenUseCase;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {br.com.evandrorenan.web3270.Web3270Application.class})
@@ -44,10 +45,10 @@ public class WebSocketScreenTest {
 	private final WebSocketHttpHeaders headers = new WebSocketHttpHeaders();
 
     @org.springframework.test.context.bean.override.mockito.MockitoBean
-	private br.com.evandrorenan.web3270.session._interface.IScreenService screenService;
+	private SendKeysUseCase sendKeysUseCase;
 
     @org.springframework.test.context.bean.override.mockito.MockitoBean
-	private br.com.evandrorenan.web3270.session._interface.ISessionService sessionService;
+	private GetSessionScreenUseCase getSessionScreenUseCase;
 
 	@BeforeEach
 	public void setup() {
@@ -100,11 +101,7 @@ public class WebSocketScreenTest {
             // Allow some time for the message to be processed
             Thread.sleep(1000);
 
-            verify(sessionService).getSession("123");
-            // We can also verify sendKeysAsync if we mock the session return
-            // But since getSession returns null by default mock, sendKeysAsync receives null session.
-            // ScreenController passes whatever it gets.
-            verify(screenService).sendKeysAsync(org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any());
+            verify(sendKeysUseCase).execute(org.mockito.ArgumentMatchers.eq("123"), org.mockito.ArgumentMatchers.any());
 		}
 		else {
 			fail("Timeout waiting for connection/send");
