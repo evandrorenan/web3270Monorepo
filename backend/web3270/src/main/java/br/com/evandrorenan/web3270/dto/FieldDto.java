@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Component
 @Data
 @NoArgsConstructor
 public class FieldDto {
@@ -27,15 +26,14 @@ public class FieldDto {
 	
 	public Integer getRow() {
 		if ( this.row == null) {
-			return (int) Math.ceil(this.start / 80.0);
+			return (this.start / 80) + 1;
 		}
 		return this.row;
 	}
 	
 	public Integer getCol() {
 		if ( this.col == null ) {
-			int col = this.start - (int) Math.floor(this.start / 80.0) * 80;
-			return col == 0 ? 80 : col;
+			return (this.start % 80) + 1;
 		}
 		return this.col;
 	}

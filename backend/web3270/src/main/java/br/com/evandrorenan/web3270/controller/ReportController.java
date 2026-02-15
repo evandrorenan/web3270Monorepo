@@ -22,9 +22,8 @@ public class ReportController {
 	private IProgramReportService programReportService;
 	
 	@Autowired
-	public ReportController(
-			ISessionService sessionService ) {
-		this.programReportService = new ProgramReportService(sessionService);
+	public ReportController(IProgramReportService programReportService) {
+		this.programReportService = programReportService;
 	}
 	
 	@PostMapping(path = {"/programreport"})

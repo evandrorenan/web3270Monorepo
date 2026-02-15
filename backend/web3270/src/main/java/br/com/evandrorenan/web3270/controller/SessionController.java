@@ -70,7 +70,7 @@ public class SessionController {
 		return new ResponseEntity<>(sessionDto, HttpStatus.OK);
 	}
 	
-	@GetMapping(path = {"/session/{sessionid}/disconnect"})
+	@GetMapping(path = {"/session/{sessionId}/disconnect"})
 	public SessionDto disconnectSession(@PathVariable String sessionId) {
 		return this.sessionService.disconnect(sessionId);
 	}

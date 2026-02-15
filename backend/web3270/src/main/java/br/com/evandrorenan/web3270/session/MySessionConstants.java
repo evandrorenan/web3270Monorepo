@@ -1,8 +1,5 @@
 package br.com.evandrorenan.web3270.session;
 
-import org.springframework.stereotype.Component;
-
-@Component 
 public final class MySessionConstants {
 	
 	private MySessionConstants() {}

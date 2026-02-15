@@ -43,12 +43,14 @@ public class SessionService implements ISessionService {
 	private Map<String, IMySession> sessionMap;
 	private SimpMessagingTemplate messageTemplate;
 	private IScreenService screenService;
+	private br.com.evandrorenan.web3270.session.MySessionFactory sessionFactory;
 	
 	@Autowired
-	public SessionService(SimpMessagingTemplate messageTemplate, IScreenService screenService) {
+	public SessionService(SimpMessagingTemplate messageTemplate, IScreenService screenService, br.com.evandrorenan.web3270.session.MySessionFactory sessionFactory) {
 		this.messageTemplate = messageTemplate;
 		this.sessionMap = new HashMap<>();
 		this.screenService = screenService;
+		this.sessionFactory = sessionFactory;
 		logger.info("SessionService constructed;");
 	}
 	
@@ -113,61 +115,13 @@ public class SessionService implements ISessionService {
 	}
 
 	private IMySession newSession(String host, String port, boolean mapSession) throws ExceptionWeb3270 {		
-		Properties props = new Properties();
-		props.setProperty("SESSION_HOST"		, host);
-		props.setProperty("SESSION_HOST_PORT"	, port);
-		props.setProperty("SESSION_TYPE"		, "1");
-		props.setProperty("codePage"			, "037");
-		props.setProperty("3D"					, "false");
-		props.setProperty("SESSION_WIN_STATE"	, "false");
-		props.setProperty("AutoConnect"			, "N");
-
-		try {
-			MyPcommSession pcomm = new MyPcommSession(props, this.messageTemplate, this.screenService);
-
-			ExecutorService executor = new VirtualThreadExecutor(UUID.randomUUID().toString());
-			TimeLimiter limiter = SimpleTimeLimiter.create(executor);
-			IMySession proxyPcomm = limiter.newProxy(
-					pcomm, IMySession.class, 1000, TimeUnit.MILLISECONDS);
-
-			proxyPcomm.connect();
-			
-			Thread.sleep(2000);
-			if (pcomm.GetCommStatus() != ECLConnection.CONNECTION_READY
-			&&  pcomm.GetCommStatus() != ECLConnection.CONNECTION_ACTIVE) {
-				return null;
-			}
-			
-			if (mapSession) {
-				this.sessionMap.put(pcomm.getSessionId(), pcomm); 
-			}
-			
-			return pcomm;
-
-		} catch (UncheckedTimeoutException e) {
-			log.info("Connection timeout");
-			return null;
-		} catch (ECLErr e) {
-			throw new ExceptionWeb3270(
-				"Error creating new Session.",
-					props.getProperty("SESSION_HOST"		) + ", " +
-					props.getProperty("SESSION_HOST_PORT"	) + ", " +
-					props.getProperty("SESSION_TYPE"		) + ", " +
-					props.getProperty("codePage"			) + ", " +
-					props.getProperty("3D"					) + ", " +
-					props.getProperty("SESSION_WIN_STATE"	) + ", " , 
-				e);			
-		} catch (InterruptedException e) {
-			throw new ExceptionWeb3270(
-				"Thread Sleep error when creating new Session.",
-					props.getProperty("SESSION_HOST"		) + ", " +
-					props.getProperty("SESSION_HOST_PORT"	) + ", " +
-					props.getProperty("SESSION_TYPE"		) + ", " +
-					props.getProperty("codePage"			) + ", " +
-					props.getProperty("3D"					) + ", " +
-					props.getProperty("SESSION_WIN_STATE"	) + ", " , 
-				e);		
+		IMySession pcomm = this.sessionFactory.getNewSession(host, port);
+		
+		if (mapSession) {
+			this.sessionMap.put(pcomm.getSessionId(), pcomm); 
 		}
+		
+		return pcomm;
 	}	
 	
 	/**

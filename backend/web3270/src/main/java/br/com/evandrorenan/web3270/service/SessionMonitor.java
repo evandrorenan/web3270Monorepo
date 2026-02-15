@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
 
 @Slf4j
-@Component
 public class SessionMonitor {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SessionMonitor.class);

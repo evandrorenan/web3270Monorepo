@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import lombok.Data;
 
-@Component
-@Data
 public class WorkAreaService {
 
 	private static final Logger logger = LoggerFactory.getLogger(ExceptionWeb3270.class);

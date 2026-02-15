@@ -9,7 +9,6 @@ import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
 import lombok.Data;
 
-@Component
 @Data
 public class BaseLocatorDto {
 	
@@ -20,7 +19,6 @@ public class BaseLocatorDto {
 	private StringBuilder workAreaEbcdic;
 	private StringBuilder workAreaHex;
 	
-	@Autowired
 	public BaseLocatorDto() {
 		this.baseLocatorType = "";
 		this.baseLocatorId = "";
@@ -31,20 +29,20 @@ public class BaseLocatorDto {
 	}
 	
 	public String getWorkAreaEbcdic() {
-		String strEbcdic = this.workAreaEbcdic.toString();
 		if (this.workAreaEbcdic.length() < 4096) {
 			this.workAreaEbcdic.append(
 					new String(new char[4096 - this.workAreaEbcdic.length()]).replace("\0", "."));
 		}
+		String strEbcdic = this.workAreaEbcdic.toString();
 		return strEbcdic.substring(0, Math.min(4096, strEbcdic.length()));
 	}
 
 	public String getWorkAreaHex() {
-		String strHex = workAreaHex.toString();
 		if (this.workAreaHex.length() < 4096 * 2) {
 			this.workAreaHex.append(
-					new String(new char[4096 * 2 - this.workAreaEbcdic.length()]).replace("\0", "00"));
+					new String(new char[4096 * 2 - this.workAreaHex.length()]).replace("\0", "00"));
 		}
+		String strHex = workAreaHex.toString();
 		return strHex.substring(0, Math.min(4096 * 2, strHex.length()));
 	}
 
@@ -113,10 +111,10 @@ public class BaseLocatorDto {
 	}
 	
 	public static boolean isValidWorkArea(String str) {
-		if ( str.lastIndexOf('*') < 16 ) {
+		if ( str.length() < 14 || str.lastIndexOf('*') < 16 ) {
 			return false;
 		}
-		return str.substring(0,14).replace(" ", "").matches("[0-9A-F]{8}");
+		return str.substring(0,14).replace(" ", "").matches("[0-9A-F]{8,}");
 	}	
 
 	private void handleRepetitions(String line) {

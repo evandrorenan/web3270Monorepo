@@ -21,7 +21,9 @@ public final class Web3270Utils {
 	}
 
 	public static boolean isNumeric(String str) {
-		
+		if (str == null || str.isEmpty()) {
+			return false;
+		}
 		for (char c : str.toCharArray()) {
 			if (!Character.isDigit(c)) {
 				return false;
@@ -42,6 +44,11 @@ public final class Web3270Utils {
 			return "";
 		}
 		
-		return text.toUpperCase().substring(j + wordAfter.length() + 1).replaceAll(REGEX_MATCHES_EVERYTHING_STARTING_FROM_FIRST_SPACE, "");
+		int start = j + wordAfter.length() + 1;
+		if (start >= text.length()) {
+			return "";
+		}
+		
+		return text.toUpperCase().substring(start).replaceAll(REGEX_MATCHES_EVERYTHING_STARTING_FROM_FIRST_SPACE, "");
 	}
 }

@@ -41,12 +41,11 @@ public class ProgramReportService implements IProgramReportService {
 	private ISessionService sessionService;
 	
 	@Autowired
-	public ProgramReportService(ISessionService sessionService) {
+	public ProgramReportService(ISessionService sessionService, IEvtService evtService, IBaseLocatorService abendService) {
 		log.info("ProgramReportService constructed;");
-
-		this.abendService = new FaultAnalyzerBaseLocatorService(sessionService);
-		this.evtService = new EvtService(sessionService);
 		this.sessionService = sessionService;
+		this.evtService = evtService;
+		this.abendService = abendService;
 	}
 	
 	@Override
@@ -147,11 +146,6 @@ public class ProgramReportService implements IProgramReportService {
 		
 
 		return report;
-		} catch (Exception e) {
-			log.error(e.getMessage());
-			return null;
-		}
-		
 	}
 
 	private TokenDto createNewTokenDto(Map<Integer, DataDivisionMapItemContentDto> dataDivisionMap,

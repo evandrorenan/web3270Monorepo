@@ -1,7 +1,8 @@
 package websocket;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
+import static org.mockito.Mockito.verify;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -30,14 +31,23 @@ import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 import br.com.evandrorenan.web3270.controller.ScreenController;
 
 
-@SpringBootTest(classes = {ScreenController.class})
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {br.com.evandrorenan.web3270.Web3270Application.class})
 public class WebSocketScreenTest {
+
+    @org.springframework.boot.test.web.server.LocalServerPort
+    private int port;
 
 	private SockJsClient sockJsClient;
 
 	private WebSocketStompClient stompClient;
 
 	private final WebSocketHttpHeaders headers = new WebSocketHttpHeaders();
+
+    @org.springframework.test.context.bean.override.mockito.MockitoBean
+	private br.com.evandrorenan.web3270.session._interface.IScreenService screenService;
+
+    @org.springframework.test.context.bean.override.mockito.MockitoBean
+	private br.com.evandrorenan.web3270.session._interface.ISessionService sessionService;
 
 	@BeforeEach
 	public void setup() {
@@ -50,7 +60,7 @@ public class WebSocketScreenTest {
 	}
 
 	@Test
-	public void getGreeting() throws Exception {
+	public void testSendKeys() throws Exception {
 
 		final CountDownLatch latch = new CountDownLatch(1);
 		final AtomicReference<Throwable> failure = new AtomicReference<>();
@@ -59,27 +69,20 @@ public class WebSocketScreenTest {
 
 			@Override
 			public void afterConnected(final StompSession session, StompHeaders connectedHeaders) {
-				session.subscribe("/topic/greetings", new StompFrameHandler() {
-					@Override
-					public Type getPayloadType(StompHeaders headers) {
-						return String.class;
-					}
-
-					@Override
-					public void handleFrame(StompHeaders headers, Object payload) {
-						String greeting = (String) payload;
-						try {
-							assertEquals("Hello, Spring!", greeting);
-						} catch (Throwable t) {
-							failure.set(t);
-						} finally {
-							session.disconnect();
-							latch.countDown();
-						}
-					}
-				});
+				// We don't subscribe because ScreenController doesn't reply directly.
+                // We verify the side effect (service call).
 				try {
-					session.send("/app/screen", "sent via session.send");
+                    br.com.evandrorenan.web3270.dto.UserInputDto payload = new br.com.evandrorenan.web3270.dto.UserInputDto();
+                    payload.setSessionId("123");
+                    payload.setSendKeys(new java.util.ArrayList<>());
+                    br.com.evandrorenan.web3270.dto.SendKeysDto sendKey = new br.com.evandrorenan.web3270.dto.SendKeysDto();
+                    sendKey.setRow(1);
+                    sendKey.setCol(1);
+                    sendKey.setText("test");
+                    payload.getSendKeys().add(sendKey);
+
+					session.send("/ws/sendkeys", payload);
+                    latch.countDown();
 				} catch (Throwable t) {
 					failure.set(t);
 					latch.countDown();
@@ -87,17 +90,25 @@ public class WebSocketScreenTest {
 			}
 		};
 
-		this.stompClient.connect("ws://localhost:8080/web3270-websocket", this.headers, handler);
+		this.stompClient.connect("ws://localhost:{port}/web3270-websocket", this.headers, handler, port);
 
 		if (latch.await(3, TimeUnit.SECONDS)) {
 			if (failure.get() != null) {
 				throw new AssertionError("", failure.get());
 			}
+            
+            // Allow some time for the message to be processed
+            Thread.sleep(1000);
+
+            verify(sessionService).getSession("123");
+            // We can also verify sendKeysAsync if we mock the session return
+            // But since getSession returns null by default mock, sendKeysAsync receives null session.
+            // ScreenController passes whatever it gets.
+            verify(screenService).sendKeysAsync(org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any());
 		}
 		else {
-			fail("Greeting not received");
+			fail("Timeout waiting for connection/send");
 		}
-
 	}
 
 	private class TestSessionHandler extends StompSessionHandlerAdapter {

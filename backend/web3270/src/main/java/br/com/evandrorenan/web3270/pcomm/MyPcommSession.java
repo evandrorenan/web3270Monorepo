@@ -25,7 +25,6 @@ import br.com.evandrorenan.web3270.session._interface.IMySession;
 import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import lombok.ToString;
 
-@Component
 @ToString(callSuper = true)
 public class MyPcommSession extends ECLSession implements IMySession {
 	

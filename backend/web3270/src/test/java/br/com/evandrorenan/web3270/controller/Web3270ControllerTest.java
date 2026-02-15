@@ -176,7 +176,7 @@ public class Web3270ControllerTest {
 			.thenReturn(this.getSessionDto(VALID_SESSION_ID));
 		
 		Mockito
-			.when(this.mockScreenService.getScreenDto(mySession))
+			.when(this.mockScreenService.getScreenFields(mySession))
 			.thenReturn(this.getScreenDto(mySession));
 
 		//Assuming that mockWeb3270ScreenService.sendKeys will do nothing by default

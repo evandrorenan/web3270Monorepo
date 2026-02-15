@@ -10,7 +10,6 @@ import br.com.evandrorenan.web3270.dto.PositionDto;
 import br.com.evandrorenan.web3270.exception.ExceptionWeb3270;
 import br.com.evandrorenan.web3270.session._interface.IMySession;
 
-@Component
 public class MySessionMock implements IMySession {
 
 	private String sessionId;

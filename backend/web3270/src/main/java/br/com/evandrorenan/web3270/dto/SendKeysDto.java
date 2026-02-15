@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-@Component
 @Data
 public class SendKeysDto {
 	private int row;
