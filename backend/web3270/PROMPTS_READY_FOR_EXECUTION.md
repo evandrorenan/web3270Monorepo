@@ -517,7 +517,9 @@ public class SessionController {
 ### Comando para Executar
 ```bash
 Você é especialista em segurança Spring. Implemente Spring Security + Validação 
-conforme especificação abaixo:
+conforme especificação abaixo.
+A JDK do java 21 necessária para esse projeto está em C:\Users\renan\.jdks\sapmachine-21.
+O projeto java está na pasta C:\fed\web3270Monorepo\backend\web3270
 ```
 
 ### Especificação Completa
@@ -931,42 +933,247 @@ services:
 6. RateLimitingFilter
 7. application-{dev,test,prod}.yml atualizado
 8. Testes de segurança (SecurityIntegrationTest)
-9. Commit: `feat(security): implement Spring Security + JWT + validation`
+9. Cobertura de testes de segurança (80%+)
+10. Commit: `feat(security): implement Spring Security + JWT + validation`
 
 ---
 
 <a id="prompt-4"></a>
 ## PROMPT 4: Observabilidade + Logging
 
-[Instruções similares ao PROMPT 3...]
+### Comando para Executar
+```bash
+Você é um especialista em observabilidade e SRE. Implemente OpenTelemetry (OTEL) 
+e logging estruturado pronto para EFK conforme especificação abaixo.
+```
+
+### Especificação Completa
+
+#### Objetivo
+Implementar rastreamento distribuído com OpenTelemetry e padronizar o logging em toda a base de código para integração com a stack EFK (Elasticsearch, Fluentd, Kibana).
+
+#### Tasks Detalhadas
+
+**TASK 1: OpenTelemetry (OTEL) Integration**
+1.1. Adicionar `opentelemetry-spring-boot-starter` e `opentelemetry-exporter-otlp` ao `pom.xml`.
+1.2. Configurar o exportador OTLP via variáveis de ambiente para traces e métricas.
+1.3. Instrumentar automaticamente a camada de rede e banco de dados (se houver).
+
+**TASK 2: Java Logging Review & Enhancement**
+2.1. Revisar todos os arquivos `.java` em `src/main/java`:
+    - Substituir qualquer `System.out.println` por logs SLF4J adequados.
+    - Adicionar logs de entrada/saída em métodos críticos dos Use Cases.
+    - Garantir que exceções sejam logadas com o stack trace completo: `log.error("Erro ao processar X", e)`.
+2.2. Utilizar MDC (Mapped Diagnostic Context) para incluir metadados contextuais (ex: `sessionId`, `host`) em cada entrada de log.
+
+**TASK 3: EFK Readiness (JSON Logging)**
+3.1. Configurar `logback-spring.xml` com o `LogstashEncoder` para gerar logs em formato JSON.
+3.2. Incluir campos obrigatórios para o Fluentd: `service_name`, `env`, `traceId`, `spanId`.
+3.3. Configurar um `ConsoleAppender` específico para o perfil `prod` que produza apenas JSON bruto.
+
+#### Requisitos Técnicos
+- Tracing ID deve ser propagado automaticamente para o frontend (via headers W3C TraceContext).
+- Logs não devem conter dados sensíveis (PII).
+
+#### Validação de Sucesso
+- [ ] Logs no console em formato JSON válido e parseável.
+- [ ] Presença de `traceId` e `spanId` correlacionados entre OTEL e Logs.
+- [ ] Todos os arquivos Java revisados seguindo o novo padrão de logging.
+
+#### Entregáveis
+1. Configuração Logback JSON.
+2. Instrumentação OTEL configurada.
+3. Código Java atualizado com logs enriquecidos.
+4. Commit: `feat(obs): implement OpenTelemetry and EFK-ready structured logging`
+
 
 ---
 
 <a id="prompt-5"></a>
 ## PROMPT 5: Tratamento de Erro Global
 
-[Instruções similares ao PROMPT 3...]
+### Comando para Executar
+```bash
+Você é um desenvolvedor Java sênior. Implemente um tratamento de erros global 
+e padronizado (RFC 7807) conforme especificação abaixo.
+```
+
+### Especificação Completa
+
+#### Objetivo
+Unificar o tratamento de exceções e retornar erros legíveis conforme padrões HTTP.
+
+#### Tasks Detalhadas
+
+**TASK 1: RFC 7807 (Problem Details)**
+1.1. Implementar `GlobalExceptionHandler` estendendo `ResponseEntityExceptionHandler`.
+1.2. Criar DTO de erro padronizado:
+```java
+public record ErrorResponse(
+    String type,
+    String title,
+    int status,
+    String detail,
+    String instance,
+    Map<String, Object> properties
+) {}
+```
+
+**TASK 2: Mapeamento de Exceções**
+2.1. Mapear `DomainException` para 400 Bad Request.
+2.2. Mapear `SessionNotFoundException` para 404 Not Found.
+2.3. Mapear erros de validação (@Valid) para 400 com detalhes dos campos.
+2.4. Mapear exceções inesperadas para 500 Internal Server Error.
+
+#### Requisitos Técnicos
+- Usar `ProblemDetail` do Spring 6/Boot 3 se disponível.
+- Garantir que segredos ou stack traces não vazem no corpo da resposta em `prod`.
+
+#### Validação de Sucesso
+- [ ] Erros de validação retornam detalhes JSON claros.
+- [ ] Exceções de domínio são convertidas corretamente.
+- [ ] HTTP status codes condizem com o erro.
+
+#### Entregáveis
+1. `GlobalExceptionHandler` completo.
+2. DTOs de erro padronizados.
+3. Commit: `feat(error): implement global error handling with RFC 7807`
+
 
 ---
 
 <a id="prompt-6"></a>
 ## PROMPT 6: DevOps + Configuração
 
-[Instruções similares ao PROMPT 3...]
+### Comando para Executar
+```bash
+Você é um engenheiro de DevOps especializado em Java e Docker. Implemente 
+containerização e pipelines conforme especificação abaixo.
+```
+
+### Especificação Completa
+
+#### Objetivo
+Preparar a aplicação para deploy em containers e automação de CI/CD.
+
+#### Tasks Detalhadas
+
+**TASK 1: Dockerization**
+1.1. Criar `Dockerfile` multi-stage (build -> runtime).
+1.2. Usar imagem base leve (Alpine ou Distroless com JRE 21).
+1.3. Otimizar camadas para cache do Docker.
+
+**TASK 2: Docker Compose Avançado**
+2.1. Configurar `docker-compose.yml` com perfis (`dev`, `prod`).
+2.2. Incluir healthchecks para o serviço Java.
+2.3. Configurar persistência de logs e volumes se necessário.
+
+**TASK 3: GitHub Actions (CI)**
+3.1. Criar workflow `.github/workflows/ci.yml`.
+3.2. Steps: checkout, Java setup, Maven build, Run tests, JaCoCo check.
+
+#### Requisitos Técnicos
+- Senhas e segredos via variáveis de ambiente.
+- Build do Docker deve ser determinístico.
+
+#### Validação de Sucesso
+- [ ] `docker compose up` inicia a aplicação corretamente.
+- [ ] Pipeline do GitHub Actions passa com sucesso.
+
+#### Entregáveis
+1. `Dockerfile`, `docker-compose.yml`.
+2. Pipeline CI configurado.
+3. Commit: `chore(devops): implement dockerization and ci pipeline`
+
 
 ---
 
 <a id="prompt-7"></a>
 ## PROMPT 7: Testes de Integração
 
-[Instruções similares ao PROMPT 3...]
+### Comando para Executar
+```bash
+Você é um QA Engineer especializado em testes automatizados. Implemente 
+testes de integração ponta-a-ponta conforme especificação abaixo.
+```
+
+### Especificação Completa
+
+#### Objetivo
+Garantir que todos os componentes da aplicação funcionam juntos corretamente.
+
+#### Tasks Detalhadas
+
+**TASK 1: Integration Tests (HTTP)**
+1.1. Criar `SessionIntegrationTest` testando fluxo completo (POST session -> GET screen).
+1.2. Usar `@SpringBootTest` com porta aleatória.
+
+**TASK 2: WebSocket Integration**
+2.1. Implementar testes para o fluxo de WebSocket usando `StompSessionHandler`.
+2.2. Validar entrega de mensagens assíncronas do terminal.
+
+**TASK 3: Security Integration**
+3.1. Garantir que as regras do Spring Security estão sendo aplicadas nos testes de integração.
+
+#### Requisitos Técnicos
+- Testes devem ser independentes do ambiente (usar mocks para terminal Pcomm se necessário).
+- Garantir limpeza de estado entre os testes.
+
+#### Validação de Sucesso
+- [ ] Suite de testes de integração roda com `mvn verify`.
+- [ ] Fluxos críticos (caminho feliz e erro) cobertos.
+
+#### Entregáveis
+1. Classe `IntegrationTestSuite`.
+2. Testes de WebSocket funcionais.
+3. Commit: `test(int): implement e2e and websocket integration tests`
+
 
 ---
 
 <a id="prompt-8"></a>
 ## PROMPT 8: Documentação + Polish
 
-[Instruções similares ao PROMPT 3...]
+### Comando para Executar
+```bash
+Você é um desenvolvedor focado em qualidade e documentação. Finalize o projeto 
+com Swagger e limpeza de código conforme especificação abaixo.
+```
+
+### Especificação Completa
+
+#### Objetivo
+Fornecer documentação técnica de alta qualidade e código limpo.
+
+#### Tasks Detalhadas
+
+**TASK 1: OpenAPI / Swagger UI**
+1.1. Adicionar `springdoc-openapi-starter-webmvc-ui`.
+1.2. Configurar metadados da API (Título, Versão, Descrição).
+1.3. Adicionar anotações `@Operation` e `@ApiResponse` nos controllers.
+
+**TASK 2: Polish & Code Cleanup**
+2.1. Remover mocks e códigos de exemplo não utilizados.
+2.2. Revisar nomes de métodos e variáveis para consistência (Clean Code).
+2.3. Otimizar imports e formatar código seguindo padrão Google/Sun.
+
+**TASK 3: README Final**
+3.1. Atualizar `README.md` com instruções de execução, arquitetura e segurança.
+
+#### Requisitos Técnicos
+- Swagger UI acessível em `/swagger-ui.html`.
+- Zero warnings no checkstyle ou linter.
+
+#### Validação de Sucesso
+- [ ] UI do Swagger exibe todos os endpoints corretamente.
+- [ ] Documentação está clara e atualizada.
+
+#### Entregáveis
+1. Configuração OpenAPI.
+2. README.md finalizado.
+3. Código polido e limpo.
+4. Commit: `docs(polish): finalize api documentation and code cleanup`
+
 
 ---
 
