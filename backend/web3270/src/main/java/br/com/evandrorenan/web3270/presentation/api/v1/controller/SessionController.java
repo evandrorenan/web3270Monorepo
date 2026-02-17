@@ -6,10 +6,13 @@ import br.com.evandrorenan.web3270.application.usecase.SendKeysUseCase;
 import br.com.evandrorenan.web3270.application.dto.SessionResponse;
 import br.com.evandrorenan.web3270.presentation.api.v1.request.CreateSessionRequest;
 import br.com.evandrorenan.web3270.presentation.api.v1.request.SendKeysRequest;
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/sessions")
 public class SessionController {
@@ -37,13 +40,25 @@ public class SessionController {
 
     @PostMapping("/{sessionId}/keys")
     public ResponseEntity<Void> sendKeys(@PathVariable String sessionId, @RequestBody SendKeysRequest request) {
-        sendKeys.execute(sessionId, new br.com.evandrorenan.web3270.application.port.SendKeysRequest(request.keys()));
-        return ResponseEntity.ok().build();
+        MDC.put("sessionId", sessionId);
+        try {
+            log.info("Sending keys to session {}: {}", sessionId, request.keys());
+            sendKeys.execute(sessionId, new br.com.evandrorenan.web3270.application.port.SendKeysRequest(request.keys()));
+            return ResponseEntity.ok().build();
+        } finally {
+            MDC.remove("sessionId");
+        }
     }
 
     @DeleteMapping("/{sessionId}")
     public ResponseEntity<Void> disconnect(@PathVariable String sessionId) {
-        disconnect.execute(sessionId);
-        return ResponseEntity.noContent().build();
+        MDC.put("sessionId", sessionId);
+        try {
+            log.info("Disconnecting session {}", sessionId);
+            disconnect.execute(sessionId);
+            return ResponseEntity.noContent().build();
+        } finally {
+            MDC.remove("sessionId");
+        }
     }
 }

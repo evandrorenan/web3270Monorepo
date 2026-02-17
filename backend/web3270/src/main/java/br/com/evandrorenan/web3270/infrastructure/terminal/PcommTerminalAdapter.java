@@ -5,9 +5,10 @@ import br.com.evandrorenan.web3270.domain.session.port.TerminalConnection;
 import br.com.evandrorenan.web3270.pcomm.MyPcommSession;
 import br.com.evandrorenan.web3270.session._interface.IScreenService;
 import java.util.Properties;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Component;
 
+@Slf4j
 public class PcommTerminalAdapter implements TerminalConnection {
     private final SimpMessagingTemplate messagingTemplate;
     private final IScreenService screenService;
@@ -20,6 +21,7 @@ public class PcommTerminalAdapter implements TerminalConnection {
 
     @Override
     public void connect(SessionProperties props) {
+        log.info("Pcomm adapter connecting to {}:{}", props.host(), props.port());
         Properties pcommProps = new Properties();
         pcommProps.setProperty("SESSION_HOST", props.host());
         pcommProps.setProperty("SESSION_HOST_PORT", props.port());
@@ -29,7 +31,9 @@ public class PcommTerminalAdapter implements TerminalConnection {
         try {
             this.session = new MyPcommSession(pcommProps, messagingTemplate, screenService);
             this.session.connect();
+            log.info("Pcomm session connected successfully");
         } catch (Exception e) {
+            log.error("Pcomm connection failed for {}:{}", props.host(), props.port(), e);
             throw new RuntimeException("Failed to connect to Pcomm", e);
         }
     }
@@ -56,10 +60,14 @@ public class PcommTerminalAdapter implements TerminalConnection {
     public void sendKeys(String keys) {
         if (session != null) {
             try {
+                log.debug("Pcomm adapter sending keys: {}", keys);
                 session.sendKey(keys);
             } catch (Exception e) {
+                log.error("Pcomm failed to send keys: {}", keys, e);
                 throw new RuntimeException("Failed to send keys", e);
             }
+        } else {
+            log.warn("Attempted to send keys to a null Pcomm session");
         }
     }
 }
