@@ -63,7 +63,7 @@ class SessionControllerTest {
     @Test
     @DisplayName("should create new session successfully")
     void shouldCreateNewSession() throws Exception {
-        CreateSessionRequest props = new CreateSessionRequest("host", "23", "3270", "UTF-8");
+        CreateSessionRequest props = new CreateSessionRequest("127.0.0.1", "23", "3270", "UTF-8");
         SessionResponse sessionDto = new SessionResponse("123", true, LocalDateTime.now());
         
         when(createSessionUseCase.execute(any())).thenReturn(sessionDto);

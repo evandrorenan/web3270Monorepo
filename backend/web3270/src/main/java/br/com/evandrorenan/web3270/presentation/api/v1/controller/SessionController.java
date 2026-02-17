@@ -8,6 +8,7 @@ import br.com.evandrorenan.web3270.presentation.api.v1.request.CreateSessionRequ
 import br.com.evandrorenan.web3270.presentation.api.v1.request.SendKeysRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/sessions")
@@ -26,7 +27,7 @@ public class SessionController {
     }
 
     @PostMapping
-    public ResponseEntity<SessionResponse> createSession(@RequestBody CreateSessionRequest request) {
+    public ResponseEntity<SessionResponse> createSession(@Valid @RequestBody CreateSessionRequest request) {
         br.com.evandrorenan.web3270.application.port.CreateSessionRequest appRequest = 
             new br.com.evandrorenan.web3270.application.port.CreateSessionRequest(
                 request.host(), request.port(), request.type(), request.codePage()
