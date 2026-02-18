@@ -65,6 +65,41 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/hodmain.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>br.com.evandrorenan</groupId>
+            <artifactId>hodhelp</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/hodhelp.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>br.com.evandrorenan</groupId>
+            <artifactId>pcseclj</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/pcseclj.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>br.com.evandrorenan</groupId>
+            <artifactId>CachedAppletInstaller2</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/CachedAppletInstaller2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>br.com.evandrorenan</groupId>
+            <artifactId>WSCachedLoader2</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/WSCachedLoader2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>br.com.evandrorenan</groupId>
+            <artifactId>WSCachedSupporter2</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/WSCachedSupporter2.jar</systemPath>
+        </dependency>
 
         <!-- Swagger dependencies -->
 		<dependency>
@@ -198,6 +233,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                    <layout>ZIP</layout>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

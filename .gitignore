@@ -4,3 +4,4 @@ backend/web3270/target/
 backend/web3270/.idea/
 backend/web3270/.metadata/
 backend/web3270/src/main/webapp/WEB-INF/lib/hodhelp.jar
+*.log

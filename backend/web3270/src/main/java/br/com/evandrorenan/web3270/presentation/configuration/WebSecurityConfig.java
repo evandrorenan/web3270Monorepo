@@ -37,7 +37,7 @@ public class WebSecurityConfig {
             .addFilterAfter(rateLimitingFilter, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.class)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/v1/auth/**").permitAll()
-                .requestMatchers("/actuator/health").permitAll()
+                .requestMatchers("/actuator/**").permitAll()
                 .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/web3270-websocket/**").permitAll()
                 .anyRequest().authenticated()
