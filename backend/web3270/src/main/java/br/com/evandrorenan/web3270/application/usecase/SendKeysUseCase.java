@@ -27,7 +27,7 @@ public class SendKeysUseCase {
                 return new SessionNotFoundException(new SessionId(sessionId));
             });
 
-        connection.sendKeys(request.keys());
+        connection.sendKey(request.keys());
         log.info("Keys sent successfully to session {}", sessionId);
     }
 }

@@ -7,5 +7,6 @@ public interface TerminalConnection {
     void disconnect();
     boolean isConnected();
     String getScreen();
-    void sendKeys(String keys);
+    void sendKey(String key);
+    void setCurrentSessionId(String sessionId);
 }

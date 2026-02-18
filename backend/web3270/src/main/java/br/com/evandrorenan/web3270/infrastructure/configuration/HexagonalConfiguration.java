@@ -18,6 +18,7 @@ public class HexagonalConfiguration {
     }
 
     @Bean
+    @org.springframework.context.annotation.Profile("!test")
     public TerminalConnection terminalConnection(SimpMessagingTemplate messagingTemplate, IScreenService screenService) {
         return new PcommTerminalAdapter(messagingTemplate, screenService);
     }

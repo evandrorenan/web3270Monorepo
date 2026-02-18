@@ -57,17 +57,21 @@ public class PcommTerminalAdapter implements TerminalConnection {
     }
 
     @Override
-    public void sendKeys(String keys) {
+    public void sendKey(String key) {
         if (session != null) {
             try {
-                log.debug("Pcomm adapter sending keys: {}", keys);
-                session.sendKey(keys);
+                log.debug("Pcomm adapter sending key: {}", key);
+                session.sendKey(key);
             } catch (Exception e) {
-                log.error("Pcomm failed to send keys: {}", keys, e);
-                throw new RuntimeException("Failed to send keys", e);
+                log.error("Failed to send key to Pcomm: {}", e.getMessage(), e);
             }
         } else {
-            log.warn("Attempted to send keys to a null Pcomm session");
+            log.warn("Attempted to send key to a null Pcomm session");
         }
+    }
+
+    @Override
+    public void setCurrentSessionId(String sessionId) {
+        // No-op for production adapter
     }
 }

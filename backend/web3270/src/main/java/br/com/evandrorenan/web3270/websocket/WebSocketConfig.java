@@ -29,7 +29,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
-		config.enableSimpleBroker("/queue/session");
+		config.enableSimpleBroker("/topic", "/queue/session");
 
 		// Messages sent to the websocket must prefix '/ws/foobar' to be
 		// recognized by MessageMapping '/foobar' annotation
