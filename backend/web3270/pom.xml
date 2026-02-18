@@ -67,13 +67,6 @@
         </dependency>
         <dependency>
             <groupId>br.com.evandrorenan</groupId>
-            <artifactId>hodhelp</artifactId>
-            <version>1</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/hodhelp.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>br.com.evandrorenan</groupId>
             <artifactId>pcseclj</artifactId>
             <version>1</version>
             <scope>system</scope>

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web3270-frontend:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://backend:8080
+      - VITE_WS_URL=ws://backend:8080/web3270-websocket
+    depends_on:
+      - backend
+
+  backend:
+    image: openjdk:11-jre-slim
+    # Placeholder for the backend service.
+    # In a real setup, this would point to the backend Dockerfile or image.
+    command: ["java", "-jar", "/app.jar"]
+    # Mocking simple HTTP server or omitted if backend is external.
+    # For now, just a dummy service that won't start properly without jar.
+    restart: "no"
