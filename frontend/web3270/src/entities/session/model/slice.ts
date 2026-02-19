@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface Field {
-  fieldId: number;
+  fieldId: string | number;
   start: number;
   end: number;
   row: number;
@@ -9,6 +9,7 @@ export interface Field {
   length: number;
   text: string;
   hidden: boolean;
+  protected: boolean;
   highLight: boolean;
   modified: boolean;
   // ref removed as it's non-serializable and shouldn't be in Redux
@@ -17,6 +18,7 @@ export interface Field {
 export interface SessionState {
   sessionId: string | null;
   fields: Field[];
+  content: string;
   cursorPos: number;
   status: 'disconnected' | 'connecting' | 'connected' | 'error';
   error: string | null;
@@ -26,6 +28,7 @@ export interface SessionState {
 const initialState: SessionState = {
   sessionId: null,
   fields: [],
+  content: '',
   cursorPos: 1,
   status: 'disconnected',
   error: null,
@@ -53,8 +56,9 @@ export const sessionSlice = createSlice({
       state.sessionId = null;
       state.fields = [];
     },
-    updateScreen: (state, action: PayloadAction<{ fields: Field[]; cursorPos: number }>) => {
+    updateScreen: (state, action: PayloadAction<{ fields: Field[]; content: string; cursorPos: number }>) => {
       state.fields = action.payload.fields;
+      state.content = action.payload.content || '';
       state.cursorPos = action.payload.cursorPos;
       state.waitingStatus = false;
     },
