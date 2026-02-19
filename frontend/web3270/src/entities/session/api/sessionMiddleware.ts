@@ -35,6 +35,7 @@ const adaptScreenData = (data: any) => {
       hidden: f.isHidden || f.hidden || false,
       protected: f.isProtected || f.protected || false,
       highLight: f.isHighIntensity || f.highIntensity || f.isHighLight || f.highLight || false,
+      color: f.color || undefined,
       modified: false
     };
   };

@@ -8,7 +8,8 @@ const createField = (
   text: string,
   isProtected: boolean,
   isHidden: boolean,
-  isHighIntensity: boolean
+  isHighIntensity: boolean,
+  color?: string
 ): any => {
     // Backend field DTO structure (as expected by adaptScreenData in middleware)
     return {
@@ -18,13 +19,14 @@ const createField = (
         text,
         isProtected,
         isHidden,
-        isHighIntensity
+        isHighIntensity,
+        color
     };
 };
 
 // Layout: 24 rows x 80 columns = 1920 chars
-// Row 1 starts at 1. Row 2 starts at 81.
 const ROW_1 = 1;
+const ROW_3 = 1 + (2 * 80);
 const ROW_5 = 1 + (4 * 80);
 const ROW_7 = 1 + (6 * 80);
 const ROW_24 = 1 + (23 * 80);
@@ -42,33 +44,27 @@ const BACKGROUND_TEXT =
   "                                                                                ".repeat(14) + // 10-23
   "PF3=Exit  Enter=Submit                                                          "; // 24
 
-// Adjust background text to match fields?
-// Usually background text is what's "underneath".
-// But let's keep it simple. The content string will be the full screen text representation.
-// Fields will overlay.
-// Actually, for content, let's make it reflect the labels.
-
 export const mockLoginScreen = {
     content: BACKGROUND_TEXT,
     cursorPos: ROW_5 + 16, // Cursor at start of User input
     fields: [
-        // Title (Protected)
-        createField('title', ROW_1 + 27, 26, "Web3270 Mock System", true, false, true),
+        // Title (Protected) - High Intensity White - On Row 3 to match background
+        createField('title', ROW_3 + 27, 26, "Web3270 Mock System", true, false, true, "White"),
 
-        // User Label (Protected)
-        createField('lbl_user', ROW_5 + 10, 5, "User:", true, false, false),
+        // User Label (Protected) - Green
+        createField('lbl_user', ROW_5 + 10, 5, "User:", true, false, false, "Green"),
 
-        // User Input (Unprotected)
-        createField('inp_user', ROW_5 + 16, 10, "", false, false, false),
+        // User Input (Unprotected) - Turquoise/Cyan
+        createField('inp_user', ROW_5 + 16, 10, "", false, false, false, "Turquoise"),
 
-        // Password Label (Protected)
-        createField('lbl_pass', ROW_7 + 10, 9, "Password:", true, false, false),
+        // Password Label (Protected) - Green
+        createField('lbl_pass', ROW_7 + 10, 9, "Password:", true, false, false, "Green"),
 
-        // Password Input (Unprotected, Hidden)
-        createField('inp_pass', ROW_7 + 20, 10, "", false, true, false),
+        // Password Input (Unprotected, Hidden) - Red (usually hidden doesn't matter color but for demo)
+        createField('inp_pass', ROW_7 + 20, 10, "", false, true, false, "Red"),
 
-        // Footer (Protected)
-        createField('footer', ROW_24, 25, "PF3=Exit  Enter=Submit", true, false, true),
+        // Footer (Protected) - Blue
+        createField('footer', ROW_24, 25, "PF3=Exit  Enter=Submit", true, false, true, "Blue"),
     ]
 };
 
@@ -78,7 +74,7 @@ export const mockLoggedInScreen = {
              "                                                                                ".repeat(13),
     cursorPos: 1,
     fields: [
-        createField('welcome', ROW_1 + (10 * 80) + 20, 22, "WELCOME TO THE SYSTEM!", true, false, true)
+        createField('welcome', ROW_1 + (10 * 80) + 20, 22, "WELCOME TO THE SYSTEM!", true, false, true, "Yellow")
     ]
 };
 

@@ -122,7 +122,7 @@ export const Terminal3270: React.FC = () => {
         <div className="relative bg-black text-green-500 font-mono shadow-2xl" style={{
             width: '80ch',
             height: '28.8em', // 24 rows * 1.2em
-            fontSize: '16px',
+            fontSize: '22px',
             lineHeight: '1.2em',
             userSelect: 'text',
             whiteSpace: 'pre'

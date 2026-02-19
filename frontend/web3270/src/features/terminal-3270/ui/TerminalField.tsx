@@ -15,6 +15,36 @@ interface TerminalFieldProps {
   onMoveToNext: (currentIndex: number) => void;
 }
 
+const mapColorToClass = (colorName?: string) => {
+    if (!colorName) return 'text-green-500'; // Default green
+
+    // Normalize color name
+    const color = colorName.toLowerCase();
+
+    // Mapping based on typical 3270 colors
+    switch (color) {
+        case 'blue': return 'text-blue-500';
+        case 'green': return 'text-green-500';
+        case 'red': return 'text-red-500';
+        case 'pink':
+        case 'magenta': return 'text-fuchsia-500';
+        case 'turquoise':
+        case 'cyan': return 'text-cyan-500';
+        case 'yellow': return 'text-yellow-400';
+        case 'white': return 'text-white';
+        case 'light-blue': return 'text-blue-300';
+        case 'light-green': return 'text-green-300';
+        case 'light-red': return 'text-red-300';
+        case 'light-magenta': return 'text-fuchsia-300';
+        case 'light-cyan': return 'text-cyan-300';
+        case 'white-hi': return 'text-white font-bold';
+        case 'gray': return 'text-gray-400';
+        case 'brown': return 'text-amber-700';
+        case 'black': return 'text-black';
+        default: return 'text-green-500';
+    }
+};
+
 export const TerminalField: React.FC<TerminalFieldProps> = React.memo(({
   field,
   index,
@@ -37,14 +67,25 @@ export const TerminalField: React.FC<TerminalFieldProps> = React.memo(({
   }, [isActive, field.protected]);
 
   const getColorClass = () => {
-    if (field.highLight) return 'text-white font-bold';
     if (field.hidden) return 'text-transparent';
-    if (field.text === '' && field.highLight) return 'bg-gray-700';
+
+    // Use color from backend if available
+    if (field.color) {
+        // Apply High Intensity if flag set?
+        // Usually color is enough, but 'highLight' might mean bold.
+        const baseColor = mapColorToClass(field.color);
+        if (field.highLight) {
+            return `${baseColor} font-bold brightness-125`;
+        }
+        return baseColor;
+    }
+
+    // Fallback logic
+    if (field.highLight) return 'text-white font-bold';
     return 'text-green-500';
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // If protected, should not be receiving events ideally, but just in case
     if (field.protected) return;
 
     if (e.key.startsWith('F') && !isNaN(Number(e.key.substring(1)))) {
@@ -111,7 +152,7 @@ export const TerminalField: React.FC<TerminalFieldProps> = React.memo(({
         left: `${field.col - 1}ch`,
         width: `${field.length}ch`,
         height: '1.2em',
-        zIndex: field.protected ? 5 : 10, // Editable fields on top
+        zIndex: field.protected ? 5 : 10,
       }}
       autoComplete="off"
       spellCheck={false}

@@ -11,6 +11,7 @@ export interface Field {
   hidden: boolean;
   protected: boolean;
   highLight: boolean;
+  color?: string;
   modified: boolean;
   // ref removed as it's non-serializable and shouldn't be in Redux
 }
