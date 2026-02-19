@@ -40,8 +40,10 @@ export const sessionSlice = createSlice({
   initialState,
   reducers: {
     connect: (state) => {
-      state.status = 'connecting';
-      state.error = null;
+      if (state.status === 'disconnected' || state.status === 'error') {
+        state.status = 'connecting';
+        state.error = null;
+      }
     },
     connectSuccess: (state, action: PayloadAction<string>) => {
       state.status = 'connected';

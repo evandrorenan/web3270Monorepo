@@ -11,18 +11,16 @@ import {
   SessionState,
 } from '../model/slice';
 
+import { MockSessionService } from './mockSessionService';
+
 let stompClient: Client | null = null;
 
-// Helper to convert backend DTOs to our state format
 const adaptScreenData = (data: any) => {
   const mapField = (f: any, index: number) => {
-    // Determine start/end/length
     const start = f.start || 0;
     const end = f.end || 0;
-    const length = end - start + 1; // Simplification, assuming linear
+    const length = end - start + 1;
 
-    // Determine row/col (1-based)
-    // start is 1-based index
     const row = Math.ceil(start / 80);
     const col = ((start - 1) % 80) + 1;
 
@@ -45,18 +43,20 @@ const adaptScreenData = (data: any) => {
   let content = '';
   let cursorPos = 1;
 
-  // If it's ScreenResponse (from Controller)
   if (data.content !== undefined) {
     fields = (data.fields || []).map(mapField);
     content = data.content;
-    cursorPos = data.cursorPosition;
+    cursorPos = data.cursorPos;
   }
-  // If it's ScreenDto (from Listener)
   else if (data.positions) {
-    // Reconstruct content string from positions
     content = data.positions.map((p: any) => p.text).join('');
     fields = (data.fields || []).map(mapField);
     cursorPos = data.cursorPos || 1;
+  }
+  else if (data.fields && data.content) {
+      fields = (data.fields || []).map(mapField);
+      content = data.content;
+      cursorPos = data.cursorPos || 1;
   }
 
   return {
@@ -67,18 +67,31 @@ const adaptScreenData = (data: any) => {
 };
 
 export const sessionMiddleware: Middleware = (store) => (next) => async (action: unknown) => {
-  // 1. Handle Connect
+  const useMock = import.meta.env.VITE_USE_MOCK === 'true';
+
   if (connect.match(action)) {
     if (stompClient?.active) {
       return next(action);
     }
 
+    if (useMock) {
+        try {
+            const session = await MockSessionService.connect();
+            store.dispatch(connectSuccess(session.sessionId));
+
+            const screen = await MockSessionService.getScreen();
+            store.dispatch(updateScreen(adaptScreenData(screen)));
+        } catch (e: any) {
+            store.dispatch(connectFailure(e.message));
+        }
+        return next(action);
+    }
+
+    // ... Real implementation ...
     try {
-      // 1. Create Session via REST
-      // Use defaults as per backend config or common values
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
       const sessionResponse = await axios.post(`${apiUrl}/api/v1/sessions`, {
-        host: '192.168.240.1', // Default from backend config
+        host: '192.168.240.1',
         port: '51004',
         type: '1',
         codePage: '037'
@@ -87,7 +100,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
       const sessionId = sessionResponse.data.sessionId;
       store.dispatch(connectSuccess(sessionId));
 
-      // 2. Connect WebSocket
       const wsUrl = import.meta.env.VITE_WS_URL || 'ws://localhost:8080/web3270-websocket';
 
       stompClient = new Client({
@@ -101,7 +113,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
       stompClient.onConnect = (frame) => {
         console.log('Connected: ' + frame);
 
-        // Subscribe to Controller updates (Response/Request pattern)
         stompClient?.subscribe(`/topic/session/${sessionId}/screen`, (message: IMessage) => {
           if (message.body) {
             try {
@@ -114,7 +125,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
           }
         });
 
-        // Subscribe to Listener updates (Push pattern)
         stompClient?.subscribe(`/queue/session/${sessionId}`, (message: IMessage) => {
            if (message.body) {
              try {
@@ -127,7 +137,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
            }
         });
 
-        // Request initial screen
         stompClient?.publish({
             destination: `/app/session/${sessionId}/screen`,
             body: '{}'
@@ -147,12 +156,13 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
     }
   }
 
-  // 2. Handle Disconnect
   if (disconnect.match(action)) {
+    if (useMock) {
+        return next(action);
+    }
     if (stompClient) {
       stompClient.deactivate();
       stompClient = null;
-      // Should also call DELETE /api/v1/sessions/{sessionId}
       const state = store.getState() as { session: SessionState };
       const sessionId = state.session.sessionId;
       if (sessionId) {
@@ -162,21 +172,25 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
     }
   }
 
-  // 3. Handle Send Keystroke
   if (sendKeystroke.match(action)) {
-    if (stompClient?.active) {
-      const state = store.getState() as { session: SessionState };
-      const { sessionId, fields } = state.session;
-      const { key } = action.payload; // key is e.g. '[enter]', '[pf1]'
+    const state = store.getState() as { session: SessionState };
+    const sessionId = state.session.sessionId;
+    const { key } = action.payload;
 
-      if (sessionId) {
+    if (useMock && sessionId) {
+        MockSessionService.sendKeys(sessionId, key).then((newScreen) => {
+             store.dispatch(updateScreen(adaptScreenData(newScreen)));
+        });
+
+        return next(action);
+    }
+
+    if (stompClient?.active && sessionId) {
+        const { fields } = state.session;
         const sendKeysList = [];
 
-        // 1. Add modified fields
-        // We need to know where to type. row/col from field.
         fields.forEach(f => {
             if (f.modified) {
-                // Send text at field position
                 sendKeysList.push({
                     row: f.row,
                     col: f.col,
@@ -186,7 +200,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
             }
         });
 
-        // 2. Add the Action Key (at cursor position or just global?)
         sendKeysList.push({
             row: 0,
             col: 0,
@@ -203,10 +216,6 @@ export const sessionMiddleware: Middleware = (store) => (next) => async (action:
           destination: `/app/sendkeys`,
           body: JSON.stringify(payload),
         });
-
-        // Optimistically clear modified flags? Or wait for screen update?
-        // Redux state will be replaced by screen update anyway.
-      }
     }
   }
 

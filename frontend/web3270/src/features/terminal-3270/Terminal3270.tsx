@@ -85,6 +85,7 @@ export const Terminal3270: React.FC = () => {
 
   const handleSubmit = () => {
       dispatch(submitScreen());
+      dispatch(sendKeystroke({ key: '[enter]', cursor: cursorPos }));
   };
 
   const rows = [];
