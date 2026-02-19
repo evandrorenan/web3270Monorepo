@@ -1,8 +1,11 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Container } from '../../shared/ui/Container';
 
 const MainLayout: React.FC = () => {
+  const location = useLocation();
+  const isReportsPage = location.pathname === '/reports';
+
   return (
     <div className="flex h-screen flex-col">
       <header className="border-b bg-white shadow-sm">
@@ -23,10 +26,14 @@ const MainLayout: React.FC = () => {
           </div>
         </Container>
       </header>
-      <main className="flex-1 bg-gray-50 py-6">
-        <Container>
+      <main className={`flex-1 bg-gray-50 ${isReportsPage ? '' : 'py-6'}`}>
+        {isReportsPage ? (
           <Outlet />
-        </Container>
+        ) : (
+          <Container>
+            <Outlet />
+          </Container>
+        )}
       </main>
     </div>
   );
