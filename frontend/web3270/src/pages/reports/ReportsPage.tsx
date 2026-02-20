@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { MOCK_PROGRAM, MOCK_VARIABLES } from "../../entities/report/model/mockData";
 import { VariableEntry } from "../../entities/report/model/types";
 import { CodeLine } from "../../entities/report/ui/CodeLine";
@@ -110,7 +110,7 @@ export default function ReportsPage() {
 
         <div className="ml-auto text-slate-600 text-[10px] leading-tight text-right hidden md:block font-mono">
           <div>Right panel tracks your scroll position</div>
-          <div>📍 pin · 📌 pinned · click value = expand</div>
+          <div>📍 pin · 📌 pinned · double-click = detail</div>
         </div>
       </header>
 
@@ -118,7 +118,7 @@ export default function ReportsPage() {
       <div className="flex-1 flex overflow-hidden min-h-0">
 
         {/* ── CODE PANE ── */}
-        <div ref={codeScrollRef} className="flex-1 overflow-auto min-w-0">
+        <div ref={codeScrollRef} className="shrink-0 overflow-auto border-r border-slate-800" style={{ width: '84ch', maxWidth: '60%' }}>
           <div className="py-3 px-2 min-w-max">
 
             {/* Legend */}
@@ -154,7 +154,7 @@ export default function ReportsPage() {
         </div>
 
         {/* ── RIGHT PANEL ── */}
-        <aside className="w-60 shrink-0 border-l border-slate-800 bg-[#090e15] flex flex-col overflow-hidden">
+        <aside className="flex-1 border-l border-slate-800 bg-[#090e15] flex flex-col overflow-hidden min-w-0">
 
           {/* Panel header + search */}
           <div className="shrink-0 px-2.5 py-2.5 border-b border-slate-800 bg-[#0b1119]/80 space-y-2">
