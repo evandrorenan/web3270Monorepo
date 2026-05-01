@@ -4,8 +4,7 @@ import { Container } from '../../shared/ui/Container';
 
 const MainLayout: React.FC = () => {
   const location = useLocation();
-  const isReportsPage = location.pathname === '/reports';
-
+  
   return (
     <div className="flex h-screen flex-col overflow-hidden">
       <header className="shrink-0 border-b bg-white shadow-sm h-16">
@@ -16,29 +15,19 @@ const MainLayout: React.FC = () => {
               <Link to="/" className="text-sm font-medium text-gray-600 hover:text-gray-900">
                 Terminal
               </Link>
-              <Link to="/reports" className="text-sm font-medium text-gray-600 hover:text-gray-900">
-                Reports
-              </Link>
-              <Link to="/upload" className="text-sm font-medium text-gray-600 hover:text-gray-900">
-                Upload
-              </Link>
-            </nav>
+              </nav>
           </div>
         </Container>
       </header>
-      <main className={`flex-1 overflow-hidden bg-gray-50 ${isReportsPage ? 'flex flex-col' : 'py-6 overflow-y-auto'}`}>
-        {isReportsPage ? (
-          <div className="flex-1 min-h-0 relative">
-            <Outlet />
-          </div>
-        ) : (
-          <Container>
+      <main className={`flex-1 overflow-hidden bg-gray-50 py-6 overflow-y-auto`}>
+        <Container>
             <Outlet />
           </Container>
-        )}
       </main>
     </div>
   );
 };
 
 export default MainLayout;
+
+
