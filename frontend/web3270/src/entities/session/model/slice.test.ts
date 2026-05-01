@@ -5,6 +5,7 @@ describe('session reducer', () => {
   const initialState = {
     sessionId: null,
     fields: [],
+    content: '',
     cursorPos: 1,
     status: 'disconnected' as const,
     error: null,
@@ -30,10 +31,12 @@ describe('session reducer', () => {
   it('should handle updateScreen', () => {
     const fields: Field[] = [{
        fieldId: 1, start: 0, end: 10, row: 1, col: 1, length: 10,
-       text: 'Hello', hidden: false, highLight: false, modified: false
+       text: 'Hello', hidden: false, highLight: false, modified: false, protected: false
     }];
-    const actual = sessionReducer(initialState, updateScreen({ fields, cursorPos: 5 }));
+    const content = 'Hello World';
+    const actual = sessionReducer(initialState, updateScreen({ fields, content, cursorPos: 5 }));
     expect(actual.fields).toEqual(fields);
+    expect(actual.content).toEqual(content);
     expect(actual.cursorPos).toEqual(5);
     expect(actual.waitingStatus).toBe(false);
   });
